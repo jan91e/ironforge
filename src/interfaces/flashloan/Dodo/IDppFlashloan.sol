@@ -2,7 +2,7 @@
 
 pragma solidity >=0.5.0 <0.9.0;
 
-interface IDPPOracle {
+interface IDppFlashloan {
     function flashLoan(
         uint256 baseAmount,
         uint256 quoteAmount,
