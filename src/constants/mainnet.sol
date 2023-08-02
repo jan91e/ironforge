@@ -1,2 +1,1 @@
-import "./mainnet/tokens.sol";
-import "./mainnet/flashloan/flashloan.sol";
+import "./mainnet/index.sol";
