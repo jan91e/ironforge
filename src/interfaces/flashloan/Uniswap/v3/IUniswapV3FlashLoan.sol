@@ -4,7 +4,7 @@ pragma solidity >=0.5.0 <0.9.0;
 
 /// @title Permissionless pool actions
 /// @notice Contains pool methods that can be called by anyone
-interface IUniswapV3FlashLoan {
+interface IUniswapV3Flashloan {
 
     /// @notice Receive token0 and/or token1 and pay it back, plus a fee, in the callback
     /// @dev The caller of this method receives a callback in the form of IUniswapV3FlashCallback#uniswapV3FlashCallback
