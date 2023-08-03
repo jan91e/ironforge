@@ -1,8 +1,12 @@
-// SPDX-License-Identifier: UNLICENSED
-
-pragma solidity >=0.5.0 <0.9.0;
-
 interface IDppFlashloanReceiver {
+    function DPPFlashLoanCall(
+        address sender,
+        uint256 baseAmount,
+        uint256 quoteAmount,
+        bytes calldata data
+    ) external;
+}
+interface IDodoFlashloanReceiver {
     function DVMSellShareCall(
         address sender,
         uint256 burnShareAmount,
@@ -12,13 +16,6 @@ interface IDppFlashloanReceiver {
     ) external;
 
     function DVMFlashLoanCall(
-        address sender,
-        uint256 baseAmount,
-        uint256 quoteAmount,
-        bytes calldata data
-    ) external;
-
-    function DPPFlashLoanCall(
         address sender,
         uint256 baseAmount,
         uint256 quoteAmount,
