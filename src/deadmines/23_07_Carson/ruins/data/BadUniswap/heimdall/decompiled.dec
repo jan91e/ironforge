@@ -1,0 +1,711 @@
+// SPDX-License-Identifier: MIT
+pragma solidity >=0.8.0;
+
+/// @title            Decompiled Contract
+/// @author           Jonathan Becker <jonathan@jbecker.dev>
+/// @custom:version   heimdall-rs v0.4.8
+///
+/// @notice           This contract was decompiled using the heimdall-rs decompiler.
+///                     It was generated directly by tracing the EVM opcodes from this contract.
+///                     As a result, it may not compile or even be valid solidity code.
+///                     Despite this, it should be obvious what each function does. Overall
+///                     logic should have been preserved throughout decompiling.
+///
+/// @custom:github    You can find the open-source decompiler here:
+///                       https://heimdall.rs
+
+contract DecompiledContract {
+    
+    bytes32 public stor_a;
+    bytes32 public stor_b;
+    bytes32 public stor_c;
+    bytes32 public stor_e;
+    bytes32 public stor_g;
+    bytes32 public stor_i;
+    bytes32 public stor_j;
+    uint112 public stor_h;
+    (bool success, bytes public stor_d;
+    (bool success, bytes public stor_f;
+    mapping(address => bytes32) public stor_map_k;
+    mapping(address => bytes32) public stor_map_n;
+    mapping(bytes32 => bytes32) public stor_map_l;
+    mapping(bytes32 => bytes32) public stor_map_m;
+    
+    event Approval(address arg0, address arg1, uint256 arg2);
+    event Transfer(address arg0, address arg1, uint256 arg2);
+    event Sync(uint112 arg0, uint112 arg1);
+    
+    /// @custom:selector    0x5909c0d5
+    /// @custom:name        price0CumulativeLast
+    function price0CumulativeLast() public view payable returns (uint256) {
+        return stor_a;
+    }
+    
+    /// @custom:selector    0x5a3d5493
+    /// @custom:name        price1CumulativeLast
+    function price1CumulativeLast() public view payable returns (uint256) {
+        return stor_b;
+    }
+    
+    /// @custom:selector    0x3644e515
+    /// @custom:name        fopwCDKKK
+    function fopwCDKKK() public view payable returns (uint256) {
+        return stor_c;
+    }
+    
+    /// @custom:selector    0x485cc955
+    /// @custom:name        initialize
+    /// @param              arg0 ["address", "bytes", "bytes20", "bytes32", "int", "int160", "int256", "string", "uint", "uint160", "uint256"]
+    /// @param              arg1 ["address", "bytes", "bytes20", "bytes32", "int", "int160", "int256", "string", "uint", "uint160", "uint256"]
+    function initialize(address arg0, address arg1) public payable {
+        require(msg.sender == (address(stor_d)), "UniswapV2: FORBIDDEN");
+        address stor_e = (uint96(stor_e)) | (address(arg0));
+        address stor_f = (uint96(stor_f)) | (address(arg1));
+    }
+    
+    /// @custom:selector    0x30adf81f
+    /// @custom:name        PERMIT_TYPEHASH
+    function PERMIT_TYPEHASH() public pure payable returns (uint256) {
+        return 0x6e71edae12b1b97f4d1f60370fef10105fa2faae0126114a169c64845d6126c9;
+    }
+    
+    /// @custom:selector    0x6a627842
+    /// @custom:name        mint
+    /// @param              arg0 ["address", "bytes", "bytes20", "bytes32", "int", "int160", "int256", "string", "uint", "uint160", "uint256"]
+    function mint(address arg0) public payable {
+        require(0x01 == stor_g);
+        stor_g = 0;
+        require(address(stor_e).code.length);
+        (bool success, bytes memory ret0) = address(stor_e).staticcall(abi.encode(0x70a0823100000000000000000000000000000000000000000000000000000000));
+        require(!ret0.length < 0x20);
+        require(address(stor_f).code.length);
+        (bool success, bytes memory ret0) = address(stor_f).staticcall(abi.encode(0x70a0823100000000000000000000000000000000000000000000000000000000));
+        require(!(ret0.length < 0x20), "ds-math-sub-underflow");
+        require(!((var_c.length - (uint112(stor_h))) > var_c.length), "ds-math-sub-underflow");
+        require(!((var_c.length - (uint112(stor_h / 0x010000000000000000000000000000))) > var_c.length), "ds-math-sub-underflow");
+        require(address(stor_d).code.length);
+        (bool success, bytes memory ret0) = address(stor_d).staticcall(abi.encode(0x017e7e5800000000000000000000000000000000000000000000000000000000));
+        require(!(ret0.length < 0x20), "ds-math-mul-overflow");
+        require(!(address(var_c.length)), "ds-math-mul-overflow");
+        require(!stor_i, "ds-math-mul-overflow");
+        require(!(uint112(stor_h / 0x010000000000000000000000000000)), "ds-math-mul-overflow");
+        require(uint112(stor_h / 0x010000000000000000000000000000), "ds-math-mul-overflow");
+        require(uint112(stor_h) * (uint112(stor_h / 0x010000000000000000000000000000)) / (uint112(stor_h / 0x010000000000000000000000000000)) == (uint112(stor_h)), "ds-math-mul-overflow");
+        require(!(uint112(stor_h) * (uint112(stor_h / 0x010000000000000000000000000000)) > 0x03), "ds-math-sub-underflow");
+        require(!(((uint112(stor_h) * (uint112(stor_h / 0x010000000000000000000000000000)) / 0x02) + 0x01) < (uint112(stor_h) * (uint112(stor_h / 0x010000000000000000000000000000)))), "ds-math-sub-underflow");
+        require((uint112(stor_h) * (uint112(stor_h / 0x010000000000000000000000000000)) / 0x02) + 0x01, "ds-math-sub-underflow");
+        require(0x02, "ds-math-sub-underflow");
+        require(!((uint112(stor_h) * (uint112(stor_h / 0x010000000000000000000000000000)) / ((uint112(stor_h) * (uint112(stor_h / 0x010000000000000000000000000000)) / 0x02) + 0x01) + ((uint112(stor_h) * (uint112(stor_h / 0x010000000000000000000000000000)) / 0x02) + 0x01) / 0x02) < ((uint112(stor_h) * (uint112(stor_h / 0x010000000000000000000000000000)) / 0x02) + 0x01)), "ds-math-sub-underflow");
+        require(!(stor_i > 0x03), "ds-math-sub-underflow");
+        require(!(((stor_i / 0x02) + 0x01) < stor_i), "ds-math-sub-underflow");
+        require((stor_i / 0x02) + 0x01, "ds-math-sub-underflow");
+        require(0x02, "ds-math-sub-underflow");
+        require(!(((stor_i / ((stor_i / 0x02) + 0x01)) + ((stor_i / 0x02) + 0x01) / 0x02) < ((stor_i / 0x02) + 0x01)), "ds-math-sub-underflow");
+        require(!(((uint112(stor_h) * (uint112(stor_h / 0x010000000000000000000000000000)) / 0x02) + 0x01) > ((stor_i / 0x02) + 0x01)), "ds-math-sub-underflow");
+        require(!(((uint112(stor_h) * (uint112(stor_h / 0x010000000000000000000000000000)) / 0x02) + 0x01) - ((stor_i / 0x02) + 0x01) > ((uint112(stor_h) * (uint112(stor_h / 0x010000000000000000000000000000)) / 0x02) + 0x01)), "ds-math-sub-underflow");
+        require(!(((uint112(stor_h) * (uint112(stor_h / 0x010000000000000000000000000000)) / 0x02) + 0x01) - ((stor_i / 0x02) + 0x01)), "ds-math-mul-overflow");
+        require(((uint112(stor_h) * (uint112(stor_h / 0x010000000000000000000000000000)) / 0x02) + 0x01) - ((stor_i / 0x02) + 0x01), "ds-math-mul-overflow");
+        require((stor_j * (((uint112(stor_h) * (uint112(stor_h / 0x010000000000000000000000000000)) / 0x02) + 0x01) - ((stor_i / 0x02) + 0x01))) / (((uint112(stor_h) * (uint112(stor_h / 0x010000000000000000000000000000)) / 0x02) + 0x01) - ((stor_i / 0x02) + 0x01)) == stor_j, "ds-math-mul-overflow");
+        require(!0x05, "ds-math-add-overflow");
+        require(!0x05, "ds-math-add-overflow");
+        require(!((0 + ((stor_i / 0x02) + 0x01)) < 0), "ds-math-add-overflow");
+        require(0 + ((stor_i / 0x02) + 0x01), "ds-math-add-overflow");
+        require(!((stor_j * (((uint112(stor_h) * (uint112(stor_h / 0x010000000000000000000000000000)) / 0x02) + 0x01) - ((stor_i / 0x02) + 0x01))) / (0 + ((stor_i / 0x02) + 0x01))), "ds-math-add-overflow");
+        require(!((stor_j + ((stor_j * (((uint112(stor_h) * (uint112(stor_h / 0x010000000000000000000000000000)) / 0x02) + 0x01) - ((stor_i / 0x02) + 0x01))) / (0 + ((stor_i / 0x02) + 0x01)))) < stor_j), "ds-math-add-overflow");
+        stor_j = stor_j + ((stor_j * (((uint112(stor_h) * (uint112(stor_h / 0x010000000000000000000000000000)) / 0x02) + 0x01) - ((stor_i / 0x02) + 0x01))) / (0 + ((stor_i / 0x02) + 0x01)));
+        address var_f = var_c.length;
+        if (!(stor_map_k[var_f] + ((stor_j * (((uint112(stor_h) * (uint112(stor_h / 0x010000000000000000000000000000)) / 0x02) + 0x01) - ((stor_i / 0x02) + 0x01))) / (0 + ((stor_i / 0x02) + 0x01)))) < stor_map_k[var_f]) {
+        }
+        require(stor_j, "ds-math-add-overflow");
+        require(!stor_j, "ds-math-add-overflow");
+        require(stor_j, "ds-math-add-overflow");
+        require((((var_c.length - (uint112(stor_h))) * stor_j) / stor_j) == (var_c.length - (uint112(stor_h))), "ds-math-add-overflow");
+        require(uint112(stor_h), "ds-math-add-overflow");
+        require(!stor_j, "ds-math-add-overflow");
+        require(stor_j, "ds-math-add-overflow");
+        require((((var_c.length - (uint112(stor_h / 0x010000000000000000000000000000))) * stor_j) / stor_j) == (var_c.length - (uint112(stor_h / 0x010000000000000000000000000000))), "ds-math-add-overflow");
+        require(uint112(stor_h / 0x010000000000000000000000000000), "ds-math-add-overflow");
+        require(((var_c.length - (uint112(stor_h))) * stor_j) / (uint112(stor_h)) < (((var_c.length - (uint112(stor_h / 0x010000000000000000000000000000))) * stor_j) / (uint112(stor_h / 0x010000000000000000000000000000))), "ds-math-add-overflow");
+        require(((var_c.length - (uint112(stor_h))) * stor_j) / (uint112(stor_h)) > 0, "ds-math-add-overflow");
+        require(!((stor_j + (((var_c.length - (uint112(stor_h))) * stor_j) / (uint112(stor_h)))) < stor_j), "ds-math-add-overflow");
+        stor_j = stor_j + (((var_c.length - (uint112(stor_h))) * stor_j) / (uint112(stor_h)));
+        address var_f = arg0;
+        if (!(stor_map_k[var_f] + (((var_c.length - (uint112(stor_h))) * stor_j) / (uint112(stor_h)))) < stor_map_k[var_f]) {
+        }
+        if (((var_c.length - (uint112(stor_h / 0x010000000000000000000000000000))) * stor_j) / (uint112(stor_h / 0x010000000000000000000000000000)) > 0) {
+        }
+        require(!stor_j, "ds-math-mul-overflow");
+        if (uint112(stor_h / 0x010000000000000000000000000000)) {
+        }
+        require(!stor_j, "ds-math-mul-overflow");
+        if (uint112(stor_h)) {
+        }
+        if (!var_c.length - (uint112(stor_h / 0x010000000000000000000000000000))) {
+            if (!var_c.length - (uint112(stor_h / 0x010000000000000000000000000000))) {
+            }
+            if (var_c.length - (uint112(stor_h / 0x010000000000000000000000000000))) {
+                if ((var_c.length - (uint112(stor_h))) * (var_c.length - (uint112(stor_h / 0x010000000000000000000000000000))) / (var_c.length - (uint112(stor_h / 0x010000000000000000000000000000))) == (var_c.length - (uint112(stor_h)))) {
+                }
+            }
+        }
+        require(0x05, "ds-math-mul-overflow");
+        require(((((uint112(stor_h) * (uint112(stor_h / 0x010000000000000000000000000000)) / 0x02) + 0x01) * 0x05) / 0x05) == ((uint112(stor_h) * (uint112(stor_h / 0x010000000000000000000000000000)) / 0x02) + 0x01), "ds-math-mul-overflow");
+        if (!((((uint112(stor_h) * (uint112(stor_h / 0x010000000000000000000000000000)) / 0x02) + 0x01) * 0x05) + ((stor_i / 0x02) + 0x01)) < (((uint112(stor_h) * (uint112(stor_h / 0x010000000000000000000000000000)) / 0x02) + 0x01) * 0x05)) {
+        }
+        if (!((uint112(stor_h) * (uint112(stor_h / 0x010000000000000000000000000000)) / 0x02) + 0x01) - ((stor_i / 0x02) + 0x01)) {
+        }
+        if (stor_j) {
+        }
+        if ((stor_i / ((stor_i / 0x02) + 0x01)) + ((stor_i / 0x02) + 0x01) / 0x02) {
+            if (0x02) {
+            }
+        }
+        if (!((uint112(stor_h) * (uint112(stor_h / 0x010000000000000000000000000000)) / 0x02) + 0x01) > stor_i) {
+            if (stor_j) {
+            }
+            if (!(((uint112(stor_h) * (uint112(stor_h / 0x010000000000000000000000000000)) / 0x02) + 0x01) - stor_i) > ((uint112(stor_h) * (uint112(stor_h / 0x010000000000000000000000000000)) / 0x02) + 0x01)) {
+            }
+        }
+        if (!stor_i) {
+            if (!((uint112(stor_h) * (uint112(stor_h / 0x010000000000000000000000000000)) / 0x02) + 0x01) > 0x01) {
+            }
+            if (!((uint112(stor_h) * (uint112(stor_h / 0x010000000000000000000000000000)) / 0x02) + 0x01) > 0) {
+            }
+        }
+        if (uint112(stor_h) * (uint112(stor_h / 0x010000000000000000000000000000)) / ((uint112(stor_h) * (uint112(stor_h / 0x010000000000000000000000000000)) / 0x02) + 0x01) + ((uint112(stor_h) * (uint112(stor_h / 0x010000000000000000000000000000)) / 0x02) + 0x01) / 0x02) {
+            if (0x02) {
+            }
+        }
+        if (!stor_i > 0x03) {
+        }
+        if (!(uint112(stor_h)) * (uint112(stor_h / 0x010000000000000000000000000000))) {
+            if (!stor_i > 0x03) {
+                if (!((stor_i / 0x02) + 0x01) < stor_i) {
+                }
+                if (!stor_i) {
+                    if (!0x01 > 0x01) {
+                    }
+                    if (!0x01 > 0) {
+                    }
+                }
+            }
+            if (!stor_i > 0x03) {
+            }
+        }
+        if (!uint112(stor_h / 0x010000000000000000000000000000)) {
+        }
+        if (stor_j) {
+        }
+        if (!stor_i) {
+            stor_i = 0;
+            if (stor_j) {
+            }
+            if (stor_j) {
+            }
+        }
+    }
+    
+    /// @custom:selector    0x022c0d9f
+    /// @custom:name        swap
+    /// @param              arg0 ["bool", "bytes", "bytes1", "bytes32", "int", "int256", "int8", "string", "uint", "uint256", "uint8"]
+    /// @param              arg1 ["bool", "bytes", "bytes1", "bytes32", "int", "int256", "int8", "string", "uint", "uint256", "uint8"]
+    /// @param              arg2 ["address", "bytes", "bytes20", "bytes32", "int", "int160", "int256", "string", "uint", "uint160", "uint256"]
+    /// @param              arg3 ["bytes", "uint256", "int256", "string", "bytes32", "uint", "int"]
+    function swap(uint256 arg0, uint256 arg1, address arg2, bytes memory arg3) public payable {
+        require(!arg3 > 0x0100000000);
+        require(0x01 == stor_g);
+        stor_g = 0;
+        require(address(stor_d).code.length);
+        (bool success, bytes memory ret0) = address(stor_d).staticcall(abi.encode(0x64a115b400000000000000000000000000000000000000000000000000000000));
+        require(!(ret0.length < 0x20), "UniswapV2: TRANSFER_FAILED");
+        require(!(address(var_c.length)), "UniswapV2: TRANSFER_FAILED");
+        require(!(address(var_c.length)), "UniswapV2: TRANSFER_FAILED");
+        require(arg0 > 0, "UniswapV2: TRANSFER_FAILED");
+        require(arg0 > 0, "UniswapV2: TRANSFER_FAILED");
+        require(!(arg0 < (uint112(stor_h))), "UniswapV2: TRANSFER_FAILED");
+        require(arg1 < (uint112(stor_h / 0x010000000000000000000000000000)), "UniswapV2: TRANSFER_FAILED");
+        require(address(stor_e) == (address(arg2)), "UniswapV2: TRANSFER_FAILED");
+        require(!(address(arg2) == (address(stor_f))), "UniswapV2: TRANSFER_FAILED");
+        require(!arg0, "UniswapV2: TRANSFER_FAILED");
+        var_c = 0x40 + var_c;
+        var_c = var_c + 0x64;
+        require(var_c.length < 0x20, "UniswapV2: TRANSFER_FAILED");
+        (bool success, bytes memory ret0) = address(stor_e).call{ value: 0 }(abi.encode(var_i & (~((0x0100 ** (0x20 - var_c.length)) - 0x01)) | (var_c.length & ((0x0100 ** (0x20 - var_c.length)) - 0x01))));
+        require(ret0.length == 0, "UniswapV2: TRANSFER_FAILED");
+        if (!arg1) {
+            var_c = 0x40 + var_c;
+            var_c = var_c + 0x64;
+            require(!arg1);
+        }
+        require(!arg3);
+        require(address(arg2).code.length);
+        (bool success, bytes memory ret0) = address(arg2).call{ value: 0 }(abi.encode(0x10d1e85c00000000000000000000000000000000000000000000000000000000, 0x7472616e7366657228616464726573732c75696e743235362900000000000000, 0x44 + (var_c - var_c), 0xa9059cbb00000000000000000000000000000000000000000000000000000000 | (uint224(var_u))));
+        require(address(stor_e).code.length);
+        (bool success, bytes memory ret0) = address(stor_e).staticcall(abi.encode(0x70a0823100000000000000000000000000000000000000000000000000000000, 0x7472616e7366657228616464726573732c75696e743235362900000000000000));
+        require(!ret0.length < 0x20);
+        require(address(stor_f).code.length);
+        (bool success, bytes memory ret0) = address(stor_f).staticcall(abi.encode(0x70a0823100000000000000000000000000000000000000000000000000000000, 0x7472616e7366657228616464726573732c75696e743235362900000000000000));
+        require(!(ret0.length < 0x20), "ds-math-sub-underflow");
+        require(var_c.length > (uint112(stor_h) - arg0), "ds-math-sub-underflow");
+        require(var_c.length > (uint112(stor_h / 0x010000000000000000000000000000) - arg1), "ds-math-sub-underflow");
+        require(0 > 0, "ds-math-sub-underflow");
+        require(0 > 0, "ds-math-sub-underflow");
+        require(!0x03, "ds-math-sub-underflow");
+        require(!0x03, "ds-math-sub-underflow");
+        require(!0x03e8, "ds-math-sub-underflow");
+        require(!0x03e8, "ds-math-sub-underflow");
+        require(!(0 > 0), "ds-math-sub-underflow");
+        if (!0x03) {
+        }
+        if (0x03e8) {
+            if (((var_c.length * 0x03e8) / 0x03e8) == var_c.length) {
+            }
+        }
+        require(0x03, "ds-math-mul-overflow");
+        require(0 == 0, "ds-math-mul-overflow");
+        if (!0x03e8) {
+        }
+        if (0 > 0) {
+        }
+        require(0 > 0, "ds-math-sub-underflow");
+        require(0 > 0, "ds-math-sub-underflow");
+        require(!0x03, "ds-math-sub-underflow");
+        require(!0x03, "ds-math-sub-underflow");
+        require(!0x03e8, "ds-math-sub-underflow");
+        require(!0x03e8, "ds-math-sub-underflow");
+        require(!(0 > 0), "ds-math-sub-underflow");
+        if (!0x03) {
+        }
+        if (0x03e8) {
+            if (((var_c.length * 0x03e8) / 0x03e8) == var_c.length) {
+            }
+        }
+        require(0x03, "ds-math-mul-overflow");
+        require(0 == 0, "ds-math-mul-overflow");
+        if (!0x03e8) {
+        }
+        require((var_c.length - (uint112(stor_h / 0x010000000000000000000000000000) - arg1)) > 0, "UniswapV2: INSUFFICIENT_INPUT_AMOUNT");
+        if (!0x03) {
+        }
+        if (var_c.length > (uint112(stor_h / 0x010000000000000000000000000000) - arg1)) {
+        }
+        if (address(stor_e).code.length) {
+        }
+        if (!var_w) {
+            require(!var_w);
+            require(!var_w < 0x20);
+        }
+        if (!var_w) {
+        }
+        var_c = var_c + (uint248(ret0.length + 0x3f));
+        if (!arg1) {
+        }
+        if (!var_c.length) {
+            require(!var_c.length, "UniswapV2: TRANSFER_FAILED");
+            require(!var_c.length, "UniswapV2: TRANSFER_FAILED");
+        }
+        if (!var_c.length < 0x20) {
+        }
+        if ((var_c.length + 0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe0) < 0x20) {
+        }
+        if (!arg1) {
+        }
+        if (!(address(stor_e)) == (address(arg2))) {
+        }
+        if (arg0 < (uint112(stor_h))) {
+        }
+        if (arg1 > 0) {
+        }
+        if (msg.sender == (address(var_c.length))) {
+        }
+    }
+    
+    /// @custom:selector    0xc45a0155
+    /// @custom:name        factory
+    function factory() public view payable returns (address) {
+        return address(stor_d);
+    }
+    
+    /// @custom:selector    0x313ce567
+    /// @custom:name        decimals
+    function decimals() public pure payable returns (uint256) {
+        return 0x12;
+    }
+    
+    /// @custom:selector    0x0902f1ac
+    /// @custom:name        getReserves
+    function getReserves() public view payable returns (bytes memory) {
+        uint112 var_b = stor_h / 0x010000000000000000000000000000;
+        uint32 var_c = stor_h / 0x0100000000000000000000000000000000000000000000000000000000;
+        return abi.encodePacked(uint112(stor_h), var_b, var_c);
+    }
+    
+    /// @custom:selector    0x7ecebe00
+    /// @custom:name        nonces
+    /// @param              arg0 ["address", "bytes", "bytes20", "bytes32", "int", "int160", "int256", "string", "uint", "uint160", "uint256"]
+    function nonces(address arg0) public view payable returns (uint256) {
+        address var_b = arg0;
+        return stor_map_l[var_b];
+    }
+    
+    /// @custom:selector    0xd505accf
+    /// @custom:name        permit
+    /// @param              arg0 ["address", "bytes", "bytes20", "bytes32", "int", "int160", "int256", "string", "uint", "uint160", "uint256"]
+    /// @param              arg1 ["address", "bytes", "bytes20", "bytes32", "int", "int160", "int256", "string", "uint", "uint160", "uint256"]
+    /// @param              arg2 ["bytes", "uint256", "int256", "string", "bytes32", "uint", "int"]
+    /// @param              arg3 ["bytes", "uint256", "int256", "string", "bytes32", "uint", "int"]
+    /// @param              arg4 ["bool", "bytes", "bytes1", "bytes32", "int", "int256", "int8", "string", "uint", "uint256", "uint8"]
+    /// @param              arg5 ["bytes", "uint256", "int256", "string", "bytes32", "uint", "int"]
+    /// @param              arg6 ["bytes", "uint256", "int256", "string", "bytes32", "uint", "int"]
+    function permit(address arg0, address arg1, uint256 arg2, uint256 arg3, uint8 arg4, bytes32 arg5, bytes32 arg6) public payable {
+        require(!arg3 < block.timestamp);
+        address var_a = arg0;
+        var_b = 0x04;
+        address stor_map_m[var_a] = stor_map_m[var_a] + 0x01;
+        var_j = var_j + 0xe0;
+        var_j = var_j + 0x0142;
+        require(var_b);
+        require(!(address(var_v)), "UniswapV2: INVALID_SIGNATURE");
+        require(address(var_v) == (address(arg0)), "UniswapV2: INVALID_SIGNATURE");
+        address var_a = arg1;
+        stor_map_m[var_a] = arg2;
+        emit Approval(address(arg0), address(arg1), arg2);
+        require(!(!address(var_v)), "UniswapV2: INVALID_SIGNATURE");
+        address var_a = arg1;
+        stor_map_m[var_a] = arg2;
+    }
+    
+    /// @custom:selector    0x095ea7b3
+    /// @custom:name        approve
+    /// @param              arg0 ["address", "bytes", "bytes20", "bytes32", "int", "int160", "int256", "string", "uint", "uint160", "uint256"]
+    /// @param              arg1 ["bytes", "uint256", "int256", "string", "bytes32", "uint", "int"]
+    function approve(address arg0, uint256 arg1) public payable returns (bool) {
+        address var_a = arg0;
+        address stor_map_m[var_a] = arg1;
+        emit Approval(address(msg.sender), address(arg0), arg1);
+        return 0x01;
+    }
+    
+    /// @custom:selector    0x95d89b41
+    /// @custom:name        symbol
+    function symbol() public pure payable returns (bytes memory) {
+        var_a = 0x40 + var_a;
+        if (!var_a.length) {
+            return abi.encodePacked(0x20, var_a.length);
+            return abi.encodePacked(0x20, var_a.length, (~((0x0100 ** (0x20 - (bytes1(var_a.length)))) - 0x01)) & (var_g));
+        }
+        if (!var_a.length) {
+        }
+    }
+    
+    /// @custom:selector    0x0dfe1681
+    /// @custom:name        token0
+    function token0() public view payable returns (address) {
+        return address(stor_e);
+    }
+    
+    /// @custom:selector    0x18160ddd
+    /// @custom:name        totalSupply
+    function totalSupply() public view payable returns (uint256) {
+        return stor_j;
+    }
+    
+    /// @custom:selector    0xd21220a7
+    /// @custom:name        token1
+    function token1() public view payable returns (address) {
+        return address(stor_f);
+    }
+    
+    /// @custom:selector    0x70a08231
+    /// @custom:name        balanceOf
+    /// @param              arg0 ["address", "bytes", "bytes20", "bytes32", "int", "int160", "int256", "string", "uint", "uint160", "uint256"]
+    function balanceOf(address arg0) public view payable returns (uint256) {
+        address var_b = arg0;
+        return stor_map_l[var_b];
+    }
+    
+    /// @custom:selector    0xbc25cf77
+    /// @custom:name        skim
+    /// @param              arg0 ["address", "bytes", "bytes20", "bytes32", "int", "int160", "int256", "string", "uint", "uint160", "uint256"]
+    function skim(address arg0) public payable {
+        require(0x01 == stor_g);
+        stor_g = 0;
+        require(address(stor_e).code.length);
+        (bool success, bytes memory ret0) = address(stor_e).staticcall(abi.encode(0x70a0823100000000000000000000000000000000000000000000000000000000));
+        require(!(ret0.length < 0x20), "ds-math-sub-underflow");
+        require(!((var_c.length - (uint112(stor_h))) > var_c.length), "ds-math-sub-underflow");
+        var_c = 0x40 + var_c;
+        var_c = var_c + 0x64;
+        require(var_c.length < 0x20, "UniswapV2: TRANSFER_FAILED");
+        (bool success, bytes memory ret0) = address(stor_e).call{ value: 0 }(abi.encode(var_k & (~((0x0100 ** (0x20 - var_c.length)) - 0x01)) | (var_c.length & ((0x0100 ** (0x20 - var_c.length)) - 0x01))));
+        require(ret0.length == 0, "UniswapV2: TRANSFER_FAILED");
+        require(address(stor_f).code.length);
+        (bool success, bytes memory ret0) = address(stor_f).staticcall(abi.encode(0x70a0823100000000000000000000000000000000000000000000000000000000));
+        if (!var_p) {
+            require(!var_p);
+            require(!var_p < 0x20);
+        }
+        if (!var_p) {
+        }
+        var_c = var_c + (uint248(ret0.length + 0x3f));
+        if (address(stor_f).code.length) {
+        }
+        if (!var_c.length) {
+            require(!var_c.length, "UniswapV2: TRANSFER_FAILED");
+            require(!var_c.length, "UniswapV2: TRANSFER_FAILED");
+        }
+        if (!var_c.length < 0x20) {
+        }
+        if ((var_c.length + 0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe0) < 0x20) {
+        }
+    }
+    
+    /// @custom:selector    0x7464fc3d
+    /// @custom:name        kLast
+    function kLast() public view payable returns (uint256) {
+        return stor_i;
+    }
+    
+    /// @custom:selector    0xba9a7a56
+    /// @custom:name        MINIMUM_LIQUIDITY
+    function MINIMUM_LIQUIDITY() public pure payable returns (uint256) {
+        return 0x03e8;
+    }
+    
+    /// @custom:selector    0x89afcb44
+    /// @custom:name        burn
+    /// @param              arg0 ["address", "bytes", "bytes20", "bytes32", "int", "int160", "int256", "string", "uint", "uint160", "uint256"]
+    function burn(address arg0) public payable {
+        require(0x01 == stor_g);
+        stor_g = 0;
+        require(address(stor_e).code.length);
+        (bool success, bytes memory ret0) = address(stor_e).staticcall(abi.encode(0x70a0823100000000000000000000000000000000000000000000000000000000));
+        require(!ret0.length < 0x20);
+        require(address(stor_f).code.length);
+        (bool success, bytes memory ret0) = address(stor_f).staticcall(abi.encode(0x70a0823100000000000000000000000000000000000000000000000000000000));
+        require(!ret0.length < 0x20);
+        require(address(stor_d).code.length);
+        (bool success, bytes memory ret0) = address(stor_d).staticcall(abi.encode(0x017e7e5800000000000000000000000000000000000000000000000000000000));
+        require(!(ret0.length < 0x20), "ds-math-mul-overflow");
+        require(!(address(var_e.length)), "ds-math-mul-overflow");
+        require(!stor_i, "ds-math-mul-overflow");
+        require(!(uint112(stor_h / 0x010000000000000000000000000000)), "ds-math-mul-overflow");
+        require(uint112(stor_h / 0x010000000000000000000000000000), "ds-math-mul-overflow");
+        require(uint112(stor_h) * (uint112(stor_h / 0x010000000000000000000000000000)) / (uint112(stor_h / 0x010000000000000000000000000000)) == (uint112(stor_h)), "ds-math-mul-overflow");
+        require(!(uint112(stor_h) * (uint112(stor_h / 0x010000000000000000000000000000)) > 0x03), "ds-math-sub-underflow");
+        require(!(((uint112(stor_h) * (uint112(stor_h / 0x010000000000000000000000000000)) / 0x02) + 0x01) < (uint112(stor_h) * (uint112(stor_h / 0x010000000000000000000000000000)))), "ds-math-sub-underflow");
+        require((uint112(stor_h) * (uint112(stor_h / 0x010000000000000000000000000000)) / 0x02) + 0x01, "ds-math-sub-underflow");
+        require(0x02, "ds-math-sub-underflow");
+        require(!((uint112(stor_h) * (uint112(stor_h / 0x010000000000000000000000000000)) / ((uint112(stor_h) * (uint112(stor_h / 0x010000000000000000000000000000)) / 0x02) + 0x01) + ((uint112(stor_h) * (uint112(stor_h / 0x010000000000000000000000000000)) / 0x02) + 0x01) / 0x02) < ((uint112(stor_h) * (uint112(stor_h / 0x010000000000000000000000000000)) / 0x02) + 0x01)), "ds-math-sub-underflow");
+        require(!(stor_i > 0x03), "ds-math-sub-underflow");
+        require(!(((stor_i / 0x02) + 0x01) < stor_i), "ds-math-sub-underflow");
+        require((stor_i / 0x02) + 0x01, "ds-math-sub-underflow");
+        require(0x02, "ds-math-sub-underflow");
+        require(!(((stor_i / ((stor_i / 0x02) + 0x01)) + ((stor_i / 0x02) + 0x01) / 0x02) < ((stor_i / 0x02) + 0x01)), "ds-math-sub-underflow");
+        require(!(((uint112(stor_h) * (uint112(stor_h / 0x010000000000000000000000000000)) / 0x02) + 0x01) > ((stor_i / 0x02) + 0x01)), "ds-math-sub-underflow");
+        require(!(((uint112(stor_h) * (uint112(stor_h / 0x010000000000000000000000000000)) / 0x02) + 0x01) - ((stor_i / 0x02) + 0x01) > ((uint112(stor_h) * (uint112(stor_h / 0x010000000000000000000000000000)) / 0x02) + 0x01)), "ds-math-sub-underflow");
+        require(!(((uint112(stor_h) * (uint112(stor_h / 0x010000000000000000000000000000)) / 0x02) + 0x01) - ((stor_i / 0x02) + 0x01)), "ds-math-mul-overflow");
+        require(((uint112(stor_h) * (uint112(stor_h / 0x010000000000000000000000000000)) / 0x02) + 0x01) - ((stor_i / 0x02) + 0x01), "ds-math-mul-overflow");
+        require((stor_j * (((uint112(stor_h) * (uint112(stor_h / 0x010000000000000000000000000000)) / 0x02) + 0x01) - ((stor_i / 0x02) + 0x01))) / (((uint112(stor_h) * (uint112(stor_h / 0x010000000000000000000000000000)) / 0x02) + 0x01) - ((stor_i / 0x02) + 0x01)) == stor_j, "ds-math-mul-overflow");
+        require(!0x05, "ds-math-add-overflow");
+        require(!0x05, "ds-math-add-overflow");
+        require(!((0 + ((stor_i / 0x02) + 0x01)) < 0), "ds-math-add-overflow");
+        require(0 + ((stor_i / 0x02) + 0x01), "ds-math-add-overflow");
+        require(!((stor_j * (((uint112(stor_h) * (uint112(stor_h / 0x010000000000000000000000000000)) / 0x02) + 0x01) - ((stor_i / 0x02) + 0x01))) / (0 + ((stor_i / 0x02) + 0x01))), "ds-math-add-overflow");
+        require(!((stor_j + ((stor_j * (((uint112(stor_h) * (uint112(stor_h / 0x010000000000000000000000000000)) / 0x02) + 0x01) - ((stor_i / 0x02) + 0x01))) / (0 + ((stor_i / 0x02) + 0x01)))) < stor_j), "ds-math-add-overflow");
+        stor_j = stor_j + ((stor_j * (((uint112(stor_h) * (uint112(stor_h / 0x010000000000000000000000000000)) / 0x02) + 0x01) - ((stor_i / 0x02) + 0x01))) / (0 + ((stor_i / 0x02) + 0x01)));
+        address var_c = var_e.length;
+        if (!(stor_map_n[var_c] + ((stor_j * (((uint112(stor_h) * (uint112(stor_h / 0x010000000000000000000000000000)) / 0x02) + 0x01) - ((stor_i / 0x02) + 0x01))) / (0 + ((stor_i / 0x02) + 0x01)))) < stor_map_n[var_c]) {
+        }
+        require(!var_e.length, "ds-math-sub-underflow");
+        require(!var_e.length, "ds-math-sub-underflow");
+        require(stor_j, "ds-math-sub-underflow");
+        require(!var_e.length, "ds-math-sub-underflow");
+        require(!var_e.length, "ds-math-sub-underflow");
+        require(stor_j, "ds-math-sub-underflow");
+        require(!((0 / stor_j) > 0), "ds-math-sub-underflow");
+        require((0 / stor_j) > 0, "ds-math-sub-underflow");
+        address var_c = this;
+        require(!(stor_map_n[var_c] - stor_map_n[var_c] > stor_map_n[var_c]), "ds-math-sub-underflow");
+        address var_c = this;
+        address stor_map_n[var_c] = stor_map_n[var_c] - stor_map_n[var_c];
+        if (!(stor_j - stor_map_n[var_c]) > stor_j) {
+        }
+        if ((0 / stor_j) > 0) {
+        }
+        require(var_e.length, "ds-math-mul-overflow");
+        require(((stor_map_n[var_c] * var_e.length) / var_e.length) == stor_map_n[var_c], "ds-math-mul-overflow");
+        if (stor_j) {
+            if (!(0 / stor_j) > 0) {
+            }
+        }
+        if (var_e.length) {
+        }
+        require(0x05, "ds-math-mul-overflow");
+        require(((((uint112(stor_h) * (uint112(stor_h / 0x010000000000000000000000000000)) / 0x02) + 0x01) * 0x05) / 0x05) == ((uint112(stor_h) * (uint112(stor_h / 0x010000000000000000000000000000)) / 0x02) + 0x01), "ds-math-mul-overflow");
+        if (!((((uint112(stor_h) * (uint112(stor_h / 0x010000000000000000000000000000)) / 0x02) + 0x01) * 0x05) + ((stor_i / 0x02) + 0x01)) < (((uint112(stor_h) * (uint112(stor_h / 0x010000000000000000000000000000)) / 0x02) + 0x01) * 0x05)) {
+        }
+        if (!((uint112(stor_h) * (uint112(stor_h / 0x010000000000000000000000000000)) / 0x02) + 0x01) - ((stor_i / 0x02) + 0x01)) {
+        }
+        if (!var_e.length) {
+        }
+        if ((stor_i / ((stor_i / 0x02) + 0x01)) + ((stor_i / 0x02) + 0x01) / 0x02) {
+            if (0x02) {
+            }
+        }
+        if (!((uint112(stor_h) * (uint112(stor_h / 0x010000000000000000000000000000)) / 0x02) + 0x01) > stor_i) {
+            if (!var_e.length) {
+            }
+            if (!(((uint112(stor_h) * (uint112(stor_h / 0x010000000000000000000000000000)) / 0x02) + 0x01) - stor_i) > ((uint112(stor_h) * (uint112(stor_h / 0x010000000000000000000000000000)) / 0x02) + 0x01)) {
+            }
+        }
+        if (!stor_i) {
+            if (!((uint112(stor_h) * (uint112(stor_h / 0x010000000000000000000000000000)) / 0x02) + 0x01) > 0x01) {
+            }
+            if (!((uint112(stor_h) * (uint112(stor_h / 0x010000000000000000000000000000)) / 0x02) + 0x01) > 0) {
+            }
+        }
+        if (uint112(stor_h) * (uint112(stor_h / 0x010000000000000000000000000000)) / ((uint112(stor_h) * (uint112(stor_h / 0x010000000000000000000000000000)) / 0x02) + 0x01) + ((uint112(stor_h) * (uint112(stor_h / 0x010000000000000000000000000000)) / 0x02) + 0x01) / 0x02) {
+            if (0x02) {
+            }
+        }
+        if (!stor_i > 0x03) {
+        }
+        if (!(uint112(stor_h)) * (uint112(stor_h / 0x010000000000000000000000000000))) {
+            if (!stor_i > 0x03) {
+                if (!((stor_i / 0x02) + 0x01) < stor_i) {
+                }
+                if (!stor_i) {
+                    if (!0x01 > 0x01) {
+                    }
+                    if (!0x01 > 0) {
+                    }
+                }
+            }
+            if (!stor_i > 0x03) {
+            }
+        }
+        if (!uint112(stor_h / 0x010000000000000000000000000000)) {
+        }
+        if (!var_e.length) {
+        }
+        if (!stor_i) {
+            stor_i = 0;
+            if (!var_e.length) {
+            }
+            if (!var_e.length) {
+            }
+        }
+    }
+    
+    /// @custom:selector    0xdd62ed3e
+    /// @custom:name        allowance
+    /// @param              arg0 ["address", "bytes", "bytes20", "bytes32", "int", "int160", "int256", "string", "uint", "uint160", "uint256"]
+    /// @param              arg1 ["address", "bytes", "bytes20", "bytes32", "int", "int160", "int256", "string", "uint", "uint160", "uint256"]
+    function allowance(address arg0, address arg1) public view payable returns (uint256) {
+        address var_b = arg0;
+        address var_b = arg1;
+        return stor_map_l[var_b];
+    }
+    
+    /// @custom:selector    0x23b872dd
+    /// @custom:name        transferFrom
+    /// @param              arg0 ["address", "bytes", "bytes20", "bytes32", "int", "int160", "int256", "string", "uint", "uint160", "uint256"]
+    /// @param              arg1 ["address", "bytes", "bytes20", "bytes32", "int", "int160", "int256", "string", "uint", "uint160", "uint256"]
+    /// @param              arg2 ["bytes", "uint256", "int256", "string", "bytes32", "uint", "int"]
+    function transferFrom(address arg0, address arg1, uint256 arg2) public payable returns (bool) {
+        var_a = msg.sender;
+        require(0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff == stor_map_m[var_a], "ds-math-sub-underflow");
+        address var_a = arg0;
+        require(!((stor_map_m[var_a] - arg2) > stor_map_m[var_a]), "ds-math-sub-underflow");
+        address var_a = arg0;
+        address stor_map_m[var_a] = stor_map_m[var_a] - arg2;
+        address var_a = arg1;
+        require(!((stor_map_m[var_a] + arg2) < stor_map_m[var_a]), "ds-math-add-overflow");
+        address var_a = arg1;
+        stor_map_m[var_a] = stor_map_m[var_a] + arg2;
+        emit Transfer(address(arg0), address(arg1), arg2);
+        return 0x01;
+        var_a = msg.sender;
+        require(!((stor_map_m[var_a] - arg2) > stor_map_m[var_a]), "ds-math-sub-underflow");
+        var_a = msg.sender;
+        stor_map_m[var_a] = stor_map_m[var_a] - arg2;
+        address var_a = arg0;
+        if (!(stor_map_m[var_a]) > stor_map_m[var_a]) {
+        }
+    }
+    
+    /// @custom:selector    0x06fdde03
+    /// @custom:name        name
+    function name() public pure payable returns (bytes memory) {
+        var_a = 0x40 + var_a;
+        if (!var_a.length) {
+            return abi.encodePacked(0x20, var_a.length);
+            return abi.encodePacked(0x20, var_a.length, (~((0x0100 ** (0x20 - (bytes1(var_a.length)))) - 0x01)) & (var_g));
+        }
+        if (!var_a.length) {
+        }
+    }
+    
+    /// @custom:selector    0xa9059cbb
+    /// @custom:name        transfer
+    /// @param              arg0 ["address", "bytes", "bytes20", "bytes32", "int", "int160", "int256", "string", "uint", "uint160", "uint256"]
+    /// @param              arg1 ["bytes", "uint256", "int256", "string", "bytes32", "uint", "int"]
+    function transfer(address arg0, uint256 arg1) public payable returns (bool) {
+        address var_a = msg.sender;
+        require(!((stor_map_m[var_a] - arg1) > stor_map_m[var_a]), "ds-math-sub-underflow");
+        address var_a = msg.sender;
+        address stor_map_m[var_a] = stor_map_m[var_a] - arg1;
+        address var_a = arg0;
+        require(!((stor_map_m[var_a] + arg1) < stor_map_m[var_a]), "ds-math-add-overflow");
+        address var_a = arg0;
+        stor_map_m[var_a] = stor_map_m[var_a] + arg1;
+        emit Transfer(address(msg.sender), address(arg0), arg1);
+        return 0x01;
+    }
+    
+    /// @custom:selector    0xfff6cae9
+    /// @custom:name        sync
+    function sync() public payable {
+        require(0x01 == stor_g);
+        stor_g = 0;
+        require(address(stor_e).code.length);
+        (bool success, bytes memory ret0) = address(stor_e).staticcall(abi.encode(0x70a0823100000000000000000000000000000000000000000000000000000000));
+        require(!ret0.length < 0x20);
+        require(address(stor_f).code.length);
+        (bool success, bytes memory ret0) = address(stor_f).staticcall(abi.encode(0x70a0823100000000000000000000000000000000000000000000000000000000));
+        if (!ret0.length < 0x20) {
+            if (var_c.length > 0xffffffffffffffffffffffffffff) {
+                if (!var_c.length > 0xffffffffffffffffffffffffffff) {
+                    if (!uint32(block.timestamp - (stor_h / 0x0100000000000000000000000000000000000000000000000000000000))) {
+                        if (!uint32(block.timestamp - (stor_h / 0x0100000000000000000000000000000000000000000000000000000000))) {
+                            if (!uint32(block.timestamp - (stor_h / 0x0100000000000000000000000000000000000000000000000000000000))) {
+                                stor_h = (uint32(block.timestamp) * 0x0100000000000000000000000000000000000000000000000000000000) | (uint224((0x010000000000000000000000000000 * (uint112(var_c.length))) | (uint144(uint112(var_c.length) | (uint144(stor_h))))));
+                                uint112 var_a = (uint32(uint32(block.timestamp)) * 0x0100000000000000000000000000000000000000000000000000000000) | (uint224((0x010000000000000000000000000000 * (var_c.length)) | (uint144(var_c.length | (uint144(stor_h))))));
+                                uint112 var_d = (uint32(uint32(block.timestamp)) * 0x0100000000000000000000000000000000000000000000000000000000) | (uint224((0x010000000000000000000000000000 * (var_c.length)) | (uint144(var_c.length | (uint144(stor_h)))))) / 0x010000000000000000000000000000;
+                                emit Sync(var_a, var_d);
+                                stor_g = 0x01;
+                                if (uint112(stor_h)) {
+                                    stor_a = (uint224((0x010000000000000000000000000000 * (uint112(uint112(stor_h / 0x010000000000000000000000000000)))) / (uint112(uint112(stor_h)))) * (uint32(block.timestamp - (stor_h / 0x0100000000000000000000000000000000000000000000000000000000)))) + stor_a;
+                                    if (uint112(stor_h / 0x010000000000000000000000000000)) {
+                                    }
+                                }
+                            }
+                            if (!uint112(stor_h / 0x010000000000000000000000000000)) {
+                                if (uint112(stor_h)) {
+                                }
+                                stor_h = (uint32(block.timestamp) * 0x0100000000000000000000000000000000000000000000000000000000) | (uint224((0x010000000000000000000000000000 * (uint112(var_c.length))) | (uint144(uint112(var_c.length) | (uint144(stor_h))))));
+                                stor_g = 0x01;
+                            }
+                        }
+                        require(!(ret0.length < 0x20), "UniswapV2: OVERFLOW");
+                        require(var_c.length > 0xffffffffffffffffffffffffffff, "UniswapV2: OVERFLOW");
+                    }
+                    require(!(var_c.length > 0xffffffffffffffffffffffffffff), "UniswapV2: OVERFLOW");
+                }
+            }
+        }
+        if (!var_c.length > 0xffffffffffffffffffffffffffff) {
+        }
+    }
+}

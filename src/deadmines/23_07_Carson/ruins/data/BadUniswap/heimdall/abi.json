@@ -1,0 +1,541 @@
+[{
+  "type": "function",
+  "name": "price0CumulativeLast",
+  "inputs": [],
+  "outputs": [
+    {
+      "name": "ret0",
+      "internalType": "uint256",
+      "type": "uint256"
+    }
+  ],
+  "stateMutability": "payable",
+  "constant": false
+},
+{
+  "type": "function",
+  "name": "price1CumulativeLast",
+  "inputs": [],
+  "outputs": [
+    {
+      "name": "ret0",
+      "internalType": "uint256",
+      "type": "uint256"
+    }
+  ],
+  "stateMutability": "payable",
+  "constant": false
+},
+{
+  "type": "function",
+  "name": "fopwCDKKK",
+  "inputs": [],
+  "outputs": [
+    {
+      "name": "ret0",
+      "internalType": "uint256",
+      "type": "uint256"
+    }
+  ],
+  "stateMutability": "payable",
+  "constant": false
+},
+{
+  "type": "function",
+  "name": "initialize",
+  "inputs": [
+    {
+      "name": "arg0",
+      "internalType": "address",
+      "type": "address"
+    },
+    {
+      "name": "arg1",
+      "internalType": "address",
+      "type": "address"
+    }
+  ],
+  "outputs": [],
+  "stateMutability": "payable",
+  "constant": false
+},
+{
+  "type": "function",
+  "name": "PERMIT_TYPEHASH",
+  "inputs": [],
+  "outputs": [
+    {
+      "name": "ret0",
+      "internalType": "uint256",
+      "type": "uint256"
+    }
+  ],
+  "stateMutability": "payable",
+  "constant": false
+},
+{
+  "type": "function",
+  "name": "mint",
+  "inputs": [
+    {
+      "name": "arg0",
+      "internalType": "address",
+      "type": "address"
+    }
+  ],
+  "outputs": [],
+  "stateMutability": "payable",
+  "constant": false
+},
+{
+  "type": "function",
+  "name": "swap",
+  "inputs": [
+    {
+      "name": "arg0",
+      "internalType": "uint256",
+      "type": "uint256"
+    },
+    {
+      "name": "arg1",
+      "internalType": "uint256",
+      "type": "uint256"
+    },
+    {
+      "name": "arg2",
+      "internalType": "address",
+      "type": "address"
+    },
+    {
+      "name": "arg3",
+      "internalType": "bytes",
+      "type": "bytes"
+    }
+  ],
+  "outputs": [],
+  "stateMutability": "payable",
+  "constant": false
+},
+{
+  "type": "function",
+  "name": "factory",
+  "inputs": [],
+  "outputs": [
+    {
+      "name": "ret0",
+      "internalType": "address",
+      "type": "address"
+    }
+  ],
+  "stateMutability": "payable",
+  "constant": false
+},
+{
+  "type": "function",
+  "name": "decimals",
+  "inputs": [],
+  "outputs": [
+    {
+      "name": "ret0",
+      "internalType": "uint256",
+      "type": "uint256"
+    }
+  ],
+  "stateMutability": "payable",
+  "constant": false
+},
+{
+  "type": "function",
+  "name": "getReserves",
+  "inputs": [],
+  "outputs": [
+    {
+      "name": "ret0",
+      "internalType": "bytes memory",
+      "type": "bytes memory"
+    }
+  ],
+  "stateMutability": "payable",
+  "constant": false
+},
+{
+  "type": "function",
+  "name": "nonces",
+  "inputs": [
+    {
+      "name": "arg0",
+      "internalType": "address",
+      "type": "address"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "ret0",
+      "internalType": "uint256",
+      "type": "uint256"
+    }
+  ],
+  "stateMutability": "payable",
+  "constant": false
+},
+{
+  "type": "function",
+  "name": "permit",
+  "inputs": [
+    {
+      "name": "arg0",
+      "internalType": "address",
+      "type": "address"
+    },
+    {
+      "name": "arg1",
+      "internalType": "address",
+      "type": "address"
+    },
+    {
+      "name": "arg2",
+      "internalType": "uint256",
+      "type": "uint256"
+    },
+    {
+      "name": "arg3",
+      "internalType": "uint256",
+      "type": "uint256"
+    },
+    {
+      "name": "arg4",
+      "internalType": "uint8",
+      "type": "uint8"
+    },
+    {
+      "name": "arg5",
+      "internalType": "bytes32",
+      "type": "bytes32"
+    },
+    {
+      "name": "arg6",
+      "internalType": "bytes32",
+      "type": "bytes32"
+    }
+  ],
+  "outputs": [],
+  "stateMutability": "payable",
+  "constant": false
+},
+{
+  "type": "event",
+  "name": "Approval",
+  "inputs": [
+    {
+      "name": "arg0",
+      "internalType": "address",
+      "type": "address"
+    },
+    {
+      "name": "arg1",
+      "internalType": "address",
+      "type": "address"
+    },
+    {
+      "name": "arg2",
+      "internalType": "uint256",
+      "type": "uint256"
+    }
+  ]
+},
+{
+  "type": "function",
+  "name": "approve",
+  "inputs": [
+    {
+      "name": "arg0",
+      "internalType": "address",
+      "type": "address"
+    },
+    {
+      "name": "arg1",
+      "internalType": "uint256",
+      "type": "uint256"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "ret0",
+      "internalType": "bool",
+      "type": "bool"
+    }
+  ],
+  "stateMutability": "payable",
+  "constant": false
+},
+{
+  "type": "function",
+  "name": "symbol",
+  "inputs": [],
+  "outputs": [
+    {
+      "name": "ret0",
+      "internalType": "bytes memory",
+      "type": "bytes memory"
+    }
+  ],
+  "stateMutability": "payable",
+  "constant": false
+},
+{
+  "type": "function",
+  "name": "token0",
+  "inputs": [],
+  "outputs": [
+    {
+      "name": "ret0",
+      "internalType": "address",
+      "type": "address"
+    }
+  ],
+  "stateMutability": "payable",
+  "constant": false
+},
+{
+  "type": "function",
+  "name": "totalSupply",
+  "inputs": [],
+  "outputs": [
+    {
+      "name": "ret0",
+      "internalType": "uint256",
+      "type": "uint256"
+    }
+  ],
+  "stateMutability": "payable",
+  "constant": false
+},
+{
+  "type": "function",
+  "name": "token1",
+  "inputs": [],
+  "outputs": [
+    {
+      "name": "ret0",
+      "internalType": "address",
+      "type": "address"
+    }
+  ],
+  "stateMutability": "payable",
+  "constant": false
+},
+{
+  "type": "function",
+  "name": "balanceOf",
+  "inputs": [
+    {
+      "name": "arg0",
+      "internalType": "address",
+      "type": "address"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "ret0",
+      "internalType": "uint256",
+      "type": "uint256"
+    }
+  ],
+  "stateMutability": "payable",
+  "constant": false
+},
+{
+  "type": "function",
+  "name": "skim",
+  "inputs": [
+    {
+      "name": "arg0",
+      "internalType": "address",
+      "type": "address"
+    }
+  ],
+  "outputs": [],
+  "stateMutability": "payable",
+  "constant": false
+},
+{
+  "type": "function",
+  "name": "kLast",
+  "inputs": [],
+  "outputs": [
+    {
+      "name": "ret0",
+      "internalType": "uint256",
+      "type": "uint256"
+    }
+  ],
+  "stateMutability": "payable",
+  "constant": false
+},
+{
+  "type": "function",
+  "name": "MINIMUM_LIQUIDITY",
+  "inputs": [],
+  "outputs": [
+    {
+      "name": "ret0",
+      "internalType": "uint256",
+      "type": "uint256"
+    }
+  ],
+  "stateMutability": "payable",
+  "constant": false
+},
+{
+  "type": "function",
+  "name": "burn",
+  "inputs": [
+    {
+      "name": "arg0",
+      "internalType": "address",
+      "type": "address"
+    }
+  ],
+  "outputs": [],
+  "stateMutability": "payable",
+  "constant": false
+},
+{
+  "type": "function",
+  "name": "allowance",
+  "inputs": [
+    {
+      "name": "arg0",
+      "internalType": "address",
+      "type": "address"
+    },
+    {
+      "name": "arg1",
+      "internalType": "address",
+      "type": "address"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "ret0",
+      "internalType": "uint256",
+      "type": "uint256"
+    }
+  ],
+  "stateMutability": "payable",
+  "constant": false
+},
+{
+  "type": "function",
+  "name": "transferFrom",
+  "inputs": [
+    {
+      "name": "arg0",
+      "internalType": "address",
+      "type": "address"
+    },
+    {
+      "name": "arg1",
+      "internalType": "address",
+      "type": "address"
+    },
+    {
+      "name": "arg2",
+      "internalType": "uint256",
+      "type": "uint256"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "ret0",
+      "internalType": "bool",
+      "type": "bool"
+    }
+  ],
+  "stateMutability": "payable",
+  "constant": false
+},
+{
+  "type": "event",
+  "name": "Transfer",
+  "inputs": [
+    {
+      "name": "arg0",
+      "internalType": "address",
+      "type": "address"
+    },
+    {
+      "name": "arg1",
+      "internalType": "address",
+      "type": "address"
+    },
+    {
+      "name": "arg2",
+      "internalType": "uint256",
+      "type": "uint256"
+    }
+  ]
+},
+{
+  "type": "function",
+  "name": "name",
+  "inputs": [],
+  "outputs": [
+    {
+      "name": "ret0",
+      "internalType": "bytes memory",
+      "type": "bytes memory"
+    }
+  ],
+  "stateMutability": "payable",
+  "constant": false
+},
+{
+  "type": "function",
+  "name": "transfer",
+  "inputs": [
+    {
+      "name": "arg0",
+      "internalType": "address",
+      "type": "address"
+    },
+    {
+      "name": "arg1",
+      "internalType": "uint256",
+      "type": "uint256"
+    }
+  ],
+  "outputs": [
+    {
+      "name": "ret0",
+      "internalType": "bool",
+      "type": "bool"
+    }
+  ],
+  "stateMutability": "payable",
+  "constant": false
+},
+{
+  "type": "function",
+  "name": "sync",
+  "inputs": [],
+  "outputs": [],
+  "stateMutability": "payable",
+  "constant": false
+},
+{
+  "type": "event",
+  "name": "Sync",
+  "inputs": [
+    {
+      "name": "arg0",
+      "internalType": "uint112",
+      "type": "uint112"
+    },
+    {
+      "name": "arg1",
+      "internalType": "uint112",
+      "type": "uint112"
+    }
+  ]
+}]

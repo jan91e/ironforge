@@ -1,0 +1,2321 @@
+// Decompiled by library.dedaub.com
+// 2023.07.25 16:29 UTC
+
+object "contract" {
+    code { }
+    object "runtime" {
+        code {
+            function func_0x19cd(_0, _1, _2, _3) {
+                    let _4 := 0x0                    
+                    let _5 := 0x0                    
+                    let _6 := 0x0                    
+                    let _7 := 0x0                    
+                    let _8 := 0x0                    
+                    let _9 := mload(0x40)                    
+                    mstore(0x40, add(0x40, _9))
+                    mstore(_9, 0x19)
+                    mstore(add(0x20, _9), 0x7472616e7366657228616464726573732c75696e743235362900000000000000)
+                    let _10 := mload(0x40)                    
+                    let _11 := sub(shl(0xa0, 0x1), 0x1)                    
+                    mstore(add(_10, 0x24), and(_11, _1))
+                    mstore(add(_10, 0x44), _0)
+                    let _12 := mload(0x40)                    
+                    mstore(_12, add(0x44, sub(_10, _12)))
+                    mstore(0x40, add(_10, 0x64))
+                    let _13 := add(_12, 0x20)                    
+                    let _14 := _13                    
+                    let _15 := _13                    
+                    let _16 := mload(_13)                    
+                    mstore(_13, or(shl(0xe0, 0xa9059cbb), and(sub(shl(0xe0, 0x1), 0x1), _16)))
+                    let _17 := mload(0x40)                    
+                    let _18 := _17                    
+                    let _19 := _17                    
+                    let _20 := mload(_12)                    
+                    let _21 := _20                    
+                    let _22 := _20                    
+                    let _23 := _20                    
+                    for {
+                        let _24 := 0x20                        
+                        let _25 := 0x1f                        
+                        let _26 := not(_25)                        
+                        _8 := add(_22, _26)                        
+                        let _27 := 0x20                        
+                        _7 := add(_27, _14)                        
+                        _6 := add(_27, _18)                        
+                    }
+                    not(lt(_21, _24))                    
+                    { }
+                    {
+                        _21 := _8                        
+                        _24 := 0x20                        
+                        let _28 := not(lt(_21, _24))                        
+                        _22 := _8                        
+                        _18 := _6                        
+                        _14 := _7                        
+                        let _29 := mload(_14)                        
+                        mstore(_18, _29)
+                        _25 := 0x1f                        
+                        _26 := not(_25)                        
+                        _8 := add(_22, _26)                        
+                        _21 := _8                        
+                        _22 := _8                        
+                        _23 := _8                        
+                        _27 := 0x20                        
+                        _6 := add(_27, _18)                        
+                        _18 := _6                        
+                        _19 := _6                        
+                        _7 := add(_27, _14)                        
+                        _14 := _7                        
+                        _15 := _7                        
+                    }
+                    _23 := _8                    
+                    _15 := _7                    
+                    _19 := _6                    
+                    let _30 := sub(exp(0x100, sub(0x20, _23)), 0x1)                    
+                    let _31 := mload(_15)                    
+                    let _32 := mload(_19)                    
+                    mstore(_19, or(and(_31, not(_30)), and(_32, _30)))
+                    let _33 := mload(0x40)                    
+                    let _34 := call(gas(), and(_2, _11), 0x0, _33, sub(add(_20, _17), _33), _33, 0x0)                    
+                    let _35 := _34                    
+                    let _36 := returndatasize()                    
+                    let _37 := eq(_36, 0x0)                    
+                    switch _36
+                        case 0x0{
+                            _5 := 0x60                            
+                            _4 := 0x60                            
+                        }
+                        default {
+                            let _38 := mload(0x40)                            
+                            _5 := _38                            
+                            _4 := _38                            
+                            mstore(0x40, add(_38, and(add(returndatasize(), 0x3f), not(0x1f))))
+                            mstore(_38, returndatasize())
+                            returndatacopy(add(_38, 0x20), 0x0, returndatasize())
+                        }
+                    let _39 := iszero(_34)                    
+                    if not(_39){
+                        let _40 := mload(_5)                        
+                        let _41 := iszero(_40)                        
+                        _35 := _41                        
+                        if not(_41){
+                            let _42 := mload(_4)                            
+                            let _43 := iszero(lt(_42, 0x20))                            
+                            require(not(_43))
+                            let _44 := mload(add(0x20, _4))                            
+                            _35 := _44                            
+                        }
+                    }
+                    if _35{
+                        leave
+                    }
+                    if not(_35){
+                        let _45 := mload(0x40)                        
+                        mstore(_45, shl(0xe5, 0x461bcd))
+                        mstore(add(_45, 0x4), 0x20)
+                        mstore(add(_45, 0x24), 0x1a)
+                        mstore(add(_45, 0x44), 0x556e697377617056323a205452414e534645525f4641494c4544000000000000)
+                        let _46 := mload(0x40)                        
+                        revert(_46, add(0x64, sub(_45, _46)))
+                    }
+                }
+            function func_name() {
+                    let _47 := mload(0x40)                    
+                    mstore(0x40, add(0x40, _47))
+                    mstore(_47, 0xa)
+                    mstore(add(0x20, _47), shl(0xb1, 0x2ab734b9bbb0b8102b19))
+                    let _48 := mload(0x40)                    
+                    mstore(_48, 0x20)
+                    let _49 := mload(_47)                    
+                    mstore(add(_48, 0x20), _49)
+                    let _50 := mload(_47)                    
+                    let _51 := add(_48, 0x40)                    
+                    let _52 := 0x0                    
+                    let _53 := 0x0                    
+                    for {
+                        let _54 := lt(_52, _50)                        
+                        let _55 := 0x20                        
+                        let _56 := add(_55, _53)                        
+                    }
+                    not(iszero(_54))                    
+                    { }
+                    {
+                        _52 := _56                        
+                        _54 := lt(_52, _50)                        
+                        let _57 := not(iszero(_54))                        
+                        _53 := _56                        
+                        let _58 := mload(add(_53, add(_47, 0x20)))                        
+                        mstore(add(_53, _51), _58)
+                        _55 := 0x20                        
+                        _56 := add(_55, _53)                        
+                        _52 := _56                        
+                        _53 := _56                        
+                    }
+                    let _59 := add(_50, _51)                    
+                    let _60 := _59                    
+                    let _61 := and(0x1f, _50)                    
+                    let _62 := iszero(_61)                    
+                    if not(_62){
+                        let _63 := sub(_59, _61)                        
+                        let _64 := mload(_63)                        
+                        mstore(_63, and(not(sub(exp(0x100, sub(0x20, _61)), 0x1)), _64))
+                        _60 := add(0x20, _63)                        
+                    }
+                    let _65 := mload(0x40)                    
+                    return(_65, sub(_60, _65))
+                }
+            function func_symbol() {
+                    let _66 := mload(0x40)                    
+                    mstore(0x40, add(0x40, _66))
+                    mstore(_66, 0x6)
+                    mstore(add(0x20, _66), shl(0xd1, 0x2aa72496ab19))
+                    let _67 := mload(0x40)                    
+                    mstore(_67, 0x20)
+                    let _68 := mload(_66)                    
+                    mstore(add(_67, 0x20), _68)
+                    let _69 := mload(_66)                    
+                    let _70 := add(_67, 0x40)                    
+                    let _71 := 0x0                    
+                    let _72 := 0x0                    
+                    for {
+                        let _73 := lt(_71, _69)                        
+                        let _74 := 0x20                        
+                        let _75 := add(_74, _72)                        
+                    }
+                    not(iszero(_73))                    
+                    { }
+                    {
+                        _71 := _75                        
+                        _73 := lt(_71, _69)                        
+                        let _76 := not(iszero(_73))                        
+                        _72 := _75                        
+                        let _77 := mload(add(_72, add(_66, 0x20)))                        
+                        mstore(add(_72, _70), _77)
+                        _74 := 0x20                        
+                        _75 := add(_74, _72)                        
+                        _71 := _75                        
+                        _72 := _75                        
+                    }
+                    let _78 := add(_69, _70)                    
+                    let _79 := _78                    
+                    let _80 := and(0x1f, _69)                    
+                    let _81 := iszero(_80)                    
+                    if not(_81){
+                        let _82 := sub(_78, _80)                        
+                        let _83 := mload(_82)                        
+                        mstore(_82, and(not(sub(exp(0x100, sub(0x20, _80)), 0x1)), _83))
+                        _79 := add(0x20, _82)                        
+                    }
+                    let _84 := mload(0x40)                    
+                    return(_84, sub(_79, _84))
+                }
+                mstore(0x40, 0x80)
+                let _85 := iszero(callvalue())                
+                require(not(_85))
+                let _86 := lt(calldatasize(), 0x4)                
+                if _86{
+                    func_ROOT4146650865()
+                }
+                if not(_86){
+                    let _87 := shr(0xe0, calldataload(0x0))                    
+                    let _88 := gt(0x6a627842, _87)                    
+                    if _88{
+                        let _89 := gt(0x23b872dd, _87)                        
+                        if _89{
+                            let _90 := eq(0x22c0d9f, _87)                            
+                            switch _87
+                                case 0x22c0d9f{
+                                    func_swap(_87)
+                                }
+                                case 0x6fdde03{
+                                    func_name()
+                                }
+                                case 0x902f1ac{
+                                    func_getReserves()
+                                }
+                                case 0x95ea7b3{
+                                    func_approve()
+                                }
+                                case 0xdfe1681{
+                                    func_token0()
+                                }
+                                case 0x18160ddd{
+                                    func_totalSupply()
+                                }
+                                default {
+                                    revert(0x0, 0x0)
+                                }
+                        }
+                        if not(_89){
+                            let _91 := gt(0x3644e515, _87)                            
+                            if _91{
+                                let _92 := eq(0x23b872dd, _87)                                
+                                switch _87
+                                    case 0x23b872dd{
+                                        func_transferFrom()
+                                    }
+                                    case 0x30adf81f{
+                                        func_PERMIT_TYPEHASH()
+                                    }
+                                    case 0x313ce567{
+                                        func_decimals()
+                                    }
+                                    default {
+                                        revert(0x0, 0x0)
+                                    }
+                            }
+                            if not(_91){
+                                let _93 := eq(0x3644e515, _87)                                
+                                switch _87
+                                    case 0x3644e515{
+                                        func_DOMAIN_SEPARATOR()
+                                    }
+                                    case 0x485cc955{
+                                        func_initialize()
+                                    }
+                                    case 0x5909c0d5{
+                                        func_price0CumulativeLast()
+                                    }
+                                    case 0x5a3d5493{
+                                        func_price1CumulativeLast()
+                                    }
+                                    default {
+                                        revert(0x0, 0x0)
+                                    }
+                            }
+                        }
+                    }
+                    if not(_88){
+                        let _94 := gt(0xba9a7a56, _87)                        
+                        if _94{
+                            let _95 := gt(0x7ecebe00, _87)                            
+                            if _95{
+                                let _96 := eq(0x6a627842, _87)                                
+                                switch _87
+                                    case 0x6a627842{
+                                        func_mint()
+                                    }
+                                    case 0x70a08231{
+                                        func_balanceOf()
+                                    }
+                                    case 0x7464fc3d{
+                                        func_kLast()
+                                    }
+                                    default {
+                                        revert(0x0, 0x0)
+                                    }
+                            }
+                            if not(_95){
+                                let _97 := eq(0x7ecebe00, _87)                                
+                                switch _87
+                                    case 0x7ecebe00{
+                                        func_nonces()
+                                    }
+                                    case 0x89afcb44{
+                                        func_burn()
+                                    }
+                                    case 0x95d89b41{
+                                        func_symbol()
+                                    }
+                                    case 0xa9059cbb{
+                                        func_transfer()
+                                    }
+                                    default {
+                                        revert(0x0, 0x0)
+                                    }
+                            }
+                        }
+                        if not(_94){
+                            let _98 := gt(0xd21220a7, _87)                            
+                            if _98{
+                                let _99 := eq(0xba9a7a56, _87)                                
+                                switch _87
+                                    case 0xba9a7a56{
+                                        func_MINIMUM_LIQUIDITY()
+                                    }
+                                    case 0xbc25cf77{
+                                        func_skim()
+                                    }
+                                    case 0xc45a0155{
+                                        func_factory()
+                                    }
+                                    default {
+                                        revert(0x0, 0x0)
+                                    }
+                            }
+                            if not(_98){
+                                let _100 := eq(0xd21220a7, _87)                                
+                                switch _87
+                                    case 0xd21220a7{
+                                        func_token1()
+                                    }
+                                    case 0xd505accf{
+                                        func_permit()
+                                    }
+                                    case 0xdd62ed3e{
+                                        func_allowance()
+                                    }
+                                    case 0xfff6cae9{
+                                        func_sync()
+                                    }
+                                    default {
+                                        revert(0x0, 0x0)
+                                    }
+                            }
+                        }
+                    }
+                }
+            function func_sync() {
+                    let _101 := sload(0xc)                    
+                    let _102 := eq(0x1, _101)                    
+                    switch _101
+                        case 0x1{
+                            sstore(0xc, 0x0)
+                            let _103 := sload(0x6)                            
+                            let _104 := mload(0x40)                            
+                            mstore(_104, shl(0xe0, 0x70a08231))
+                            mstore(add(_104, 0x4), address())
+                            let _105 := mload(0x40)                            
+                            let _106 := and(sub(shl(0xa0, 0x1), 0x1), _103)                            
+                            let _107 := add(_104, 0x24)                            
+                            let _108 := iszero(iszero(extcodesize(_106)))                            
+                            require(not(_108))
+                            let _109 := staticcall(gas(), _106, _105, add(sub(_104, _105), 0x24), _105, 0x20)                            
+                            let _110 := iszero(iszero(_109))                            
+                            if _110{
+                                let _111 := mload(0x40)                                
+                                let _112 := iszero(lt(returndatasize(), 0x20))                                
+                                require(not(_112))
+                                let _113 := mload(_111)                                
+                                let _114 := sload(0x7)                                
+                                let _115 := mload(0x40)                                
+                                mstore(_115, shl(0xe0, 0x70a08231))
+                                mstore(add(_115, 0x4), address())
+                                let _116 := mload(0x40)                                
+                                let _117 := and(_114, sub(shl(0xa0, 0x1), 0x1))                                
+                                let _118 := add(_115, 0x24)                                
+                                let _119 := iszero(iszero(extcodesize(_117)))                                
+                                require(not(_119))
+                                let _120 := staticcall(gas(), _117, _116, add(sub(_115, _116), 0x24), _116, 0x20)                                
+                                let _121 := iszero(iszero(_120))                                
+                                if _121{
+                                    let _122 := mload(0x40)                                    
+                                    let _123 := iszero(lt(returndatasize(), 0x20))                                    
+                                    require(not(_123))
+                                    let _124 := mload(_122)                                    
+                                    let _125 := sload(0x8)                                    
+                                    let _126 := sub(shl(0x70, 0x1), 0x1)                                    
+                                    let _127 := and(_125, _126)                                    
+                                    let _128 := and(div(_125, shl(0x70, 0x1)), _126)                                    
+                                    let _129 := gt(_113, sub(shl(0x70, 0x1), 0x1))                                    
+                                    let _130 := iszero(_129)                                    
+                                    if not(_129){
+                                        _130 := iszero(gt(_124, sub(shl(0x70, 0x1), 0x1)))                                        
+                                    }
+                                    if _130{
+                                        let _131 := sload(0x8)                                        
+                                        let _132 := and(0xffffffff, timestamp())                                        
+                                        let _133 := sub(_132, and(0xffffffff, div(_131, shl(0xe0, 0x1))))                                        
+                                        let _134 := iszero(and(_133, 0xffffffff))                                        
+                                        let _135 := iszero(_134)                                        
+                                        let _136 := _135                                        
+                                        let _137 := _135                                        
+                                        if not(_134){
+                                            let _138 := iszero(iszero(and(_127, sub(shl(0x70, 0x1), 0x1))))                                            
+                                            _136 := _138                                            
+                                            _137 := _138                                            
+                                        }
+                                        let _139 := iszero(_136)                                        
+                                        if not(_139){
+                                            _137 := iszero(iszero(and(_128, sub(shl(0x70, 0x1), 0x1))))                                            
+                                        }
+                                        let _140 := iszero(_137)                                        
+                                        if not(_140){
+                                            let _141 := and(0x274e, 0xffffffff)                                            
+                                            let _142 := and(_127, sub(shl(0x70, 0x1), 0x1))                                            
+                                            if _142{
+                                                let _143 := sload(0x9)                                                
+                                                sstore(0x9, add(mul(and(sub(shl(0xe0, 0x1), 0x1), div(and(and(sub(shl(0xe0, 0x1), 0x1), mul(shl(0x70, 0x1), and(sub(shl(0x70, 0x1), 0x1), _128))), sub(shl(0xe0, 0x1), 0x1)), _142)), and(0xffffffff, _133)), _143))
+                                                let _144 := and(0x274e, 0xffffffff)                                                
+                                                let _145 := and(_128, sub(shl(0x70, 0x1), 0x1))                                                
+                                                if _145{
+                                                    let _146 := sload(0xa)                                                    
+                                                    sstore(0xa, add(mul(and(sub(shl(0xe0, 0x1), 0x1), div(and(and(sub(shl(0xe0, 0x1), 0x1), mul(shl(0x70, 0x1), and(sub(shl(0x70, 0x1), 0x1), _127))), sub(shl(0xe0, 0x1), 0x1)), _145)), and(_133, 0xffffffff)), _146))
+                                                }
+                                                if not(_145){
+                                                    invalid()
+                                                }
+                                            }
+                                            if not(_142){
+                                                invalid()
+                                            }
+                                        }
+                                        let _147 := sload(0x8)                                        
+                                        let _148 := sub(shl(0x70, 0x1), 0x1)                                        
+                                        let _149 := shl(0x70, 0x1)                                        
+                                        let _150 := or(mul(and(_132, 0xffffffff), shl(0xe0, 0x1)), and(sub(shl(0xe0, 0x1), 0x1), or(mul(_149, and(_148, _124)), and(not(shl(0x70, 0xffffffffffffffffffffffffffff)), or(and(_148, _113), and(not(0xffffffffffffffffffffffffffff), _147))))))                                        
+                                        sstore(0x8, _150)
+                                        let _151 := mload(0x40)                                        
+                                        mstore(_151, and(_148, _150))
+                                        mstore(add(_151, 0x20), and(_148, div(_150, _149)))
+                                        let _152 := mload(0x40)                                        
+                                        log1(_152, add(0x40, sub(_151, _152)), 0x1c411e9a96e071241c2f21f7726b17ae89e3cab4c78be50e062b03a9fffbbad1)
+                                        sstore(0xc, 0x1)
+                                        stop()
+                                    }
+                                    if not(_130){
+                                        let _153 := mload(0x40)                                        
+                                        mstore(_153, shl(0xe5, 0x461bcd))
+                                        mstore(add(_153, 0x4), 0x20)
+                                        mstore(add(_153, 0x24), 0x13)
+                                        mstore(add(_153, 0x44), shl(0x68, 0x556e697377617056323a204f564552464c4f57))
+                                        let _154 := mload(0x40)                                        
+                                        revert(_154, add(0x64, sub(_153, _154)))
+                                    }
+                                }
+                                if not(_121){
+                                    returndatacopy(0x0, 0x0, returndatasize())
+                                    revert(0x0, returndatasize())
+                                }
+                            }
+                            if not(_110){
+                                returndatacopy(0x0, 0x0, returndatasize())
+                                revert(0x0, returndatasize())
+                            }
+                        }
+                        default {
+                            let _155 := mload(0x40)                            
+                            mstore(_155, shl(0xe5, 0x461bcd))
+                            mstore(add(_155, 0x4), 0x20)
+                            mstore(add(_155, 0x24), 0x11)
+                            mstore(add(_155, 0x44), shl(0x7a, 0x155b9a5cddd85c158c8e881313d0d2d151))
+                            let _156 := mload(0x40)                            
+                            revert(_156, add(0x64, sub(_155, _156)))
+                        }
+                }
+            function func_0x1b67(_157, _158, _159)  -> ret_val_0 {
+                    let _160 := 0x0                    
+                    let _161 := iszero(_157)                    
+                    let _162 := _161                    
+                    if not(_161){
+                        let _163 := mul(_158, _157)                        
+                        _160 := _163                        
+                        if _157{
+                            _162 := eq(div(_163, _157), _158)                            
+                        }
+                        if not(_157){
+                            invalid()
+                        }
+                    }
+                    if _162{
+                        ret_val_0 := _160                        
+                        leave
+                    }
+                    if not(_162){
+                        let _164 := mload(0x40)                        
+                        mstore(_164, shl(0xe5, 0x461bcd))
+                        mstore(add(_164, 0x4), 0x20)
+                        mstore(add(_164, 0x24), 0x14)
+                        mstore(add(_164, 0x44), shl(0x60, 0x64732d6d6174682d6d756c2d6f766572666c6f77))
+                        let _165 := mload(0x40)                        
+                        revert(_165, add(0x64, sub(_164, _165)))
+                    }
+                }
+            function func_0x1bca(_166, _167, _168)  -> ret_val_0 {
+                    let _169 := sub(_167, _166)                    
+                    let _170 := iszero(gt(_169, _167))                    
+                    if _170{
+                        ret_val_0 := _169                        
+                        leave
+                    }
+                    if not(_170){
+                        let _171 := mload(0x40)                        
+                        mstore(_171, shl(0xe5, 0x461bcd))
+                        mstore(add(_171, 0x4), 0x20)
+                        mstore(add(_171, 0x24), 0x15)
+                        mstore(add(_171, 0x44), shl(0x58, 0x64732d6d6174682d7375622d756e646572666c6f77))
+                        let _172 := mload(0x40)                        
+                        revert(_172, add(0x64, sub(_171, _172)))
+                    }
+                }
+            function func_0x222c(_173, _174, _175)  -> ret_val_0 {
+                    let _176 := sload(0x5)                    
+                    let _177 := and(sub(shl(0xa0, 0x1), 0x1), and(sub(shl(0xa0, 0x1), 0x1), div(_176, exp(0x100, 0x0))))                    
+                    let _178 := mload(0x40)                    
+                    mstore(_178, shl(0xe0, and(0xffffffff, 0x17e7e58)))
+                    let _179 := mload(0x40)                    
+                    let _180 := iszero(iszero(extcodesize(_177)))                    
+                    require(not(_180))
+                    let _181 := staticcall(gas(), _177, _179, sub(add(0x4, _178), _179), _179, 0x20)                    
+                    let _182 := iszero(iszero(_181))                    
+                    if _182{
+                        let _183 := mload(0x40)                        
+                        let _184 := iszero(lt(returndatasize(), 0x20))                        
+                        require(not(_184))
+                        let _185 := mload(_183)                        
+                        let _186 := sload(0xb)                        
+                        let _187 := iszero(and(_185, sub(shl(0xa0, 0x1), 0x1)))                        
+                        if _187{
+                            let _188 := iszero(_186)                            
+                            if _188{
+                                ret_val_0 := iszero(_187)                                
+                                leave
+                            }
+                            if not(_188){
+                                sstore(0xb, 0x0)
+                                leave
+                            }
+                        }
+                        if not(_187){
+                            let _189 := iszero(_186)                            
+                            if not(_189){
+                                let _190 := sub(shl(0x70, 0x1), 0x1)                                
+                                let _191 := and(0x1b67, 0xffffffff)                                
+                                let _192 := func_0x238a(func_0x1b67(and(_173, _190), and(_190, _174), 0x2e8c), 0x22ea)                                
+                                let _193 := func_0x238a(_186, 0x22f7)                                
+                                let _194 := iszero(gt(_192, _193))                                
+                                if not(_194){
+                                    let _195 := and(0x1bca, 0xffffffff)                                    
+                                    let _196 := sload(0x0)                                    
+                                    let _197 := and(0x1b67, 0xffffffff)                                    
+                                    let _198 := and(0x1b67, 0xffffffff)                                    
+                                    let _199 := func_0x1b67(0x5, _192, 0x233e)                                    
+                                    let _200 := and(0x26ed, 0xffffffff)                                    
+                                    let _201 := add(_199, _193)                                    
+                                    let _202 := iszero(lt(_201, _199))                                    
+                                    if _202{
+                                        if _201{
+                                            let _203 := div(func_0x1b67(func_0x1bca(_193, _192, 0x2316), _196, 0x2325), _201)                                            
+                                            let _204 := iszero(_203)                                            
+                                            if not(_204){
+                                                func_0x23dc(_203, _185, 0x236a)
+                                            }
+                                        }
+                                        if not(_201){
+                                            invalid()
+                                        }
+                                    }
+                                    if not(_202){
+                                        let _205 := mload(0x40)                                        
+                                        mstore(_205, shl(0xe5, 0x461bcd))
+                                        mstore(add(_205, 0x4), 0x20)
+                                        mstore(add(_205, 0x24), 0x14)
+                                        mstore(add(_205, 0x44), shl(0x60, 0x64732d6d6174682d6164642d6f766572666c6f77))
+                                        let _206 := mload(0x40)                                        
+                                        revert(_206, add(0x64, sub(_205, _206)))
+                                    }
+                                }
+                            }
+                            leave
+                        }
+                    }
+                    if not(_182){
+                        returndatacopy(0x0, 0x0, returndatasize())
+                        revert(0x0, returndatasize())
+                    }
+                }
+            function func_0x248a(_207, _208, _209, _210, _211) {
+                    let _212 := gt(_210, sub(shl(0x70, 0x1), 0x1))                    
+                    let _213 := iszero(_212)                    
+                    if not(_212){
+                        _213 := iszero(gt(_209, sub(shl(0x70, 0x1), 0x1)))                        
+                    }
+                    if _213{
+                        let _214 := sload(0x8)                        
+                        let _215 := and(0xffffffff, timestamp())                        
+                        let _216 := sub(_215, and(0xffffffff, div(_214, shl(0xe0, 0x1))))                        
+                        let _217 := iszero(and(_216, 0xffffffff))                        
+                        let _218 := iszero(_217)                        
+                        let _219 := _218                        
+                        let _220 := _218                        
+                        if not(_217){
+                            let _221 := iszero(iszero(and(_208, sub(shl(0x70, 0x1), 0x1))))                            
+                            _219 := _221                            
+                            _220 := _221                            
+                        }
+                        let _222 := iszero(_219)                        
+                        if not(_222){
+                            _220 := iszero(iszero(and(_207, sub(shl(0x70, 0x1), 0x1))))                            
+                        }
+                        let _223 := iszero(_220)                        
+                        if not(_223){
+                            let _224 := and(0x274e, 0xffffffff)                            
+                            let _225 := and(_208, sub(shl(0x70, 0x1), 0x1))                            
+                            if _225{
+                                let _226 := sload(0x9)                                
+                                sstore(0x9, add(mul(and(sub(shl(0xe0, 0x1), 0x1), div(and(and(sub(shl(0xe0, 0x1), 0x1), mul(shl(0x70, 0x1), and(sub(shl(0x70, 0x1), 0x1), _207))), sub(shl(0xe0, 0x1), 0x1)), _225)), and(0xffffffff, _216)), _226))
+                                let _227 := and(0x274e, 0xffffffff)                                
+                                let _228 := and(_207, sub(shl(0x70, 0x1), 0x1))                                
+                                if _228{
+                                    let _229 := sload(0xa)                                    
+                                    sstore(0xa, add(mul(and(sub(shl(0xe0, 0x1), 0x1), div(and(and(sub(shl(0xe0, 0x1), 0x1), mul(shl(0x70, 0x1), and(sub(shl(0x70, 0x1), 0x1), _208))), sub(shl(0xe0, 0x1), 0x1)), _228)), and(_216, 0xffffffff)), _229))
+                                }
+                                if not(_228){
+                                    invalid()
+                                }
+                            }
+                            if not(_225){
+                                invalid()
+                            }
+                        }
+                        let _230 := sload(0x8)                        
+                        let _231 := sub(shl(0x70, 0x1), 0x1)                        
+                        let _232 := shl(0x70, 0x1)                        
+                        let _233 := or(mul(and(_215, 0xffffffff), shl(0xe0, 0x1)), and(sub(shl(0xe0, 0x1), 0x1), or(mul(_232, and(_231, _209)), and(not(shl(0x70, 0xffffffffffffffffffffffffffff)), or(and(_231, _210), and(not(0xffffffffffffffffffffffffffff), _230))))))                        
+                        sstore(0x8, _233)
+                        let _234 := mload(0x40)                        
+                        mstore(_234, and(_231, _233))
+                        mstore(add(_234, 0x20), and(_231, div(_233, _232)))
+                        let _235 := mload(0x40)                        
+                        log1(_235, add(0x40, sub(_234, _235)), 0x1c411e9a96e071241c2f21f7726b17ae89e3cab4c78be50e062b03a9fffbbad1)
+                        leave
+                    }
+                    if not(_213){
+                        let _236 := mload(0x40)                        
+                        mstore(_236, shl(0xe5, 0x461bcd))
+                        mstore(add(_236, 0x4), 0x20)
+                        mstore(add(_236, 0x24), 0x13)
+                        mstore(add(_236, 0x44), shl(0x68, 0x556e697377617056323a204f564552464c4f57))
+                        let _237 := mload(0x40)                        
+                        revert(_237, add(0x64, sub(_236, _237)))
+                    }
+                }
+            function func_0x238a(_238, _239)  -> ret_val_0 {
+                    let _240 := 0x0                    
+                    let _241 := iszero(gt(_238, 0x3))                    
+                    if _241{
+                        let _242 := iszero(_238)                        
+                        if _242{
+                            ret_val_0 := 0x0                            
+                            leave
+                        }
+                        if not(_242){
+                            leave
+                        }
+                    }
+                    if not(_241){
+                        let _243 := add(div(_238, 0x2), 0x1)                        
+                        let _244 := _243                        
+                        let _245 := _243                        
+                        let _246 := _243                        
+                        let _247 := _243                        
+                        let _248 := _243                        
+                        let _249 := _243                        
+                        for {
+                            let _250 := lt(_245, _246)                            
+                            let _251 := div(_238, _247)                            
+                            let _252 := add(_251, _248)                            
+                            let _253 := 0x2                            
+                            _240 := div(_252, _253)                            
+                        }
+                        not(iszero(_250))                        
+                        { }
+                        {
+                            _245 := _240                            
+                            _246 := _240                            
+                            _250 := lt(_245, _246)                            
+                            let _254 := not(iszero(_250))                            
+                            _244 := _240                            
+                            _253 := 0x2                            
+                            if _244{
+                                _247 := _240                                
+                                _248 := _240                                
+                                _251 := div(_238, _247)                                
+                                _252 := add(_251, _248)                                
+                                if _253{
+                                    _240 := div(_252, _253)                                    
+                                    _244 := _240                                    
+                                    _245 := _240                                    
+                                    _246 := _240                                    
+                                    _247 := _240                                    
+                                    _248 := _240                                    
+                                    _249 := _240                                    
+                                }
+                                if not(_253){
+                                    invalid()
+                                }
+                            }
+                            if not(_244){
+                                invalid()
+                                break
+                            }
+                        }
+                        _249 := _240                        
+                        leave
+                    }
+                }
+            function func_swap(_255) {
+                    let _256 := 0x0                    
+                    let _257 := 0x0                    
+                    let _258 := 0x0                    
+                    let _259 := 0x0                    
+                    let _260 := 0x2976                    
+                    let _261 := 0x2976                    
+                    let _262 := sub(calldatasize(), 0x4)                    
+                    let _263 := iszero(lt(_262, 0x80))                    
+                    require(not(_263))
+                    let _264 := calldataload(0x4)                    
+                    _260 := _264                    
+                    _261 := _264                    
+                    let _265 := _264                    
+                    let _266 := calldataload(add(0x4, 0x20))                    
+                    _260 := _266                    
+                    _261 := _266                    
+                    _265 := _266                    
+                    let _267 := _266                    
+                    let _268 := and(calldataload(add(0x4, 0x40)), sub(shl(0xa0, 0x1), 0x1))                    
+                    _260 := _268                    
+                    _261 := _268                    
+                    _265 := _268                    
+                    _267 := _268                    
+                    let _269 := add(0x4, _262)                    
+                    let _270 := add(0x4, 0x80)                    
+                    let _271 := calldataload(add(0x4, 0x60))                    
+                    let _272 := iszero(gt(_271, 0x100000000))                    
+                    require(not(_272))
+                    let _273 := add(0x4, _271)                    
+                    let _274 := iszero(gt(add(_273, 0x20), _269))                    
+                    require(not(_274))
+                    let _275 := calldataload(_273)                    
+                    let _276 := _275                    
+                    let _277 := _275                    
+                    _260 := _275                    
+                    _261 := _275                    
+                    _265 := _275                    
+                    _267 := _275                    
+                    let _278 := add(0x20, _273)                    
+                    _260 := _278                    
+                    _261 := _278                    
+                    _265 := _278                    
+                    _267 := _278                    
+                    let _279 := iszero(or(gt(_275, 0x100000000), gt(add(_278, mul(_275, 0x1)), _269)))                    
+                    require(not(_279))
+                    let _280 := sload(0xc)                    
+                    let _281 := eq(0x1, _280)                    
+                    switch _280
+                        case 0x1{
+                            sstore(0xc, 0x0)
+                            let _282 := sload(0x5)                            
+                            let _283 := mload(0x40)                            
+                            mstore(_283, shl(0xe2, 0x1928456d))
+                            mstore(add(_283, 0x4), address())
+                            let _284 := mload(0x40)                            
+                            let _285 := and(sub(shl(0xa0, 0x1), 0x1), _282)                            
+                            let _286 := add(_283, 0x24)                            
+                            let _287 := iszero(iszero(extcodesize(_285)))                            
+                            require(not(_287))
+                            let _288 := staticcall(gas(), _285, _284, add(sub(_283, _284), 0x24), _284, 0x20)                            
+                            let _289 := iszero(iszero(_288))                            
+                            if _289{
+                                let _290 := mload(0x40)                                
+                                let _291 := iszero(lt(returndatasize(), 0x20))                                
+                                require(not(_291))
+                                let _292 := mload(_290)                                
+                                let _293 := iszero(and(_292, sub(shl(0xa0, 0x1), 0x1)))                                
+                                let _294 := _293                                
+                                if not(_293){
+                                    _294 := eq(caller(), and(_292, sub(shl(0xa0, 0x1), 0x1)))                                    
+                                }
+                                if _294{
+                                    let _295 := gt(_264, 0x0)                                    
+                                    let _296 := _295                                    
+                                    if not(_295){
+                                        _296 := gt(_266, 0x0)                                        
+                                    }
+                                    if _296{
+                                        let _297 := sload(0x8)                                        
+                                        let _298 := sub(shl(0x70, 0x1), 0x1)                                        
+                                        let _299 := and(_297, _298)                                        
+                                        let _300 := _299                                        
+                                        _276 := _299                                        
+                                        let _301 := _299                                        
+                                        _277 := _299                                        
+                                        _260 := _299                                        
+                                        _261 := _299                                        
+                                        _265 := _299                                        
+                                        _267 := _299                                        
+                                        let _302 := and(_298, div(_297, shl(0x70, 0x1)))                                        
+                                        _300 := _302                                        
+                                        _276 := _302                                        
+                                        _301 := _302                                        
+                                        _277 := _302                                        
+                                        _260 := _302                                        
+                                        _261 := _302                                        
+                                        _265 := _302                                        
+                                        _267 := _302                                        
+                                        let _303 := and(0xffffffff, div(_297, shl(0xe0, 0x1)))                                        
+                                        let _304 := lt(_264, and(sub(shl(0x70, 0x1), 0x1), _299))                                        
+                                        let _305 := _304                                        
+                                        let _306 := iszero(_304)                                        
+                                        if not(_306){
+                                            _305 := lt(_266, and(sub(shl(0x70, 0x1), 0x1), _302))                                            
+                                        }
+                                        if _305{
+                                            let _307 := sload(0x6)                                            
+                                            let _308 := sload(0x7)                                            
+                                            let _309 := sub(shl(0xa0, 0x1), 0x1)                                            
+                                            let _310 := and(_309, _307)                                            
+                                            let _311 := and(_309, _308)                                            
+                                            let _312 := eq(_310, and(_268, _309))                                            
+                                            let _313 := iszero(_312)                                            
+                                            if not(_312){
+                                                _313 := iszero(eq(and(sub(shl(0xa0, 0x1), 0x1), _268), and(sub(shl(0xa0, 0x1), 0x1), _311)))                                                
+                                            }
+                                            if _313{
+                                                let _314 := iszero(_264)                                                
+                                                if not(_314){
+                                                    func_0x19cd(_264, _268, _310, 0x768)
+                                                }
+                                                let _315 := iszero(_266)                                                
+                                                if not(_315){
+                                                    func_0x19cd(_266, _268, _311, 0x779)
+                                                }
+                                                let _316 := iszero(_275)                                                
+                                                if not(_316){
+                                                    let _317 := and(sub(shl(0xa0, 0x1), 0x1), _268)                                                    
+                                                    let _318 := mload(0x40)                                                    
+                                                    mstore(_318, shl(0xe0, and(0xffffffff, 0x10d1e85c)))
+                                                    let _319 := add(0x4, _318)                                                    
+                                                    mstore(_319, and(sub(shl(0xa0, 0x1), 0x1), and(sub(shl(0xa0, 0x1), 0x1), caller())))
+                                                    let _320 := add(0x20, _319)                                                    
+                                                    mstore(_320, _264)
+                                                    let _321 := add(0x20, _320)                                                    
+                                                    mstore(_321, _266)
+                                                    let _322 := add(0x20, _321)                                                    
+                                                    let _323 := add(0x20, _322)                                                    
+                                                    mstore(_322, sub(_323, _319))
+                                                    mstore(_323, _275)
+                                                    let _324 := add(0x20, _323)                                                    
+                                                    calldatacopy(_324, _278, _275)
+                                                    mstore(add(_324, _275), 0x0)
+                                                    let _325 := mload(0x40)                                                    
+                                                    let _326 := iszero(iszero(extcodesize(_317)))                                                    
+                                                    require(not(_326))
+                                                    let _327 := call(gas(), _317, 0x0, _325, sub(add(_324, and(add(_275, 0x1f), not(0x1f))), _325), _325, 0x0)                                                    
+                                                    let _328 := iszero(iszero(_327))                                                    
+                                                    if not(_328){
+                                                        returndatacopy(0x0, 0x0, returndatasize())
+                                                        revert(0x0, returndatasize())
+                                                    }
+                                                }
+                                                let _329 := mload(0x40)                                                
+                                                mstore(_329, shl(0xe0, 0x70a08231))
+                                                mstore(add(_329, 0x4), address())
+                                                let _330 := mload(0x40)                                                
+                                                let _331 := and(_310, sub(shl(0xa0, 0x1), 0x1))                                                
+                                                let _332 := add(_329, 0x24)                                                
+                                                let _333 := iszero(iszero(extcodesize(_331)))                                                
+                                                require(not(_333))
+                                                let _334 := staticcall(gas(), _331, _330, add(sub(_329, _330), 0x24), _330, 0x20)                                                
+                                                let _335 := iszero(iszero(_334))                                                
+                                                if _335{
+                                                    let _336 := mload(0x40)                                                    
+                                                    let _337 := iszero(lt(returndatasize(), 0x20))                                                    
+                                                    require(not(_337))
+                                                    let _338 := mload(_336)                                                    
+                                                    let _339 := _338                                                    
+                                                    _300 := _338                                                    
+                                                    _261 := _338                                                    
+                                                    let _340 := mload(0x40)                                                    
+                                                    mstore(_340, shl(0xe0, 0x70a08231))
+                                                    mstore(add(_340, 0x4), address())
+                                                    let _341 := mload(0x40)                                                    
+                                                    let _342 := and(_311, sub(shl(0xa0, 0x1), 0x1))                                                    
+                                                    let _343 := add(_340, 0x24)                                                    
+                                                    let _344 := iszero(iszero(extcodesize(_342)))                                                    
+                                                    require(not(_344))
+                                                    let _345 := staticcall(gas(), _342, _341, add(sub(_340, _341), 0x24), _341, 0x20)                                                    
+                                                    let _346 := iszero(iszero(_345))                                                    
+                                                    if _346{
+                                                        let _347 := mload(0x40)                                                        
+                                                        let _348 := iszero(lt(returndatasize(), 0x20))                                                        
+                                                        require(not(_348))
+                                                        let _349 := mload(_347)                                                        
+                                                        _265 := _349                                                        
+                                                        let _350 := _349                                                        
+                                                        let _351 := gt(_338, sub(and(_299, sub(shl(0x70, 0x1), 0x1)), _264))                                                        
+                                                        if _351{
+                                                            let _352 := sub(_338, sub(and(sub(shl(0x70, 0x1), 0x1), _299), _264))                                                            
+                                                            _259 := _352                                                            
+                                                            _258 := _352                                                            
+                                                            _339 := _352                                                            
+                                                            _300 := _352                                                            
+                                                            _276 := _352                                                            
+                                                            let _353 := _352                                                            
+                                                            let _354 := _352                                                            
+                                                            _301 := _352                                                            
+                                                            _277 := _352                                                            
+                                                            _260 := _352                                                            
+                                                            _261 := _352                                                            
+                                                            _265 := _352                                                            
+                                                            _267 := _352                                                            
+                                                            _350 := _352                                                            
+                                                        }
+                                                        if not(_351){
+                                                            _259 := 0x0                                                            
+                                                            _258 := 0x0                                                            
+                                                            _339 := 0x0                                                            
+                                                            _300 := 0x0                                                            
+                                                            _276 := 0x0                                                            
+                                                            let _353 := 0x0                                                            
+                                                            let _354 := 0x0                                                            
+                                                            _301 := 0x0                                                            
+                                                            _277 := 0x0                                                            
+                                                            _260 := 0x0                                                            
+                                                            _261 := 0x0                                                            
+                                                            _265 := 0x0                                                            
+                                                            _267 := 0x0                                                            
+                                                            _350 := 0x0                                                            
+                                                        }
+                                                        let _355 := gt(_349, sub(and(sub(shl(0x70, 0x1), 0x1), _302), _266))                                                        
+                                                        if _355{
+                                                            let _356 := sub(_349, sub(and(sub(shl(0x70, 0x1), 0x1), _302), _266))                                                            
+                                                            _257 := _356                                                            
+                                                            _339 := _356                                                            
+                                                            let _357 := _356                                                            
+                                                            _300 := _356                                                            
+                                                            _276 := _356                                                            
+                                                            let _353 := _356                                                            
+                                                            let _354 := _356                                                            
+                                                            _301 := _356                                                            
+                                                            _277 := _356                                                            
+                                                            _260 := _356                                                            
+                                                            _261 := _356                                                            
+                                                            _265 := _356                                                            
+                                                            _267 := _356                                                            
+                                                            _350 := _356                                                            
+                                                        }
+                                                        if not(_355){
+                                                            _257 := 0x0                                                            
+                                                            _339 := 0x0                                                            
+                                                            let _357 := 0x0                                                            
+                                                            _300 := 0x0                                                            
+                                                            _276 := 0x0                                                            
+                                                            let _353 := 0x0                                                            
+                                                            let _354 := 0x0                                                            
+                                                            _301 := 0x0                                                            
+                                                            _277 := 0x0                                                            
+                                                            _260 := 0x0                                                            
+                                                            _261 := 0x0                                                            
+                                                            _265 := 0x0                                                            
+                                                            _267 := 0x0                                                            
+                                                            _350 := 0x0                                                            
+                                                        }
+                                                        let _358 := gt(_259, 0x0)                                                        
+                                                        let _359 := _358                                                        
+                                                        if not(_358){
+                                                            _359 := gt(_257, 0x0)                                                            
+                                                        }
+                                                        if _359{
+                                                            let _360 := 0x9f8                                                            
+                                                            let _361 := and(0x1b67, 0xffffffff)                                                            
+                                                            let _362 := func_0x1b67(0x3, _258, 0x9da)                                                            
+                                                            for {
+                                                                let _363 := 0x3e8                                                                
+                                                                let _364 := 0x2d80                                                                
+                                                                let _365 := func_0x1b67(_363, _339, _364)                                                                
+                                                                _256 := func_0x1bca(_362, _365, _360)                                                                
+                                                                let _366 := 0x3                                                                
+                                                                let _357 := _256                                                                
+                                                                let _367 := 0x9da                                                                
+                                                                let _368 := func_0x1b67(_366, _357, _367)                                                                
+                                                            }
+                                                            true                                                            
+                                                            { }
+                                                            {
+                                                                _339 := _338                                                                
+                                                                _364 := 0x2d80                                                                
+                                                                _363 := 0x3e8                                                                
+                                                                let _369 := and(0x1b67, 0xffffffff)                                                                
+                                                                _365 := func_0x1b67(_363, _339, _364)                                                                
+                                                                _362 := _368                                                                
+                                                                let _370 := and(0x1bca, 0xffffffff)                                                                
+                                                                _256 := func_0x1bca(_362, _365, _360)                                                                
+                                                                _357 := _256                                                                
+                                                                _276 := _256                                                                
+                                                                let _353 := _256                                                                
+                                                                let _354 := _256                                                                
+                                                                _301 := _256                                                                
+                                                                _277 := _256                                                                
+                                                                _260 := _256                                                                
+                                                                _267 := _256                                                                
+                                                                _357 := _256                                                                
+                                                                _360 := 0xa10                                                                
+                                                                _367 := 0x9da                                                                
+                                                                _366 := 0x3                                                                
+                                                                let _371 := and(0x1b67, 0xffffffff)                                                                
+                                                                _368 := func_0x1b67(_366, _357, _367)                                                                
+                                                                _362 := _368                                                                
+                                                            }
+                                                            _300 := _338                                                            
+                                                            _276 := _256                                                            
+                                                            let _372 := sub(shl(0x70, 0x1), 0x1)                                                            
+                                                            let _373 := and(0x1b67, 0xffffffff)                                                            
+                                                            let _374 := and(0x1b67, 0xffffffff)                                                            
+                                                            let _375 := and(0x1b67, 0xffffffff)                                                            
+                                                            let _376 := iszero(lt(func_0x1b67(_256, _256, 0xa51), func_0x1b67(0xf4240, func_0x1b67(and(_300, _372), and(_372, _276), 0xa35), 0xa41)))                                                            
+                                                            if _376{
+                                                                let _353 := _256                                                                
+                                                                let _354 := _256                                                                
+                                                                _301 := _256                                                                
+                                                                _277 := _256                                                                
+                                                                let _377 := sload(0x5)                                                                
+                                                                let _378 := sload(0x6)                                                                
+                                                                let _379 := mload(0x40)                                                                
+                                                                mstore(_379, shl(0xe0, 0x918b6c8d))
+                                                                mstore(add(_379, 0x4), address())
+                                                                let _380 := sub(shl(0xa0, 0x1), 0x1)                                                                
+                                                                mstore(add(_379, 0x24), and(_380, _378))
+                                                                let _381 := mload(0x40)                                                                
+                                                                let _382 := and(_380, _377)                                                                
+                                                                let _383 := add(_379, 0x44)                                                                
+                                                                let _384 := iszero(iszero(extcodesize(_382)))                                                                
+                                                                require(not(_384))
+                                                                let _385 := staticcall(gas(), _382, _381, add(sub(_379, _381), 0x44), _381, 0x80)                                                                
+                                                                let _386 := iszero(iszero(_385))                                                                
+                                                                if _386{
+                                                                    let _387 := mload(0x40)                                                                    
+                                                                    let _388 := iszero(lt(returndatasize(), 0x80))                                                                    
+                                                                    require(not(_388))
+                                                                    let _389 := mload(_387)                                                                    
+                                                                    let _390 := mload(add(_387, 0x20))                                                                    
+                                                                    let _391 := mload(add(_387, 0x40))                                                                    
+                                                                    let _392 := mload(add(_387, 0x60))                                                                    
+                                                                    let _393 := and(0x1b67, 0xffffffff)                                                                    
+                                                                    if 0xde0b6b3a7640000{
+                                                                        let _394 := div(func_0x1b67(_390, _354, 0x1cda), 0xde0b6b3a7640000)                                                                        
+                                                                        let _395 := and(0x1b67, 0xffffffff)                                                                        
+                                                                        if 0xde0b6b3a7640000{
+                                                                            let _396 := iszero(_394)                                                                            
+                                                                            if not(_396){
+                                                                                let _397 := sload(0x6)                                                                                
+                                                                                let _398 := mload(0x40)                                                                                
+                                                                                mstore(_398, shl(0xe0, 0xa9059cbb))
+                                                                                let _399 := sub(shl(0xa0, 0x1), 0x1)                                                                                
+                                                                                mstore(add(_398, 0x4), and(_399, _389))
+                                                                                mstore(add(_398, 0x24), _394)
+                                                                                let _400 := mload(0x40)                                                                                
+                                                                                let _401 := and(_397, _399)                                                                                
+                                                                                let _402 := add(_398, 0x44)                                                                                
+                                                                                let _403 := iszero(iszero(extcodesize(_401)))                                                                                
+                                                                                require(not(_403))
+                                                                                let _404 := call(gas(), _401, 0x0, _400, add(sub(_398, _400), 0x44), _400, 0x20)                                                                                
+                                                                                let _405 := iszero(iszero(_404))                                                                                
+                                                                                if _405{
+                                                                                    let _406 := mload(0x40)                                                                                    
+                                                                                    let _407 := iszero(lt(returndatasize(), 0x20))                                                                                    
+                                                                                    require(not(_407))
+                                                                                    let _408 := sload(0x6)                                                                                    
+                                                                                    let _409 := mload(0x40)                                                                                    
+                                                                                    mstore(_409, shl(0xe0, 0xa9059cbb))
+                                                                                    let _410 := sub(shl(0xa0, 0x1), 0x1)                                                                                    
+                                                                                    mstore(add(_409, 0x4), and(_410, _391))
+                                                                                    mstore(add(_409, 0x24), div(func_0x1b67(_392, _354, 0x1cfd), 0xde0b6b3a7640000))
+                                                                                    let _411 := mload(0x40)                                                                                    
+                                                                                    let _412 := and(_408, _410)                                                                                    
+                                                                                    let _413 := add(_409, 0x44)                                                                                    
+                                                                                    let _414 := iszero(iszero(extcodesize(_412)))                                                                                    
+                                                                                    require(not(_414))
+                                                                                    let _415 := call(gas(), _412, 0x0, _411, add(sub(_409, _411), 0x44), _411, 0x20)                                                                                    
+                                                                                    let _416 := iszero(iszero(_415))                                                                                    
+                                                                                    if _416{
+                                                                                        let _417 := mload(0x40)                                                                                        
+                                                                                        let _418 := iszero(lt(returndatasize(), 0x20))                                                                                        
+                                                                                        require(not(_418))
+                                                                                    }
+                                                                                    if not(_416){
+                                                                                        returndatacopy(0x0, 0x0, returndatasize())
+                                                                                        revert(0x0, returndatasize())
+                                                                                    }
+                                                                                }
+                                                                                if not(_405){
+                                                                                    returndatacopy(0x0, 0x0, returndatasize())
+                                                                                    revert(0x0, returndatasize())
+                                                                                }
+                                                                            }
+                                                                            let _419 := sload(0x5)                                                                            
+                                                                            let _420 := sload(0x7)                                                                            
+                                                                            let _421 := mload(0x40)                                                                            
+                                                                            mstore(_421, shl(0xe0, 0x918b6c8d))
+                                                                            mstore(add(_421, 0x4), address())
+                                                                            let _422 := sub(shl(0xa0, 0x1), 0x1)                                                                            
+                                                                            mstore(add(_421, 0x24), and(_422, _420))
+                                                                            let _423 := mload(0x40)                                                                            
+                                                                            let _424 := and(_419, _422)                                                                            
+                                                                            let _425 := add(_421, 0x44)                                                                            
+                                                                            let _426 := iszero(iszero(extcodesize(_424)))                                                                            
+                                                                            require(not(_426))
+                                                                            let _427 := staticcall(gas(), _424, _423, add(sub(_421, _423), 0x44), _423, 0x80)                                                                            
+                                                                            let _428 := iszero(iszero(_427))                                                                            
+                                                                            if _428{
+                                                                                let _429 := mload(0x40)                                                                                
+                                                                                let _430 := iszero(lt(returndatasize(), 0x80))                                                                                
+                                                                                require(not(_430))
+                                                                                let _431 := mload(_429)                                                                                
+                                                                                let _432 := mload(add(_429, 0x20))                                                                                
+                                                                                let _433 := mload(add(_429, 0x40))                                                                                
+                                                                                let _434 := mload(add(_429, 0x60))                                                                                
+                                                                                let _435 := and(0x1b67, 0xffffffff)                                                                                
+                                                                                if 0xde0b6b3a7640000{
+                                                                                    let _436 := div(func_0x1b67(_432, _353, 0x1ec8), 0xde0b6b3a7640000)                                                                                    
+                                                                                    let _437 := and(0x1b67, 0xffffffff)                                                                                    
+                                                                                    if 0xde0b6b3a7640000{
+                                                                                        let _438 := iszero(_436)                                                                                        
+                                                                                        if not(_438){
+                                                                                            let _439 := sload(0x7)                                                                                            
+                                                                                            let _440 := mload(0x40)                                                                                            
+                                                                                            mstore(_440, shl(0xe0, 0xa9059cbb))
+                                                                                            let _441 := sub(shl(0xa0, 0x1), 0x1)                                                                                            
+                                                                                            mstore(add(_440, 0x4), and(_441, _431))
+                                                                                            mstore(add(_440, 0x24), _436)
+                                                                                            let _442 := mload(0x40)                                                                                            
+                                                                                            let _443 := and(_439, _441)                                                                                            
+                                                                                            let _444 := add(_440, 0x44)                                                                                            
+                                                                                            let _445 := iszero(iszero(extcodesize(_443)))                                                                                            
+                                                                                            require(not(_445))
+                                                                                            let _446 := call(gas(), _443, 0x0, _442, add(sub(_440, _442), 0x44), _442, 0x20)                                                                                            
+                                                                                            let _447 := iszero(iszero(_446))                                                                                            
+                                                                                            if _447{
+                                                                                                let _448 := mload(0x40)                                                                                                
+                                                                                                let _449 := iszero(lt(returndatasize(), 0x20))                                                                                                
+                                                                                                require(not(_449))
+                                                                                                let _450 := sload(0x7)                                                                                                
+                                                                                                let _451 := mload(0x40)                                                                                                
+                                                                                                mstore(_451, shl(0xe0, 0xa9059cbb))
+                                                                                                let _452 := sub(shl(0xa0, 0x1), 0x1)                                                                                                
+                                                                                                mstore(add(_451, 0x4), and(_452, _433))
+                                                                                                mstore(add(_451, 0x24), div(func_0x1b67(_434, _353, 0x1eeb), 0xde0b6b3a7640000))
+                                                                                                let _453 := mload(0x40)                                                                                                
+                                                                                                let _454 := and(_450, _452)                                                                                                
+                                                                                                let _455 := add(_451, 0x44)                                                                                                
+                                                                                                let _456 := iszero(iszero(extcodesize(_454)))                                                                                                
+                                                                                                require(not(_456))
+                                                                                                let _457 := call(gas(), _454, 0x0, _453, add(sub(_451, _453), 0x44), _453, 0x20)                                                                                                
+                                                                                                let _458 := iszero(iszero(_457))                                                                                                
+                                                                                                if _458{
+                                                                                                    let _459 := mload(0x40)                                                                                                    
+                                                                                                    let _460 := iszero(lt(returndatasize(), 0x20))                                                                                                    
+                                                                                                    require(not(_460))
+                                                                                                }
+                                                                                                if not(_458){
+                                                                                                    returndatacopy(0x0, 0x0, returndatasize())
+                                                                                                    revert(0x0, returndatasize())
+                                                                                                }
+                                                                                            }
+                                                                                            if not(_447){
+                                                                                                returndatacopy(0x0, 0x0, returndatasize())
+                                                                                                revert(0x0, returndatasize())
+                                                                                            }
+                                                                                        }
+                                                                                        let _461 := sload(0x6)                                                                                        
+                                                                                        let _462 := mload(0x40)                                                                                        
+                                                                                        mstore(_462, shl(0xe0, 0x70a08231))
+                                                                                        mstore(add(_462, 0x4), address())
+                                                                                        let _463 := mload(0x40)                                                                                        
+                                                                                        let _464 := and(sub(shl(0xa0, 0x1), 0x1), _461)                                                                                        
+                                                                                        let _465 := add(_462, 0x24)                                                                                        
+                                                                                        let _466 := iszero(iszero(extcodesize(_464)))                                                                                        
+                                                                                        require(not(_466))
+                                                                                        let _467 := staticcall(gas(), _464, _463, add(sub(_462, _463), 0x24), _463, 0x20)                                                                                        
+                                                                                        let _468 := iszero(iszero(_467))                                                                                        
+                                                                                        if _468{
+                                                                                            let _469 := mload(0x40)                                                                                            
+                                                                                            let _470 := iszero(lt(returndatasize(), 0x20))                                                                                            
+                                                                                            require(not(_470))
+                                                                                            let _471 := mload(_469)                                                                                            
+                                                                                            let _472 := sload(0x7)                                                                                            
+                                                                                            let _473 := mload(0x40)                                                                                            
+                                                                                            mstore(_473, shl(0xe0, 0x70a08231))
+                                                                                            mstore(add(_473, 0x4), address())
+                                                                                            let _474 := mload(0x40)                                                                                            
+                                                                                            let _475 := and(_472, sub(shl(0xa0, 0x1), 0x1))                                                                                            
+                                                                                            let _476 := add(_473, 0x24)                                                                                            
+                                                                                            let _477 := iszero(iszero(extcodesize(_475)))                                                                                            
+                                                                                            require(not(_477))
+                                                                                            let _478 := staticcall(gas(), _475, _474, add(sub(_473, _474), 0x24), _474, 0x20)                                                                                            
+                                                                                            let _479 := iszero(iszero(_478))                                                                                            
+                                                                                            if _479{
+                                                                                                let _480 := mload(0x40)                                                                                                
+                                                                                                let _481 := iszero(lt(returndatasize(), 0x20))                                                                                                
+                                                                                                require(not(_481))
+                                                                                                let _482 := mload(_480)                                                                                                
+                                                                                                func_0x248a(_301, _277, _482, _471, 0x2102)
+                                                                                                _260 := _256                                                                                                
+                                                                                                _261 := _338                                                                                                
+                                                                                                _265 := _349                                                                                                
+                                                                                                _267 := _256                                                                                                
+                                                                                                _350 := _349                                                                                                
+                                                                                                let _483 := mload(0x40)                                                                                                
+                                                                                                mstore(_483, _350)
+                                                                                                mstore(add(_483, 0x20), _256)
+                                                                                                mstore(add(0x40, _483), _261)
+                                                                                                mstore(add(_483, 0x60), _265)
+                                                                                                let _484 := mload(0x40)                                                                                                
+                                                                                                log3(_484, add(0x80, sub(_483, _484)), 0xd78ad95fa46c994b6551d0da85fc275fe613ce37657fb8d5e3d130840159d822, caller(), and(_267, sub(shl(0xa0, 0x1), 0x1)))
+                                                                                                sstore(0xc, 0x1)
+                                                                                                stop()
+                                                                                            }
+                                                                                            if not(_479){
+                                                                                                returndatacopy(0x0, 0x0, returndatasize())
+                                                                                                revert(0x0, returndatasize())
+                                                                                            }
+                                                                                        }
+                                                                                        if not(_468){
+                                                                                            returndatacopy(0x0, 0x0, returndatasize())
+                                                                                            revert(0x0, returndatasize())
+                                                                                        }
+                                                                                    }
+                                                                                    if not(0xde0b6b3a7640000){
+                                                                                        invalid()
+                                                                                    }
+                                                                                }
+                                                                                if not(0xde0b6b3a7640000){
+                                                                                    invalid()
+                                                                                }
+                                                                            }
+                                                                            if not(_428){
+                                                                                returndatacopy(0x0, 0x0, returndatasize())
+                                                                                revert(0x0, returndatasize())
+                                                                            }
+                                                                        }
+                                                                        if not(0xde0b6b3a7640000){
+                                                                            invalid()
+                                                                        }
+                                                                    }
+                                                                    if not(0xde0b6b3a7640000){
+                                                                        invalid()
+                                                                    }
+                                                                }
+                                                                if not(_386){
+                                                                    returndatacopy(0x0, 0x0, returndatasize())
+                                                                    revert(0x0, returndatasize())
+                                                                }
+                                                            }
+                                                            if not(_376){
+                                                                let _485 := mload(0x40)                                                                
+                                                                mstore(_485, shl(0xe5, 0x461bcd))
+                                                                mstore(add(_485, 0x4), 0x20)
+                                                                mstore(add(_485, 0x24), 0xc)
+                                                                mstore(add(_485, 0x44), shl(0xa0, 0x556e697377617056323a204b))
+                                                                let _486 := mload(0x40)                                                                
+                                                                revert(_486, add(0x64, sub(_485, _486)))
+                                                            }
+                                                        }
+                                                        if not(_359){
+                                                            let _487 := mload(0x40)                                                            
+                                                            mstore(_487, shl(0xe5, 0x461bcd))
+                                                            let _488 := add(0x4, _487)                                                            
+                                                            let _489 := add(0x20, _488)                                                            
+                                                            mstore(_488, sub(_489, _488))
+                                                            mstore(_489, 0x24)
+                                                            let _490 := add(0x20, _489)                                                            
+                                                            codecopy(_490, 0x2799, 0x24)
+                                                            let _491 := mload(0x40)                                                            
+                                                            revert(_491, sub(add(0x40, _490), _491))
+                                                        }
+                                                    }
+                                                    if not(_346){
+                                                        returndatacopy(0x0, 0x0, returndatasize())
+                                                        revert(0x0, returndatasize())
+                                                    }
+                                                }
+                                                if not(_335){
+                                                    returndatacopy(0x0, 0x0, returndatasize())
+                                                    revert(0x0, returndatasize())
+                                                }
+                                            }
+                                            if not(_313){
+                                                let _492 := mload(0x40)                                                
+                                                mstore(_492, shl(0xe5, 0x461bcd))
+                                                mstore(add(_492, 0x4), 0x20)
+                                                mstore(add(_492, 0x24), 0x15)
+                                                mstore(add(_492, 0x44), shl(0x58, 0x556e697377617056323a20494e56414c49445f544f))
+                                                let _493 := mload(0x40)                                                
+                                                revert(_493, add(0x64, sub(_492, _493)))
+                                            }
+                                        }
+                                        if not(_305){
+                                            let _494 := mload(0x40)                                            
+                                            mstore(_494, shl(0xe5, 0x461bcd))
+                                            let _495 := add(0x4, _494)                                            
+                                            let _496 := add(0x20, _495)                                            
+                                            mstore(_495, sub(_496, _495))
+                                            mstore(_496, 0x21)
+                                            let _497 := add(0x20, _496)                                            
+                                            codecopy(_497, 0x27bd, 0x21)
+                                            let _498 := mload(0x40)                                            
+                                            revert(_498, sub(add(0x40, _497), _498))
+                                        }
+                                    }
+                                    if not(_296){
+                                        let _499 := mload(0x40)                                        
+                                        mstore(_499, shl(0xe5, 0x461bcd))
+                                        let _500 := add(0x4, _499)                                        
+                                        let _501 := add(0x20, _500)                                        
+                                        mstore(_500, sub(_501, _500))
+                                        mstore(_501, 0x25)
+                                        let _502 := add(0x20, _501)                                        
+                                        codecopy(_502, 0x2774, 0x25)
+                                        let _503 := mload(0x40)                                        
+                                        revert(_503, sub(add(0x40, _502), _503))
+                                    }
+                                }
+                                if not(_294){
+                                    let _504 := mload(0x40)                                    
+                                    mstore(_504, shl(0xe5, 0x461bcd))
+                                    mstore(add(_504, 0x4), 0x20)
+                                    mstore(add(_504, 0x24), 0x14)
+                                    mstore(add(_504, 0x44), shl(0x61, 0x2ab734b9bbb0b82b191d102327a92124a22222a7))
+                                    let _505 := mload(0x40)                                    
+                                    revert(_505, add(0x64, sub(_504, _505)))
+                                }
+                            }
+                            if not(_289){
+                                returndatacopy(0x0, 0x0, returndatasize())
+                                revert(0x0, returndatasize())
+                            }
+                        }
+                        default {
+                            let _506 := mload(0x40)                            
+                            mstore(_506, shl(0xe5, 0x461bcd))
+                            mstore(add(_506, 0x4), 0x20)
+                            mstore(add(_506, 0x24), 0x11)
+                            mstore(add(_506, 0x44), shl(0x7a, 0x155b9a5cddd85c158c8e881313d0d2d151))
+                            let _507 := mload(0x40)                            
+                            revert(_507, add(0x64, sub(_506, _507)))
+                        }
+                }
+            function func_approve() {
+                    let _508 := iszero(lt(sub(calldatasize(), 0x4), 0x40))                    
+                    require(not(_508))
+                    let _509 := calldataload(add(0x20, 0x4))                    
+                    let _510 := sub(shl(0xa0, 0x1), 0x1)                    
+                    let _511 := and(caller(), _510)                    
+                    mstore(0x0, _511)
+                    mstore(0x20, 0x2)
+                    let _512 := and(and(calldataload(0x4), sub(shl(0xa0, 0x1), 0x1)), _510)                    
+                    mstore(0x0, _512)
+                    mstore(0x20, keccak256(0x0, 0x40))
+                    sstore(keccak256(0x0, 0x40), _509)
+                    let _513 := mload(0x40)                    
+                    mstore(_513, _509)
+                    let _514 := mload(0x40)                    
+                    log3(_514, add(0x20, sub(_513, _514)), 0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925, _511, _512)
+                    let _515 := mload(0x40)                    
+                    mstore(_515, iszero(iszero(0x1)))
+                    let _516 := mload(0x40)                    
+                    return(_516, add(0x20, sub(_515, _516)))
+                }
+            function func_transferFrom() {
+                    let _517 := iszero(lt(sub(calldatasize(), 0x4), 0x60))                    
+                    require(not(_517))
+                    let _518 := sub(shl(0xa0, 0x1), 0x1)                    
+                    let _519 := and(_518, calldataload(0x4))                    
+                    let _520 := calldataload(add(0x40, 0x4))                    
+                    mstore(0x0, and(_519, sub(shl(0xa0, 0x1), 0x1)))
+                    mstore(0x20, 0x2)
+                    mstore(0x0, caller())
+                    mstore(0x20, keccak256(0x0, 0x40))
+                    let _521 := sload(keccak256(0x0, 0x40))                    
+                    let _522 := eq(not(0x0), _521)                    
+                    if not(_522){
+                        mstore(0x0, and(_519, sub(shl(0xa0, 0x1), 0x1)))
+                        mstore(0x20, 0x2)
+                        mstore(0x0, caller())
+                        mstore(0x20, keccak256(0x0, 0x40))
+                        let _523 := sload(keccak256(0x0, 0x40))                        
+                        let _524 := and(0x1bca, 0xffffffff)                        
+                        mstore(0x0, and(_519, sub(shl(0xa0, 0x1), 0x1)))
+                        mstore(0x20, 0x2)
+                        mstore(0x0, caller())
+                        mstore(0x20, keccak256(0x0, 0x40))
+                        sstore(keccak256(0x0, 0x40), func_0x1bca(_520, _523, 0xbe3))
+                    }
+                    func_0x2172(_520, and(_518, calldataload(add(0x4, 0x20))), _519, 0xc13)
+                    let _525 := mload(0x40)                    
+                    mstore(_525, iszero(iszero(0x1)))
+                    let _526 := mload(0x40)                    
+                    return(_526, add(0x20, sub(_525, _526)))
+                }
+            function func_initialize() {
+                    let _527 := iszero(lt(sub(calldatasize(), 0x4), 0x40))                    
+                    require(not(_527))
+                    let _528 := sub(shl(0xa0, 0x1), 0x1)                    
+                    let _529 := sload(0x5)                    
+                    let _530 := eq(caller(), and(sub(shl(0xa0, 0x1), 0x1), _529))                    
+                    if _530{
+                        let _531 := sload(0x6)                        
+                        let _532 := sub(shl(0xa0, 0x1), 0x1)                        
+                        let _533 := not(sub(shl(0xa0, 0x1), 0x1))                        
+                        sstore(0x6, or(and(_533, _531), and(_532, and(_528, calldataload(0x4)))))
+                        let _534 := sload(0x7)                        
+                        sstore(0x7, or(and(_534, _533), and(_532, and(calldataload(add(0x20, 0x4)), _528))))
+                        stop()
+                    }
+                    if not(_530){
+                        let _535 := mload(0x40)                        
+                        mstore(_535, shl(0xe5, 0x461bcd))
+                        mstore(add(_535, 0x4), 0x20)
+                        mstore(add(_535, 0x24), 0x14)
+                        mstore(add(_535, 0x44), shl(0x61, 0x2ab734b9bbb0b82b191d102327a92124a22222a7))
+                        let _536 := mload(0x40)                        
+                        revert(_536, add(0x64, sub(_535, _536)))
+                    }
+                }
+            function func_mint() {
+                    let _537 := 0x0                    
+                    let _538 := 0x0                    
+                    let _539 := 0x0                    
+                    let _540 := iszero(lt(sub(calldatasize(), 0x4), 0x20))                    
+                    require(not(_540))
+                    let _541 := sload(0xc)                    
+                    let _542 := eq(0x1, _541)                    
+                    switch _541
+                        case 0x1{
+                            sstore(0xc, 0x0)
+                            let _543 := sload(0x8)                            
+                            let _544 := sub(shl(0x70, 0x1), 0x1)                            
+                            let _545 := and(_543, _544)                            
+                            let _546 := and(_544, div(_543, shl(0x70, 0x1)))                            
+                            let _547 := and(0xffffffff, div(_543, shl(0xe0, 0x1)))                            
+                            let _548 := sload(0x6)                            
+                            let _549 := mload(0x40)                            
+                            mstore(_549, shl(0xe0, 0x70a08231))
+                            mstore(add(_549, 0x4), address())
+                            let _550 := mload(0x40)                            
+                            let _551 := and(_548, sub(shl(0xa0, 0x1), 0x1))                            
+                            let _552 := add(_549, 0x24)                            
+                            let _553 := iszero(iszero(extcodesize(_551)))                            
+                            require(not(_553))
+                            let _554 := staticcall(gas(), _551, _550, add(sub(_549, _550), 0x24), _550, 0x20)                            
+                            let _555 := iszero(iszero(_554))                            
+                            if _555{
+                                let _556 := mload(0x40)                                
+                                let _557 := iszero(lt(returndatasize(), 0x20))                                
+                                require(not(_557))
+                                let _558 := mload(_556)                                
+                                let _559 := sload(0x7)                                
+                                let _560 := mload(0x40)                                
+                                mstore(_560, shl(0xe0, 0x70a08231))
+                                mstore(add(_560, 0x4), address())
+                                let _561 := mload(0x40)                                
+                                let _562 := and(_559, sub(shl(0xa0, 0x1), 0x1))                                
+                                let _563 := add(_560, 0x24)                                
+                                let _564 := iszero(iszero(extcodesize(_562)))                                
+                                require(not(_564))
+                                let _565 := staticcall(gas(), _562, _561, add(sub(_560, _561), 0x24), _561, 0x20)                                
+                                let _566 := iszero(iszero(_565))                                
+                                if _566{
+                                    let _567 := mload(0x40)                                    
+                                    let _568 := iszero(lt(returndatasize(), 0x20))                                    
+                                    require(not(_568))
+                                    let _569 := mload(_567)                                    
+                                    let _570 := and(0x1bca, 0xffffffff)                                    
+                                    let _571 := func_0x1bca(and(_545, sub(shl(0x70, 0x1), 0x1)), _558, 0xe53)                                    
+                                    let _572 := and(0x1bca, 0xffffffff)                                    
+                                    let _573 := func_0x1bca(and(_546, sub(shl(0x70, 0x1), 0x1)), _569, 0xe70)                                    
+                                    let _574 := sload(0x0)                                    
+                                    if _574{
+                                        let _575 := and(_545, sub(shl(0x70, 0x1), 0x1))                                        
+                                        let _576 := and(0x1b67, 0xffffffff)                                        
+                                        if _575{
+                                            let _577 := div(func_0x1b67(_574, _571, 0xed8), _575)                                            
+                                            _539 := _577                                            
+                                            _538 := _577                                            
+                                            _537 := _577                                            
+                                            let _578 := and(_546, sub(shl(0x70, 0x1), 0x1))                                            
+                                            let _579 := and(0x1b67, 0xffffffff)                                            
+                                            if _578{
+                                                let _580 := div(func_0x1b67(_574, _573, 0xefa), _578)                                                
+                                                _539 := _580                                                
+                                                _538 := _580                                                
+                                                _537 := _580                                                
+                                                let _581 := lt(_577, _580)                                                
+                                            }
+                                            if not(_578){
+                                                invalid()
+                                            }
+                                        }
+                                        if not(_575){
+                                            invalid()
+                                        }
+                                    }
+                                    if not(_574){
+                                        let _582 := and(0x1b67, 0xffffffff)                                        
+                                        let _583 := and(0x1bca, 0xffffffff)                                        
+                                        let _584 := func_0x1bca(0x3e8, func_0x238a(func_0x1b67(_573, _571, 0x2dd6), 0x2dab), 0xea7)                                        
+                                        _539 := _584                                        
+                                        _538 := _584                                        
+                                        _537 := _584                                        
+                                        func_0x23dc(0x3e8, 0x0, 0xeb6)
+                                    }
+                                    let _585 := gt(_539, 0x0)                                    
+                                    if _585{
+                                        func_0x23dc(_538, and(sub(shl(0xa0, 0x1), 0x1), calldataload(0x4)), 0xf53)
+                                        func_0x248a(_546, _545, _569, _558, 0xf5f)
+                                        let _586 := iszero(func_0x222c(_546, _545, 0xe7e))                                        
+                                        if not(_586){
+                                            let _587 := sload(0x8)                                            
+                                            let _588 := sub(shl(0x70, 0x1), 0x1)                                            
+                                            let _589 := and(0x1b67, 0xffffffff)                                            
+                                            sstore(0xb, func_0x1b67(and(div(_587, shl(0x70, 0x1)), _588), and(_587, _588), 0xf8b))
+                                        }
+                                        let _590 := mload(0x40)                                        
+                                        mstore(_590, _571)
+                                        mstore(add(_590, 0x20), _573)
+                                        let _591 := mload(0x40)                                        
+                                        log2(_591, add(sub(_590, _591), 0x40), 0x4c209b5fc8ad50758f13e2e1088ba56a560dff690a1c6fef26394f4c03821c4f, caller())
+                                        sstore(0xc, 0x1)
+                                        let _592 := mload(0x40)                                        
+                                        mstore(_592, _537)
+                                        let _593 := mload(0x40)                                        
+                                        return(_593, add(0x20, sub(_592, _593)))
+                                    }
+                                    if not(_585){
+                                        let _594 := mload(0x40)                                        
+                                        mstore(_594, shl(0xe5, 0x461bcd))
+                                        let _595 := add(0x4, _594)                                        
+                                        let _596 := add(0x20, _595)                                        
+                                        mstore(_595, sub(_596, _595))
+                                        mstore(_596, 0x28)
+                                        let _597 := add(0x20, _596)                                        
+                                        codecopy(_597, 0x2806, 0x28)
+                                        let _598 := mload(0x40)                                        
+                                        revert(_598, sub(add(0x40, _597), _598))
+                                    }
+                                }
+                                if not(_566){
+                                    returndatacopy(0x0, 0x0, returndatasize())
+                                    revert(0x0, returndatasize())
+                                }
+                            }
+                            if not(_555){
+                                returndatacopy(0x0, 0x0, returndatasize())
+                                revert(0x0, returndatasize())
+                            }
+                        }
+                        default {
+                            let _599 := mload(0x40)                            
+                            mstore(_599, shl(0xe5, 0x461bcd))
+                            mstore(add(_599, 0x4), 0x20)
+                            mstore(add(_599, 0x24), 0x11)
+                            mstore(add(_599, 0x44), shl(0x7a, 0x155b9a5cddd85c158c8e881313d0d2d151))
+                            let _600 := mload(0x40)                            
+                            revert(_600, add(0x64, sub(_599, _600)))
+                        }
+                }
+            function func_balanceOf() {
+                    let _601 := iszero(lt(sub(calldatasize(), 0x4), 0x20))                    
+                    require(not(_601))
+                    mstore(0x20, 0x1)
+                    mstore(0x0, and(sub(shl(0xa0, 0x1), 0x1), calldataload(0x4)))
+                    let _602 := sload(keccak256(0x0, 0x40))                    
+                    let _603 := mload(0x40)                    
+                    mstore(_603, _602)
+                    let _604 := mload(0x40)                    
+                    return(_604, add(0x20, sub(_603, _604)))
+                }
+            function func_nonces() {
+                    let _605 := iszero(lt(sub(calldatasize(), 0x4), 0x20))                    
+                    require(not(_605))
+                    mstore(0x20, 0x4)
+                    mstore(0x0, and(sub(shl(0xa0, 0x1), 0x1), calldataload(0x4)))
+                    let _606 := sload(keccak256(0x0, 0x40))                    
+                    let _607 := mload(0x40)                    
+                    mstore(_607, _606)
+                    let _608 := mload(0x40)                    
+                    return(_608, add(0x20, sub(_607, _608)))
+                }
+            function func_burn() {
+                    let _609 := iszero(lt(sub(calldatasize(), 0x4), 0x20))                    
+                    require(not(_609))
+                    let _610 := and(sub(shl(0xa0, 0x1), 0x1), calldataload(0x4))                    
+                    let _611 := sload(0xc)                    
+                    let _612 := eq(0x1, _611)                    
+                    switch _611
+                        case 0x1{
+                            sstore(0xc, 0x0)
+                            let _613 := sload(0x8)                            
+                            let _614 := sub(shl(0x70, 0x1), 0x1)                            
+                            let _615 := and(_613, _614)                            
+                            let _616 := and(_614, div(_613, shl(0x70, 0x1)))                            
+                            let _617 := and(0xffffffff, div(_613, shl(0xe0, 0x1)))                            
+                            let _618 := sload(0x6)                            
+                            let _619 := sload(0x7)                            
+                            let _620 := mload(0x40)                            
+                            mstore(_620, shl(0xe0, 0x70a08231))
+                            mstore(add(_620, 0x4), address())
+                            let _621 := mload(0x40)                            
+                            let _622 := sub(shl(0xa0, 0x1), 0x1)                            
+                            let _623 := and(_622, _618)                            
+                            let _624 := and(_622, _619)                            
+                            let _625 := add(_620, 0x24)                            
+                            let _626 := iszero(iszero(extcodesize(_623)))                            
+                            require(not(_626))
+                            let _627 := staticcall(gas(), _623, _621, add(sub(_620, _621), 0x24), _621, 0x20)                            
+                            let _628 := iszero(iszero(_627))                            
+                            if _628{
+                                let _629 := mload(0x40)                                
+                                let _630 := iszero(lt(returndatasize(), 0x20))                                
+                                require(not(_630))
+                                let _631 := mload(_629)                                
+                                let _632 := mload(0x40)                                
+                                mstore(_632, shl(0xe0, 0x70a08231))
+                                mstore(add(_632, 0x4), address())
+                                let _633 := mload(0x40)                                
+                                let _634 := and(_624, sub(shl(0xa0, 0x1), 0x1))                                
+                                let _635 := add(_632, 0x24)                                
+                                let _636 := iszero(iszero(extcodesize(_634)))                                
+                                require(not(_636))
+                                let _637 := staticcall(gas(), _634, _633, add(sub(_632, _633), 0x24), _633, 0x20)                                
+                                let _638 := iszero(iszero(_637))                                
+                                if _638{
+                                    let _639 := mload(0x40)                                    
+                                    let _640 := iszero(lt(returndatasize(), 0x20))                                    
+                                    require(not(_640))
+                                    let _641 := mload(_639)                                    
+                                    mstore(0x0, address())
+                                    mstore(0x20, 0x1)
+                                    let _642 := sload(keccak256(0x0, 0x40))                                    
+                                    let _643 := sload(0x0)                                    
+                                    let _644 := and(0x1b67, 0xffffffff)                                    
+                                    if _643{
+                                        let _645 := div(func_0x1b67(_631, _642, 0x1198), _643)                                        
+                                        let _646 := and(0x1b67, 0xffffffff)                                        
+                                        if _643{
+                                            let _647 := div(func_0x1b67(_641, _642, 0x11b3), _643)                                            
+                                            let _648 := gt(_645, 0x0)                                            
+                                            let _649 := _648                                            
+                                            let _650 := iszero(_648)                                            
+                                            if not(_650){
+                                                _649 := gt(_647, 0x0)                                                
+                                            }
+                                            if _649{
+                                                let _651 := address()                                                
+                                                mstore(0x0, and(_651, sub(shl(0xa0, 0x1), 0x1)))
+                                                mstore(0x20, 0x1)
+                                                let _652 := sload(keccak256(0x0, 0x40))                                                
+                                                let _653 := and(0x1bca, 0xffffffff)                                                
+                                                mstore(0x0, and(_651, sub(shl(0xa0, 0x1), 0x1)))
+                                                mstore(0x20, 0x1)
+                                                sstore(keccak256(0x0, 0x40), func_0x1bca(_642, _652, 0x2678))
+                                                let _654 := sload(0x0)                                                
+                                                let _655 := and(0x1bca, 0xffffffff)                                                
+                                                sstore(0x0, func_0x1bca(_642, _654, 0x26a5))
+                                                let _656 := mload(0x40)                                                
+                                                mstore(_656, _642)
+                                                let _657 := mload(0x40)                                                
+                                                log3(_657, add(0x20, sub(_656, _657)), 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef, and(_651, sub(shl(0xa0, 0x1), 0x1)), 0x0)
+                                                func_0x19cd(_645, _610, _623, 0x121d)
+                                                func_0x19cd(_647, _610, _624, 0x1228)
+                                                let _658 := mload(0x40)                                                
+                                                mstore(_658, shl(0xe0, 0x70a08231))
+                                                mstore(add(_658, 0x4), address())
+                                                let _659 := mload(0x40)                                                
+                                                let _660 := and(_623, sub(shl(0xa0, 0x1), 0x1))                                                
+                                                let _661 := add(_658, 0x24)                                                
+                                                let _662 := iszero(iszero(extcodesize(_660)))                                                
+                                                require(not(_662))
+                                                let _663 := staticcall(gas(), _660, _659, add(sub(_658, _659), 0x24), _659, 0x20)                                                
+                                                let _664 := iszero(iszero(_663))                                                
+                                                if _664{
+                                                    let _665 := mload(0x40)                                                    
+                                                    let _666 := iszero(lt(returndatasize(), 0x20))                                                    
+                                                    require(not(_666))
+                                                    let _667 := mload(_665)                                                    
+                                                    let _668 := mload(0x40)                                                    
+                                                    mstore(_668, shl(0xe0, 0x70a08231))
+                                                    mstore(add(_668, 0x4), address())
+                                                    let _669 := mload(0x40)                                                    
+                                                    let _670 := and(_624, sub(shl(0xa0, 0x1), 0x1))                                                    
+                                                    let _671 := add(_668, 0x24)                                                    
+                                                    let _672 := iszero(iszero(extcodesize(_670)))                                                    
+                                                    require(not(_672))
+                                                    let _673 := staticcall(gas(), _670, _669, add(sub(_668, _669), 0x24), _669, 0x20)                                                    
+                                                    let _674 := iszero(iszero(_673))                                                    
+                                                    if _674{
+                                                        let _675 := mload(0x40)                                                        
+                                                        let _676 := iszero(lt(returndatasize(), 0x20))                                                        
+                                                        require(not(_676))
+                                                        let _677 := mload(_675)                                                        
+                                                        func_0x248a(_616, _615, _677, _667, 0x131e)
+                                                        let _678 := iszero(func_0x222c(_616, _615, 0x1181))                                                        
+                                                        if not(_678){
+                                                            let _679 := sload(0x8)                                                            
+                                                            let _680 := sub(shl(0x70, 0x1), 0x1)                                                            
+                                                            let _681 := and(0x1b67, 0xffffffff)                                                            
+                                                            sstore(0xb, func_0x1b67(and(div(_679, shl(0x70, 0x1)), _680), and(_679, _680), 0x134a))
+                                                        }
+                                                        let _682 := mload(0x40)                                                        
+                                                        mstore(_682, _645)
+                                                        mstore(add(_682, 0x20), _647)
+                                                        let _683 := mload(0x40)                                                        
+                                                        log3(_683, add(0x40, sub(_682, _683)), 0xdccd412f0b1252819cb1fd330b93224ca42612892bb3f4f789976e6d81936496, caller(), and(_610, sub(shl(0xa0, 0x1), 0x1)))
+                                                        sstore(0xc, 0x1)
+                                                        let _684 := mload(0x40)                                                        
+                                                        mstore(_684, _645)
+                                                        mstore(add(_684, 0x20), _647)
+                                                        let _685 := mload(0x40)                                                        
+                                                        return(_685, add(sub(_684, _685), 0x40))
+                                                    }
+                                                    if not(_674){
+                                                        returndatacopy(0x0, 0x0, returndatasize())
+                                                        revert(0x0, returndatasize())
+                                                    }
+                                                }
+                                                if not(_664){
+                                                    returndatacopy(0x0, 0x0, returndatasize())
+                                                    revert(0x0, returndatasize())
+                                                }
+                                            }
+                                            if not(_649){
+                                                let _686 := mload(0x40)                                                
+                                                mstore(_686, shl(0xe5, 0x461bcd))
+                                                let _687 := add(0x4, _686)                                                
+                                                let _688 := add(0x20, _687)                                                
+                                                mstore(_687, sub(_688, _687))
+                                                mstore(_688, 0x28)
+                                                let _689 := add(0x20, _688)                                                
+                                                codecopy(_689, 0x27de, 0x28)
+                                                let _690 := mload(0x40)                                                
+                                                revert(_690, sub(add(0x40, _689), _690))
+                                            }
+                                        }
+                                        if not(_643){
+                                            invalid()
+                                        }
+                                    }
+                                    if not(_643){
+                                        invalid()
+                                    }
+                                }
+                                if not(_638){
+                                    returndatacopy(0x0, 0x0, returndatasize())
+                                    revert(0x0, returndatasize())
+                                }
+                            }
+                            if not(_628){
+                                returndatacopy(0x0, 0x0, returndatasize())
+                                revert(0x0, returndatasize())
+                            }
+                        }
+                        default {
+                            let _691 := mload(0x40)                            
+                            mstore(_691, shl(0xe5, 0x461bcd))
+                            mstore(add(_691, 0x4), 0x20)
+                            mstore(add(_691, 0x24), 0x11)
+                            mstore(add(_691, 0x44), shl(0x7a, 0x155b9a5cddd85c158c8e881313d0d2d151))
+                            let _692 := mload(0x40)                            
+                            revert(_692, add(0x64, sub(_691, _692)))
+                        }
+                }
+            function func_transfer() {
+                    let _693 := iszero(lt(sub(calldatasize(), 0x4), 0x40))                    
+                    require(not(_693))
+                    func_0x2172(calldataload(add(0x20, 0x4)), and(calldataload(0x4), sub(shl(0xa0, 0x1), 0x1)), caller(), 0xb64)
+                    let _694 := mload(0x40)                    
+                    mstore(_694, iszero(iszero(0x1)))
+                    let _695 := mload(0x40)                    
+                    return(_695, add(0x20, sub(_694, _695)))
+                }
+            function func_skim() {
+                    let _696 := 0x0                    
+                    let _697 := 0x0                    
+                    let _698 := 0x0                    
+                    let _699 := 0x0                    
+                    let _700 := 0x0                    
+                    let _701 := 0x0                    
+                    let _702 := iszero(lt(sub(calldatasize(), 0x4), 0x20))                    
+                    require(not(_702))
+                    let _703 := sload(0xc)                    
+                    let _704 := eq(0x1, _703)                    
+                    switch _703
+                        case 0x1{
+                            sstore(0xc, 0x0)
+                            let _705 := sload(0x6)                            
+                            let _706 := sload(0x7)                            
+                            let _707 := sload(0x8)                            
+                            let _708 := mload(0x40)                            
+                            mstore(_708, shl(0xe0, 0x70a08231))
+                            mstore(add(_708, 0x4), address())
+                            let _709 := mload(0x40)                            
+                            let _710 := _709                            
+                            let _711 := _709                            
+                            let _712 := sub(shl(0xa0, 0x1), 0x1)                            
+                            let _713 := and(_712, _705)                            
+                            let _714 := _713                            
+                            let _715 := _713                            
+                            let _716 := and(_706, _712)                            
+                            _715 := _716                            
+                            let _717 := 0x14db                            
+                            let _718 := 0x2dfa                            
+                            let _719 := and(sub(shl(0x70, 0x1), 0x1), _707)                            
+                            let _720 := add(_708, 0x24)                            
+                            let _721 := 0x20                            
+                            let _722 := add(sub(_708, _709), 0x24)                            
+                            let _723 := iszero(iszero(extcodesize(_713)))                            
+                            require(not(_723))
+                            for {
+                                let _725 := gas()                                
+                                let _726 := staticcall(_725, _714, _711, _722, _710, _721)                                
+                                let _724 := iszero(_726)                                
+                                _701 := _700                                
+                                let _727 := 0x40                                
+                                _700 := mload(_727)                                
+                                _699 := _700                                
+                            }
+                            iszero(_724)                            
+                            { }
+                            {
+                                _725 := gas()                                
+                                _726 := staticcall(_725, _714, _711, _722, _710, _721)                                
+                                _724 := iszero(_726)                                
+                                let _728 := iszero(_724)                                
+                                let _729 := mload(0x40)                                
+                                let _730 := iszero(lt(returndatasize(), 0x20))                                
+                                if _730{
+                                    let _731 := mload(_729)                                    
+                                    let _732 := and(0x1bca, 0xffffffff)                                    
+                                    let _733 := sub(_731, _719)                                    
+                                    let _734 := iszero(gt(_733, _731))                                    
+                                    if _734{
+                                        let _735 := mload(0x40)                                        
+                                        mstore(0x40, add(0x40, _735))
+                                        mstore(_735, 0x19)
+                                        mstore(add(0x20, _735), 0x7472616e7366657228616464726573732c75696e743235362900000000000000)
+                                        let _736 := mload(0x40)                                        
+                                        let _737 := sub(shl(0xa0, 0x1), 0x1)                                        
+                                        mstore(add(_736, 0x24), and(_737, and(sub(shl(0xa0, 0x1), 0x1), calldataload(0x4))))
+                                        mstore(add(_736, 0x44), _733)
+                                        let _738 := mload(0x40)                                        
+                                        mstore(_738, add(0x44, sub(_736, _738)))
+                                        mstore(0x40, add(_736, 0x64))
+                                        let _739 := add(_738, 0x20)                                        
+                                        let _740 := _739                                        
+                                        let _741 := _739                                        
+                                        let _742 := mload(_739)                                        
+                                        mstore(_739, or(shl(0xe0, 0xa9059cbb), and(sub(shl(0xe0, 0x1), 0x1), _742)))
+                                        let _743 := mload(0x40)                                        
+                                        let _744 := _743                                        
+                                        let _745 := _743                                        
+                                        let _746 := mload(_738)                                        
+                                        let _747 := _746                                        
+                                        let _748 := _746                                        
+                                        let _749 := _746                                        
+                                        for {
+                                            let _750 := 0x20                                            
+                                            let _751 := 0x1f                                            
+                                            let _752 := not(_751)                                            
+                                            _698 := add(_748, _752)                                            
+                                            let _753 := 0x20                                            
+                                            _697 := add(_753, _740)                                            
+                                            _696 := add(_753, _744)                                            
+                                        }
+                                        not(lt(_747, _750))                                        
+                                        { }
+                                        {
+                                            _747 := _698                                            
+                                            _750 := 0x20                                            
+                                            let _754 := not(lt(_747, _750))                                            
+                                            _748 := _698                                            
+                                            _744 := _696                                            
+                                            _740 := _697                                            
+                                            let _755 := mload(_740)                                            
+                                            mstore(_744, _755)
+                                            _751 := 0x1f                                            
+                                            _752 := not(_751)                                            
+                                            _698 := add(_748, _752)                                            
+                                            _747 := _698                                            
+                                            _748 := _698                                            
+                                            _749 := _698                                            
+                                            _753 := 0x20                                            
+                                            _696 := add(_753, _744)                                            
+                                            _744 := _696                                            
+                                            _745 := _696                                            
+                                            _697 := add(_753, _740)                                            
+                                            _740 := _697                                            
+                                            _741 := _697                                            
+                                        }
+                                        _741 := _697                                        
+                                        _745 := _696                                        
+                                        _749 := _698                                        
+                                        let _756 := sub(exp(0x100, sub(0x20, _749)), 0x1)                                        
+                                        let _757 := mload(_741)                                        
+                                        let _758 := mload(_745)                                        
+                                        mstore(_745, or(and(_757, not(_756)), and(_758, _756)))
+                                        let _759 := mload(0x40)                                        
+                                        let _760 := call(gas(), and(_715, _737), 0x0, _759, sub(add(_746, _743), _759), _759, 0x0)                                        
+                                        let _761 := _760                                        
+                                        let _762 := returndatasize()                                        
+                                        let _763 := eq(_762, 0x0)                                        
+                                        switch _762
+                                            case 0x0{
+                                                _701 := 0x60                                                
+                                                _699 := 0x60                                                
+                                            }
+                                            default {
+                                                _727 := 0x40                                                
+                                                _700 := mload(_727)                                                
+                                                _701 := _700                                                
+                                                _699 := _700                                                
+                                                mstore(0x40, add(_700, and(add(returndatasize(), 0x3f), not(0x1f))))
+                                                mstore(_700, returndatasize())
+                                                returndatacopy(add(_700, 0x20), 0x0, returndatasize())
+                                            }
+                                        let _764 := iszero(_760)                                        
+                                        if not(_764){
+                                            let _765 := mload(_701)                                            
+                                            let _766 := iszero(_765)                                            
+                                            _761 := _766                                            
+                                            if not(_766){
+                                                let _767 := mload(_699)                                                
+                                                let _768 := iszero(lt(_767, 0x20))                                                
+                                                require(not(_768))
+                                                let _769 := mload(add(0x20, _699))                                                
+                                                _761 := _769                                                
+                                            }
+                                        }
+                                        if _761{
+                                            let _770 := sload(0x8)                                            
+                                            let _771 := mload(0x40)                                            
+                                            mstore(_771, shl(0xe0, 0x70a08231))
+                                            mstore(add(_771, 0x4), address())
+                                            let _772 := mload(0x40)                                            
+                                            _710 := _772                                            
+                                            _711 := _772                                            
+                                            _717 := 0x1542                                            
+                                            _718 := 0x2e1e                                            
+                                            _719 := and(sub(shl(0x70, 0x1), 0x1), div(_770, shl(0x70, 0x1)))                                            
+                                            let _773 := and(_716, sub(shl(0xa0, 0x1), 0x1))                                            
+                                            _714 := _773                                            
+                                            let _774 := add(_771, 0x24)                                            
+                                            _721 := 0x20                                            
+                                            _722 := add(sub(_771, _772), 0x24)                                            
+                                            let _775 := iszero(iszero(extcodesize(_773)))                                            
+                                            require(not(_775))
+                                            stop()
+                                        }
+                                        if not(_761){
+                                            let _776 := mload(0x40)                                            
+                                            mstore(_776, shl(0xe5, 0x461bcd))
+                                            mstore(add(_776, 0x4), 0x20)
+                                            mstore(add(_776, 0x24), 0x1a)
+                                            mstore(add(_776, 0x44), 0x556e697377617056323a205452414e534645525f4641494c4544000000000000)
+                                            let _777 := mload(0x40)                                            
+                                            revert(_777, add(0x64, sub(_776, _777)))
+                                        }
+                                    }
+                                    if not(_734){
+                                        let _778 := mload(0x40)                                        
+                                        mstore(_778, shl(0xe5, 0x461bcd))
+                                        mstore(add(_778, 0x4), 0x20)
+                                        mstore(add(_778, 0x24), 0x15)
+                                        mstore(add(_778, 0x44), shl(0x58, 0x64732d6d6174682d7375622d756e646572666c6f77))
+                                        let _779 := mload(0x40)                                        
+                                        revert(_779, add(0x64, sub(_778, _779)))
+                                    }
+                                }
+                                if not(_730){
+                                    revert(0x0, 0x0)
+                                    break
+                                }
+                            }
+                            returndatacopy(0x0, 0x0, returndatasize())
+                            revert(0x0, returndatasize())
+                        }
+                        default {
+                            let _780 := mload(0x40)                            
+                            mstore(_780, shl(0xe5, 0x461bcd))
+                            mstore(add(_780, 0x4), 0x20)
+                            mstore(add(_780, 0x24), 0x11)
+                            mstore(add(_780, 0x44), shl(0x7a, 0x155b9a5cddd85c158c8e881313d0d2d151))
+                            let _781 := mload(0x40)                            
+                            revert(_781, add(0x64, sub(_780, _781)))
+                        }
+                }
+            function func_permit() {
+                    let _782 := iszero(lt(sub(calldatasize(), 0x4), 0xe0))                    
+                    require(not(_782))
+                    let _783 := sub(shl(0xa0, 0x1), 0x1)                    
+                    let _784 := and(_783, calldataload(0x4))                    
+                    let _785 := and(_783, calldataload(add(0x4, 0x20)))                    
+                    let _786 := calldataload(add(0x4, 0x40))                    
+                    let _787 := calldataload(add(0x4, 0x60))                    
+                    let _788 := iszero(lt(_787, timestamp()))                    
+                    if _788{
+                        let _789 := sload(0x3)                        
+                        let _790 := sub(shl(0xa0, 0x1), 0x1)                        
+                        let _791 := and(_784, _790)                        
+                        mstore(0x0, _791)
+                        mstore(0x20, 0x4)
+                        let _792 := keccak256(0x0, 0x40)                        
+                        let _793 := sload(_792)                        
+                        sstore(_792, add(_793, 0x1))
+                        let _794 := mload(0x40)                        
+                        mstore(add(0x20, _794), 0x6e71edae12b1b97f4d1f60370fef10105fa2faae0126114a169c64845d6126c9)
+                        mstore(add(0x40, _794), _791)
+                        mstore(add(_794, 0x60), and(_785, _790))
+                        mstore(add(_794, 0x80), _786)
+                        mstore(add(_794, 0xa0), _793)
+                        mstore(add(_794, 0xc0), _787)
+                        let _795 := mload(0x40)                        
+                        mstore(_795, add(0xc0, sub(_794, _795)))
+                        mstore(0x40, add(_794, 0xe0))
+                        let _796 := mload(_795)                        
+                        mstore(add(_794, 0x100), shl(0xf0, 0x1901))
+                        mstore(add(_794, 0x102), _789)
+                        mstore(add(_794, 0x122), keccak256(add(0x20, _795), _796))
+                        let _797 := mload(0x40)                        
+                        mstore(_797, add(0x122, sub(_794, _797)))
+                        let _798 := add(_794, 0x142)                        
+                        mstore(0x40, _798)
+                        let _799 := mload(_797)                        
+                        mstore(_798, 0x0)
+                        let _800 := add(_794, 0x162)                        
+                        mstore(0x40, _800)
+                        mstore(_800, keccak256(add(0x20, _797), _799))
+                        mstore(add(_794, 0x182), and(and(calldataload(add(0x4, 0x80)), 0xff), 0xff))
+                        mstore(add(_794, 0x1a2), calldataload(add(0x4, 0xa0)))
+                        mstore(add(_794, 0x1c2), calldataload(add(0xc0, 0x4)))
+                        let _801 := mload(0x40)                        
+                        let _802 := add(_794, 0x1e2)                        
+                        let _803 := staticcall(gas(), 0x1, _801, add(0x1e2, sub(_794, _801)), add(_801, not(0x1f)), 0x20)                        
+                        let _804 := iszero(iszero(_803))                        
+                        if _804{
+                            let _805 := mload(0x40)                            
+                            let _806 := mload(add(not(0x1f), _805))                            
+                            let _807 := iszero(and(_806, sub(shl(0xa0, 0x1), 0x1)))                            
+                            let _808 := iszero(_807)                            
+                            if not(_807){
+                                _808 := eq(and(sub(shl(0xa0, 0x1), 0x1), _806), and(sub(shl(0xa0, 0x1), 0x1), _784))                                
+                            }
+                            if _808{
+                                let _809 := sub(shl(0xa0, 0x1), 0x1)                                
+                                let _810 := and(_784, _809)                                
+                                mstore(0x0, _810)
+                                mstore(0x20, 0x2)
+                                let _811 := and(_785, _809)                                
+                                mstore(0x0, _811)
+                                mstore(0x20, keccak256(0x0, 0x40))
+                                sstore(keccak256(0x0, 0x40), _786)
+                                let _812 := mload(0x40)                                
+                                mstore(_812, _786)
+                                let _813 := mload(0x40)                                
+                                log3(_813, add(0x20, sub(_812, _813)), 0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925, _810, _811)
+                                stop()
+                            }
+                            if not(_808){
+                                let _814 := mload(0x40)                                
+                                mstore(_814, shl(0xe5, 0x461bcd))
+                                mstore(add(_814, 0x4), 0x20)
+                                mstore(add(_814, 0x24), 0x1c)
+                                mstore(add(_814, 0x44), 0x556e697377617056323a20494e56414c49445f5349474e415455524500000000)
+                                let _815 := mload(0x40)                                
+                                revert(_815, add(0x64, sub(_814, _815)))
+                            }
+                        }
+                        if not(_804){
+                            returndatacopy(0x0, 0x0, returndatasize())
+                            revert(0x0, returndatasize())
+                        }
+                    }
+                    if not(_788){
+                        let _816 := mload(0x40)                        
+                        mstore(_816, shl(0xe5, 0x461bcd))
+                        mstore(add(_816, 0x4), 0x20)
+                        mstore(add(_816, 0x24), 0x12)
+                        mstore(add(_816, 0x44), shl(0x72, 0x155b9a5cddd85c158c8e8811561412549151))
+                        let _817 := mload(0x40)                        
+                        revert(_817, add(0x64, sub(_816, _817)))
+                    }
+                }
+            function func_allowance() {
+                    let _818 := iszero(lt(sub(calldatasize(), 0x4), 0x40))                    
+                    require(not(_818))
+                    let _819 := sub(shl(0xa0, 0x1), 0x1)                    
+                    mstore(0x20, 0x2)
+                    mstore(0x0, and(_819, calldataload(0x4)))
+                    mstore(0x20, keccak256(0x0, 0x40))
+                    mstore(0x0, and(calldataload(add(0x20, 0x4)), _819))
+                    let _820 := sload(keccak256(0x0, 0x40))                    
+                    let _821 := mload(0x40)                    
+                    mstore(_821, _820)
+                    let _822 := mload(0x40)                    
+                    return(_822, add(0x20, sub(_821, _822)))
+                }
+            function func_0x23dc(_823, _824, _825) {
+                    let _826 := sload(0x0)                    
+                    let _827 := and(0x26ed, 0xffffffff)                    
+                    let _828 := add(_826, _823)                    
+                    let _829 := iszero(lt(_828, _826))                    
+                    if _829{
+                        sstore(0x0, _828)
+                        mstore(0x0, and(_824, sub(shl(0xa0, 0x1), 0x1)))
+                        mstore(0x20, 0x1)
+                        let _830 := sload(keccak256(0x0, 0x40))                        
+                        let _831 := and(0x26ed, 0xffffffff)                        
+                        let _832 := add(_830, _823)                        
+                        let _833 := iszero(lt(_832, _830))                        
+                        if _833{
+                            let _834 := and(_824, sub(shl(0xa0, 0x1), 0x1))                            
+                            mstore(0x0, _834)
+                            mstore(0x20, 0x1)
+                            sstore(keccak256(0x0, 0x40), _832)
+                            let _835 := mload(0x40)                            
+                            mstore(_835, _823)
+                            let _836 := mload(0x40)                            
+                            log3(_836, add(0x20, sub(_835, _836)), 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef, 0x0, _834)
+                            leave
+                        }
+                        if not(_833){
+                            let _837 := mload(0x40)                            
+                            mstore(_837, shl(0xe5, 0x461bcd))
+                            mstore(add(_837, 0x4), 0x20)
+                            mstore(add(_837, 0x24), 0x14)
+                            mstore(add(_837, 0x44), shl(0x60, 0x64732d6d6174682d6164642d6f766572666c6f77))
+                            let _838 := mload(0x40)                            
+                            revert(_838, add(0x64, sub(_837, _838)))
+                        }
+                    }
+                    if not(_829){
+                        let _839 := mload(0x40)                        
+                        mstore(_839, shl(0xe5, 0x461bcd))
+                        mstore(add(_839, 0x4), 0x20)
+                        mstore(add(_839, 0x24), 0x14)
+                        mstore(add(_839, 0x44), shl(0x60, 0x64732d6d6174682d6164642d6f766572666c6f77))
+                        let _840 := mload(0x40)                        
+                        revert(_840, add(0x64, sub(_839, _840)))
+                    }
+                }
+            function func_0x2172(_841, _842, _843, _844) {
+                    mstore(0x0, and(_843, sub(shl(0xa0, 0x1), 0x1)))
+                    mstore(0x20, 0x1)
+                    let _845 := sload(keccak256(0x0, 0x40))                    
+                    let _846 := and(0x1bca, 0xffffffff)                    
+                    let _847 := sub(shl(0xa0, 0x1), 0x1)                    
+                    mstore(0x0, and(_843, _847))
+                    mstore(0x20, 0x1)
+                    sstore(keccak256(0x0, 0x40), func_0x1bca(_841, _845, 0x219b))
+                    mstore(0x0, and(_842, _847))
+                    let _848 := sload(keccak256(0x0, 0x40))                    
+                    let _849 := and(0x26ed, 0xffffffff)                    
+                    let _850 := add(_848, _841)                    
+                    let _851 := iszero(lt(_850, _848))                    
+                    if _851{
+                        let _852 := sub(shl(0xa0, 0x1), 0x1)                        
+                        let _853 := and(_842, _852)                        
+                        mstore(0x0, _853)
+                        mstore(0x20, 0x1)
+                        sstore(keccak256(0x0, 0x40), _850)
+                        let _854 := mload(0x40)                        
+                        mstore(_854, _841)
+                        let _855 := mload(0x40)                        
+                        log3(_855, add(sub(_854, _855), 0x20), 0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef, and(_843, _852), _853)
+                        leave
+                    }
+                    if not(_851){
+                        let _856 := mload(0x40)                        
+                        mstore(_856, shl(0xe5, 0x461bcd))
+                        mstore(add(_856, 0x4), 0x20)
+                        mstore(add(_856, 0x24), 0x14)
+                        mstore(add(_856, 0x44), shl(0x60, 0x64732d6d6174682d6164642d6f766572666c6f77))
+                        let _857 := mload(0x40)                        
+                        revert(_857, add(0x64, sub(_856, _857)))
+                    }
+                }
+            function func_getReserves() {
+                    let _858 := sload(0x8)                    
+                    let _859 := sub(shl(0x70, 0x1), 0x1)                    
+                    let _860 := mload(0x40)                    
+                    let _861 := sub(shl(0x70, 0x1), 0x1)                    
+                    mstore(_860, and(_861, and(_858, _859)))
+                    mstore(add(_860, 0x20), and(_861, and(_859, div(_858, shl(0x70, 0x1)))))
+                    mstore(add(0x40, _860), and(0xffffffff, and(0xffffffff, div(_858, shl(0xe0, 0x1)))))
+                    let _862 := mload(0x40)                    
+                    return(_862, add(0x60, sub(_860, _862)))
+                }
+            function func_token0() {
+                    let _863 := sload(0x6)                    
+                    let _864 := mload(0x40)                    
+                    mstore(_864, and(and(sub(shl(0xa0, 0x1), 0x1), _863), sub(shl(0xa0, 0x1), 0x1)))
+                    let _865 := mload(0x40)                    
+                    return(_865, add(0x20, sub(_864, _865)))
+                }
+            function func_totalSupply() {
+                    let _866 := sload(0x0)                    
+                    let _867 := mload(0x40)                    
+                    mstore(_867, _866)
+                    let _868 := mload(0x40)                    
+                    return(_868, add(0x20, sub(_867, _868)))
+                }
+            function func_PERMIT_TYPEHASH() {
+                    let _869 := mload(0x40)                    
+                    mstore(_869, 0x6e71edae12b1b97f4d1f60370fef10105fa2faae0126114a169c64845d6126c9)
+                    let _870 := mload(0x40)                    
+                    return(_870, add(0x20, sub(_869, _870)))
+                }
+            function func_decimals() {
+                    let _871 := mload(0x40)                    
+                    mstore(_871, and(0x12, 0xff))
+                    let _872 := mload(0x40)                    
+                    return(_872, add(0x20, sub(_871, _872)))
+                }
+            function func_DOMAIN_SEPARATOR() {
+                    let _873 := sload(0x3)                    
+                    let _874 := mload(0x40)                    
+                    mstore(_874, _873)
+                    let _875 := mload(0x40)                    
+                    return(_875, add(0x20, sub(_874, _875)))
+                }
+            function func_price0CumulativeLast() {
+                    let _876 := sload(0x9)                    
+                    let _877 := mload(0x40)                    
+                    mstore(_877, _876)
+                    let _878 := mload(0x40)                    
+                    return(_878, add(0x20, sub(_877, _878)))
+                }
+            function func_price1CumulativeLast() {
+                    let _879 := sload(0xa)                    
+                    let _880 := mload(0x40)                    
+                    mstore(_880, _879)
+                    let _881 := mload(0x40)                    
+                    return(_881, add(0x20, sub(_880, _881)))
+                }
+            function func_kLast() {
+                    let _882 := sload(0xb)                    
+                    let _883 := mload(0x40)                    
+                    mstore(_883, _882)
+                    let _884 := mload(0x40)                    
+                    return(_884, add(0x20, sub(_883, _884)))
+                }
+            function func_MINIMUM_LIQUIDITY() {
+                    let _885 := mload(0x40)                    
+                    mstore(_885, 0x3e8)
+                    let _886 := mload(0x40)                    
+                    return(_886, add(0x20, sub(_885, _886)))
+                }
+            function func_factory() {
+                    let _887 := sload(0x5)                    
+                    let _888 := mload(0x40)                    
+                    mstore(_888, and(and(sub(shl(0xa0, 0x1), 0x1), _887), sub(shl(0xa0, 0x1), 0x1)))
+                    let _889 := mload(0x40)                    
+                    return(_889, add(0x20, sub(_888, _889)))
+                }
+            function func_token1() {
+                    let _890 := sload(0x7)                    
+                    let _891 := mload(0x40)                    
+                    mstore(_891, and(and(sub(shl(0xa0, 0x1), 0x1), _890), sub(shl(0xa0, 0x1), 0x1)))
+                    let _892 := mload(0x40)                    
+                    return(_892, add(0x20, sub(_891, _892)))
+                }
+            function func_ROOT4146650865() {
+                    revert(0x0, 0x0)
+                }
+            function require(condition) {
+                    if iszero(condition){
+                        revert(0x0, 0x0)
+                    }
+                }
+        }
+    }
+}
