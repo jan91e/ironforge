@@ -1,4 +1,4 @@
-import "../src/Shaman.sol";
+import "../src/deadmines/template/Shaman.sol";
 
 import {CheatCodes} from "./ICheatCodes.sol";
 import "forge-std/Test.sol";
