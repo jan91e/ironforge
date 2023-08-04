@@ -1,6 +1,7 @@
+import {RuinLocation} from "./ruins/RuinLocation.sol";
 import "forge-std/console.sol";
 
-contract Shaman {
+contract Shaman is RuinLocation {
     function peek() external {}
 
     // attack entrypoint
