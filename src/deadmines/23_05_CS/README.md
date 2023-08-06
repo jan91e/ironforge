@@ -1,9 +1,9 @@
 # CS Token
 
 > Time: BSC#28466976
-
+>
 > Tag: `Flashloan`, `Rebasing Token`, `Public Burn`
-
+>
 > Malicious Txs: 0x906394b2ee093720955a7d55bff1666f6cf6239e46bea8af99d6352b9687baa4
 
 ## Code snippet:

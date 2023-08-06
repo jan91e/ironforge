@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.13;
 
-import "../src/deadmines/23_07_Carson/Shaman.sol";
+import "../src/deadmines/23_07_Bamboo/Shaman.sol";
 
 import "forge-std/Test.sol";
 
@@ -9,7 +9,7 @@ contract ShamanTest is Test {
     Shaman public shaman;
 
     function setUp() public {
-        vm.createSelectFork("bsc", 30306324);
+        vm.createSelectFork("bsc", 29668034);
 
         shaman = new Shaman();
     }

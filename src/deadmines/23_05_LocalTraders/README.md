@@ -1,9 +1,9 @@
 # LocalTraders
 
 > Time: bsc#28460898
-
+>
 > Tag: `ACL`, `Price Oracle`
-
+>
 > Malicious Txs:
 > 1. [Access gain] 0x57b589f631f8ff20e2a89a649c4ec2e35be72eaecf155fdfde981c0fec2be5ba
 > 2. [Price change] 0xbea605b238c85aabe5edc636219155d8c4879d6b05c48091cf1f7286bd4702ba

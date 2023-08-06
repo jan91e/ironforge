@@ -5,4 +5,7 @@ interface IDppFlashloan {
         address _assetTo,
         bytes calldata data
     ) external;
+
+    function _BASE_TOKEN_() external view returns (address);
+    function _QUOTE_TOKEN_() external view returns (address);
 }
