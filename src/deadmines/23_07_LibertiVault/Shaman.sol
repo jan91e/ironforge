@@ -21,7 +21,7 @@ interface ILibertiVault {
         bytes calldata data
     ) external returns (uint256);
 
-        /// @notice Transfer an amount of asset and an amount of stablecoin to the sender, relative to
+    /// @notice Transfer an amount of asset and an amount of stablecoin to the sender, relative to
     /// @notice their balance of shares and the total supply of the vault. Exit fees are captured
     /// @notice in the form of shares, and remaining shares are burned. The purpose of this function
     /// @notice is to let a shareholder to redeem their shares without relying on any external
