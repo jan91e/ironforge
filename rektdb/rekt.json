@@ -1,6 +1,165 @@
 [
     {
         "name": "EarningFarm",
-        "date": "2023.8.9"        
+        "date": "2023.8.9",
+        "ruins": [
+            {
+                "id": 0,
+                "chain": "eth",
+                "name": "TransparentUpgradeableProxy",
+                "address": "0x5655c442227371267c165101048E4838a762675d",
+                "type": "victimCore",
+                "impl": 1
+            },
+            {
+                "id": 1,
+                "chain": "eth",
+                "name": "EFVault",
+                "address": "0x863e572B215Fd67C855d973F870266cF827AEa5e",
+                "type": "victimCore"
+            },
+            {
+                "id": 2,
+                "chain": "eth",
+                "name": "TransparentUpgradeableProxy",
+                "address": "0x12Df0C95D2c549bbBC96cf8FbA02cA4Bc541aFD9",
+                "type": "victimRelated",
+                "impl": 3
+            },
+            {
+                "id": 3,
+                "chain": "eth",
+                "name": "ETHLeverage",
+                "address": "0x380371Cb985a3ec68377b280E46b665f280C4066",
+                "type": "victimRelated"
+            },
+            {
+                "id": 4,
+                "chain": "eth",
+                "name": "TransparentUpgradeableProxy",
+                "address": "0xE8688D014194fd5d7acC3c17477fD6db62aDdeE9",
+                "type": "victimRelated",
+                "impl": 5
+            },
+            {
+                "id": 5,
+                "chain": "eth",
+                "name": "Controller",
+                "address": "0x31CdFE2b7a702BD81512B7756a3D6D94756CA19D",
+                "type": "victimRelated",
+                "impl": 6
+            },
+            {
+                "id": 6,
+                "chain": "eth",
+                "name": "Attacker",
+                "address": "0xee4b3dd20902Fa3539706F25005fa51D3b7bDF1b",
+                "type": "attacker"
+            },
+            {
+                "id": 7,
+                "chain": "eth",
+                "name": "AttackContract",
+                "address": "0xFe141C32E36Ba7601D128F0C39DEdBE0F6aBb983",
+                "type": "attackContractCore"
+            },
+            {
+                "id": 8,
+                "chain": "eth",
+                "name": "AttackContract2",
+                "address": "0xCFD26FE5Fe6028539802275C1CC6e9325aA2e3b7",
+                "type": "attackContractRelated"
+            }
+        ],
+        "txs": [
+            {
+                "id": 0,
+                "type": "attackContractCreation",
+                "hash": "0xb4988a59a58fbf829cc15330f9888659470f36bdec1c228765ce84771039dfed"
+            },
+            {
+                "id": 1,
+                "type": "attack",
+                "hash": "0x6e6e556a5685980317cb2afdb628ed4a845b3cbd1c98bdaffd0561cb2c4790fa"
+            },
+            {
+                "id": 2,
+                "type": "attackProfit",
+                "hash": "0x0c15445d7acf6f6385e086e21ac026e57ad3355ab4b303d3636df167b943a907"
+            },
+            {
+                "id": 3,
+                "type": "attack",
+                "hash": "0x8e12959dc243c3ff24dfae0ea7cdad48f6cfc1117c349cdc1742df3ae3a3279b"
+            },
+            {
+                "id": 4,
+                "type": "attack",
+                "hash": "0x09349d03e1961cd067f3a049ddef27e6d4b2b516e0252fb885854ba109089301"
+            },
+            {
+                "id": 5,
+                "type": "attack",
+                "hash": "0xefb27bfca4bfb0111b8d858340178ccb936c2872026fdfaaabb15eb306e70e4f"
+            },
+            {
+                "id": 6,
+                "type": "attack",
+                "hash": "0x0d5106d4fa1bddee97a3ed0cb78f5ee6cf08bac4e7201883b63a7b4e71e5fddc"
+            },
+            {
+                "id": 7,
+                "type": "attack",
+                "hash": "0x2b492dd5184f2c0f5049923ea61036bc3aee44dd3aa5454dd3de2be2f354c2b6"   
+            },
+            {
+                "id": 8,
+                "type": "attack",
+                "hash": "0xb35faeee64205e3018a1331e59abf7fa7a20bd0163dd2eed4657a9693e9c7ecf"
+            },
+            {
+                "id": 9,
+                "type": "attack",
+                "hash": "0x8454beb56ca22f710706c00ac4b969caa7b8848b4a45202cf52715f10a09fc0f"
+            },
+            {
+                "id": 10,
+                "type": "attack",
+                "hash": "0x878d8986ed05ab32cc01e05663d27ea471576d2baff1081b15ed5fb550f9d81b"
+            },
+            {
+                "id": 11,
+                "type": "attack",
+                "hash": "0x25567821ea31a8efd395654b7fafbab8511e777420803b99b08ca8500dcc3e95"
+            },
+            {
+                "id": 12,
+                "type": "attackProfit",
+                "hash": "0xaafb6b2abe006b21b8bc66205590b0dfff645f99c0528599c47b94bd7983b904"
+            },
+            {
+                "id": 13,
+                "type": "attackProfit",
+                "hash": "0xcda78441c832ddddfa9afd3f25f55d3b30ce021c9f9c143021798d648eca1e39"
+            },
+            {
+                "id": 14,
+                "type": "attackProfit",
+                "hash": "0xa24180d0733beb90ac1af8273b11829382f052f3a1b4af9bce2917446a52f866"
+            },
+            {
+                "id": 15,
+                "type": "attackProfit",
+                "hash": "0x11f8b10fe74f8550e5b59fb68c2703f79f1f64564deb9b1f71323ee1b9e630b7"
+            },
+            {
+                "id": 16,
+                "type": "attackProfit",
+                "hash": "0x3e54d05d50959519a7fc849f2c2f7bc19a1d454ee51160698f220d059ed22432"
+            }
+        ],
+        "refs": [
+            "https://twitter.com/Phalcon_xyz/status/1689182459269644288"
+        ]
     }
 ]

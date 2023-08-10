@@ -4,13 +4,13 @@ import {
     USDC,
     WETH,
     UNISWAPV3_USDC_WETH_POOL
-} from "src/constants/mainnet.sol";
+} from "../../constants/mainnet.sol";
 
-import "src/interfaces/tokens/IERC20.sol";
-import "src/interfaces/tokens/IWETH.sol";
+import "../../interfaces/tokens/IERC20.sol";
+import "../../interfaces/tokens/IWETH.sol";
 
-import {ClonesUpgradeable} from "src/lib/upgradable/proxy/ClonesUpgradeable.sol";
-import {UniswapV3FlashloanHelper} from "src/lib/flashloan/uniswap/v3/UniswapV3FlashloanHelper.sol";
+import {ClonesUpgradeable} from "../../lib/upgradable/proxy/ClonesUpgradeable.sol";
+import {UniswapV3FlashloanHelper} from "../../lib/flashloan/uniswap/v3/UniswapV3FlashloanHelper.sol";
 
 import "forge-std/console.sol";
 

@@ -1,0 +1,28 @@
+Incidents::List[Incident]
+
+Incident:
+    Name::str
+    Date::str
+    Ruins::List[Ruin]
+    Txs::List[Tx]
+    Refs::List[str]
+
+Ruin:
+    Id::uint
+    Chain::str
+    Name::str
+    Address::str
+    Type::ruinType
+    Impl::uint
+
+ruinType := victimCore | victimRelated | 
+    attacker | attackContractCore | attackContractRelated |
+    frontRunner | frontRunContractCore | frontRunContractRelated
+
+Tx:
+    Type::txType
+    Id:uint
+    Hash::str
+
+txType := attack | attackProfit | attackContractCreation |
+    frontRunAttack | frontRunAttackContractCreation
