@@ -1,0 +1,3108 @@
+// Decompiled by library.dedaub.com
+// 2023.07.31 23:20 UTC
+// Compiled using the solidity compiler version 0.8.7
+
+
+// Data structures and variables inferred from the use of storage instructions
+uint256 ___function_selector__; // STORAGE[0x0]
+uint256 _owner; // STORAGE[0x1] bytes 0 to 19
+
+
+
+function 0x1291(uint256 varg0, uint256 varg1) private { 
+    v0 = v1 = 0;
+    v2 = v3 = 1;
+    v4 = _SafeAdd(v3, varg0.length);
+    require(v4 <= uint64.max, Panic(65)); // failed memory allocation (too much memory)
+    v5 = new uint256[](v4);
+    if (v4) {
+        CALLDATACOPY(v5.data, msg.data.length, v4 << 5);
+    }
+    require(0 < v5.length, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+    v6 = v5.data;
+    v5[0] = varg1;
+    while (v0 < varg0.length) {
+        require(v0 < varg0.length, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+        require(v2 < v5.length, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+        v5[v2] = MEM[96 + varg0[v0]];
+        v0 += 1;
+        v2 += 1;
+    }
+    return v5;
+}
+
+function 0x137a(uint256 varg0, uint256 varg1) private { 
+    v0 = 0x24eb(varg0, this, varg1);
+    if (v0) {
+        return ;
+    } else {
+        0x25db(~0, varg0, varg1);
+        return ;
+    }
+}
+
+function 0x0582f20f(uint256 varg0, uint256 varg1, uint256 varg2, uint256 varg3) public nonPayable { 
+    require(msg.data.length - 4 >= 128);
+    require(varg0 <= uint64.max);
+    require(4 + varg0 + 31 < msg.data.length);
+    require(varg0.length <= uint64.max);
+    require(4 + varg0 + (varg0.length << 5) + 32 <= msg.data.length);
+    require(varg1 <= uint64.max);
+    require(4 + varg1 + 31 < msg.data.length);
+    require(varg1.length <= uint64.max);
+    require(4 + varg1 + (varg1.length << 5) + 32 <= msg.data.length);
+    require(varg2 <= uint64.max);
+    require(4 + varg2 + 31 < msg.data.length);
+    require(varg2.length <= uint64.max);
+    require(4 + varg2 + (varg2.length << 5) + 32 <= msg.data.length);
+    v0 = v1 = 0;
+    v2 = v3 = bool(varg3 >> 12);
+    require(v3 <= uint64.max, Panic(65)); // failed memory allocation (too much memory)
+    v4 = new uint256[](v3);
+    if (v3) {
+        v5 = v4.data;
+        do {
+            MEM[MEM[64]] = address(0x0);
+            MEM[32 + MEM[64]] = 0;
+            MEM[64 + MEM[64]] = 0;
+            MEM[96 + MEM[64]] = 0;
+            MEM[v5] = MEM[64];
+            v5 += 32;
+            v2 = v2 - 1;
+        } while (!v2);
+    }
+    require(v3 <= uint64.max, Panic(65)); // failed memory allocation (too much memory)
+    v6 = new uint256[](v3);
+    if (v3) {
+        CALLDATACOPY(v6.data, msg.data.length, v3 << 5);
+    }
+    v7 = v8 = 0;
+    while (v7 < v3) {
+        require(v7 < v4.length, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+        require(v0 < varg1.length, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+        require((v0 << 5) + varg1.data + 32 - ((v0 << 5) + varg1.data) >= 32);
+        require(varg1[v0] == address(varg1[v0]));
+        MEM[v4[v7]] = address(varg1[v0]);
+        require(v7 < varg0.length, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+        MEM[v4[v7] + 32] = varg0[v7];
+        v0 += 1;
+        v7 = v7 + 1;
+        if (varg0[v7] & 0x80) {
+            require(v7 < varg0.length, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+            require(v7 < v6.length, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+            v6[v7] = varg0[v7];
+            v7 += 1;
+        }
+        if (varg0[v7] & 0x100) {
+            require(v7 < varg0.length, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+            MEM[v4[v7] + 64] = varg0[v7];
+            v7 = v7 + 1;
+        }
+        v7 += 1;
+    }
+    require(bool(varg3 >> 8) <= uint64.max, Panic(65)); // failed memory allocation (too much memory)
+    v9 = new uint256[](bool(varg3 >> 8));
+    if (bool(varg3 >> 8)) {
+        CALLDATACOPY(v9.data, msg.data.length, bool(varg3 >> 8) << 5);
+    }
+    v10 = v11 = 0;
+    while (v10 < bool(varg3 >> 8)) {
+        require(v10 < 32, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+        if ((byte(varg3, v10)) != 7) {
+            if (byte(varg3, v10)) {
+                if (1 != (byte(varg3, v10))) {
+                    if (2 != (byte(varg3, v10))) {
+                        if (3 != (byte(varg3, v10))) {
+                            if (4 != (byte(varg3, v10))) {
+                                if (5 != (byte(varg3, v10))) {
+                                    require(6 == (byte(varg3, v10)), Error('BB: Address'));
+                                    v12 = 0;
+                                } else {
+                                    v12 = v13 = 0x2f2a2543b76a4166549f7aab2e75bef0aefc5b0f;
+                                }
+                            } else {
+                                v12 = v14 = 0x912ce59144191c1204e64559fe8253a0e49e6548;
+                            }
+                        } else {
+                            v12 = v15 = 0xda10009cbd5d07dd0cecc66161fc93d7c9000da1;
+                        }
+                    } else {
+                        v12 = v16 = 0xff970a61a04b1ca14834a43f5de4533ebddb5cc8;
+                    }
+                } else {
+                    v12 = v17 = 0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9;
+                }
+            } else {
+                v12 = v18 = 0xd614927acfb9744441180c2525faf4cedb70207f;
+            }
+            require(v10 < v9.length, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+            v9[v10] = address(v12);
+        } else {
+            require(v0 < varg1.length, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+            require((v0 << 5) + varg1.data + 32 - ((v0 << 5) + varg1.data) >= 32);
+            require(varg1[v0] == address(varg1[v0]));
+            require(v10 < v9.length, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+            v9[v10] = address(varg1[v0]);
+            v0 += 1;
+        }
+        v10 += 1;
+    }
+    if (this == msg.sender) {
+        v19 = v20 = varg3 | 0x4;
+    } else {
+        if (uint16(varg3 >> 128)) {
+            require(bool((address(0x64)).code.size));
+            v21, /* uint256 */ v22 = address(0x64).staticcall(uint32(0xa3b1b31d)).gas(msg.gas);
+            require(bool(v21), 0, RETURNDATASIZE()); // checks call status, propagates error data on error
+            require(MEM[64] + RETURNDATASIZE() - MEM[64] >= 32);
+            require(uint8.max, Panic(18)); // division by zero
+            v23 = v22 % uint8.max;
+            if (v23 < uint8(uint16(varg3 >> 128))) {
+                v23 = v24 = _SafeAdd(v23, uint8.max);
+            }
+            v25 = _SafeSub(v23, uint8(uint16(varg3 >> 128)));
+            v26 = v27 = v25 > uint16(varg3 >> 128) >> 8;
+        } else {
+            v26 = 0;
+        }
+        require(!v26, Error('BB: Expired'));
+    }
+    v28 = v29 = uint112(v19 >> 16);
+    v30 = v31 = 0;
+    while (v30 < v4.length) {
+        require(v30 < v4.length, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+        v28 = 0x2868(v9, MEM[32 + v4[v30]], v4[v30], v28);
+        require(v30 < v6.length, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+        if (v28 > v6[v30]) {
+            if (0xfff & MEM[32 + v4[v30]] >> 30) {
+                v32 = _SafeSub(10000, 0xfff & MEM[32 + v4[v30]] >> 30);
+                v33 = _SafeMul(v28, v32);
+                v28 = _SafeDiv(v33, 10000);
+            }
+            MEM[96 + v4[v30]] = v28;
+            v30 += 1;
+        } else {
+            require(v30, Error('BB: FAIL_Q_1'));
+            require(1 != v30, Error('BB: FAIL_Q_2'));
+            require(2 != v30, Error('BB: FAIL_Q_3'));
+            require(3 != v30, Error('BB: FAIL_Q_4'));
+            revert(Error('BB: FAIL_Q_X'));
+        }
+    }
+    v34 = v35 = uint144(v19);
+    if (this != msg.sender) {
+        require(v28 >= v29, Error('BB: FAIL_Q'));
+        if (v35 & 0x2) {
+            v36 = _SafeMul(v29, 0x5f5e100);
+            v37 = _SafeDiv(v36, v28);
+            v34 = v35 | v37 << 144;
+        }
+    }
+    require(0 < v4.length, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+    v38 = v4.data;
+    v39 = v40 = MEM[0 + v4[0]];
+    require(0 < v9.length, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+    v41 = v9.data;
+    if (0 != v34 & 0x1) {
+        require(bool((address(0xd614927acfb9744441180c2525faf4cedb70207f)).code.size));
+        v42 = address(0xd614927acfb9744441180c2525faf4cedb70207f).call(uint32(0x6e0e14e3)).gas(msg.gas);
+        require(bool(v42), 0, RETURNDATASIZE()); // checks call status, propagates error data on error
+        if (MEM[32 + v4[0]] & 0x20) {
+            0x137a(v40, v9[0]);
+        }
+        MEM[32 + MEM[64]] = 96;
+        MEM[128 + MEM[64]] = v4.length;
+        v43 = v44 = 0;
+        v45 = v46 = 32 + MEM[64] + 128;
+        v47 = v48 = v4.data;
+        while (v43 < v4.length) {
+            MEM[v45] = address(MEM[MEM[v47]]);
+            MEM[v45 + 32] = MEM[MEM[v47] + 32];
+            MEM[v45 + 64] = MEM[MEM[v47] + 64];
+            MEM[v45 + 96] = MEM[96 + MEM[v47]];
+            v45 += 128;
+            v47 += 32;
+            v43 += 1;
+        }
+        MEM[32 + MEM[64] + 32] = v45 - (32 + MEM[64]);
+        MEM[v45] = v9.length;
+        v49 = v50 = v45 + 32;
+        v51 = v52 = v9.data;
+        v53 = v54 = 0;
+        while (v53 < v9.length) {
+            MEM[v49] = address(MEM[v51]);
+            v49 += 32;
+            v51 += 32;
+            v53 += 1;
+        }
+        MEM[32 + MEM[64] + 64] = v34;
+        if (MEM[32 + v4[0]] & 0x7 != 0) {
+            require(MEM[32 + v4[0]] & 0x7 == 3, Error('BB: FL_ROUTE'));
+            require(MEM[32 + v4[0]] >> 42 & 0x7 < v9.length, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+            require(MEM[32 + v4[0]] >> 45 & 0x7 < v9.length, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+            v55 = new uint256[](v49 - MEM[64] - 32);
+            v56 = v57 = 0;
+            while (v56 < v49 - MEM[64] - 32) {
+                MEM[v56 + v55.data] = MEM[v56 + (MEM[64] + 32)];
+                v56 += 32;
+            }
+            if (v56 <= v49 - MEM[64] - 32) {
+                goto 0x3411B0x3508B0x1c4cB0x969B0x221;
+            } else {
+                MEM[v49 - MEM[64] - 32 + v55.data] = 0;
+            }
+            require(bool((address(MEM[32 + v4[0]] >> 96)).code.size));
+            v58 = address(MEM[32 + v4[0]] >> 96).call(uint32(0xe62b8f40), address(v40), address(v9[MEM[32 + v4[0]] >> 42 & 0x7]), address(v9[MEM[32 + v4[0]] >> 45 & 0x7]), v29, MEM[32 + v4[0]], MEM[64 + v4[0]], address(this), v55).gas(msg.gas);
+            require(bool(v58), 0, RETURNDATASIZE()); // checks call status, propagates error data on error
+            goto 0x977B0x221;
+        } else {
+            v59 = v60 = MEM[v4[0] + 96];
+            v59 = v61 = 0;
+            v62 = new uint256[](v49 - MEM[64] - 32);
+            v63 = v64 = 0;
+            while (v63 < v49 - MEM[64] - 32) {
+                MEM[v63 + v62.data] = MEM[v63 + (MEM[64] + 32)];
+                v63 += 32;
+            }
+            if (v63 <= v49 - MEM[64] - 32) {
+                goto 0x3411B0x3787B0x1b8aB0x969B0x221;
+            } else {
+                MEM[v49 - MEM[64] - 32 + v62.data] = 0;
+            }
+            require(bool((address(v40)).code.size));
+            v65 = address(v40).swap(v59, v59, address(this), v62).gas(msg.gas);
+            require(bool(v65), 0, RETURNDATASIZE()); // checks call status, propagates error data on error
+            goto 0x977B0x221;
+        }
+    } else {
+        if (!varg2.length) {
+            if (!(MEM[32 + v4[0]] & 0x10)) {
+                v39 = v66 = this;
+            }
+            require(bool((address(0xd614927acfb9744441180c2525faf4cedb70207f)).code.size));
+            v67, /* uint256 */ v68 = address(0xd614927acfb9744441180c2525faf4cedb70207f).borrow(address(v39), address(v9[0]), v29).gas(msg.gas);
+            require(bool(v67), 0, RETURNDATASIZE()); // checks call status, propagates error data on error
+            require(MEM[64] + RETURNDATASIZE() - MEM[64] >= 32);
+            v69 = v70 = 0;
+            v71 = v72 = 0;
+            while (v69 < v4.length) {
+                v69 = v69 + 1;
+                v73 = v74 = this;
+                if (v69 != v4.length) {
+                    require(v69 < v4.length, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+                    if (0 != MEM[32 + v4[v69]] & 0x10) {
+                        require(v69 < v4.length, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+                        v73 = v75 = MEM[0 + v4[v69]];
+                    }
+                } else if (!v70) {
+                    v73 = 0xd614927acfb9744441180c2525faf4cedb70207f;
+                }
+                require(v69 < v4.length, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+                v76 = MEM[32 + v4[v69]];
+                v77 = v78 = 0;
+                if (!v69) {
+                    v69 = bool(v76 & 0x40);
+                }
+                if (v69) {
+                    require(v76 >> 45 & 0x7 < v9.length, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+                    v71 = v9[v76 >> 45 & 0x7];
+                    if (v69 < v4.length) {
+                        require(v69 < v4.length, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+                        if (MEM[32 + v4[v69]] & 0x7 < 2) {
+                            v77 = v79 = MEM[32 + v4[v69]] >> 152;
+                        }
+                    }
+                    if (!v77) {
+                        if (this == address(v73)) {
+                            v77 = v80 = 0;
+                        } else {
+                            v77 = v81 = 0xea1(v73, v71);
+                        }
+                    }
+                }
+                v82 = v83 = 0;
+                v84 = v85 = 96;
+                if (v76 & 0x7 >= 2) {
+                    v86 = v87 = 0x7 & v76 >> 42;
+                    if (v76 & 0x20) {
+                        require(v87 < v9.length, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+                        v88 = 0x24eb(MEM[0 + v4[v69]], this, v9[v87]);
+                        if (!v88) {
+                            0x25db(~0, MEM[0 + v4[v69]], v9[v87]);
+                        }
+                    }
+                    if (v76 & 0x7 != 2) {
+                        if (v76 & 0x7 == 3) {
+                            require(v87 < v9.length, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+                            require(v76 >> 45 & 0x7 < v9.length, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+                            MEM[MEM[64] + 68] = address(v9[v87]);
+                            MEM[MEM[64] + 100] = address(v9[v76 >> 45 & 0x7]);
+                            MEM[MEM[64] + 132] = v28;
+                            MEM[MEM[64] + 164] = v76;
+                            MEM[MEM[64] + 196] = MEM[v4[v69] + 64];
+                            MEM[MEM[64] + 228] = address(v73);
+                            MEM[MEM[64] + 32] = uint224(address(MEM[0 + v4[v69]])) | 0x4da9175700000000000000000000000000000000000000000000000000000000;
+                            v89 = v90 = 0;
+                            while (v89 < 228) {
+                                MEM[v89 + MEM[64]] = MEM[v89 + (MEM[64] + 32)];
+                                v89 += 32;
+                            }
+                            if (v89 <= 228) {
+                                goto 0x3447B0x20a6B0x11faB0x1a2aB0x969B0x221;
+                            } else {
+                                MEM[228 + MEM[64]] = 0;
+                            }
+                            v82 = address(v76 >> 96).delegatecall(MEM[(MEM[64]) len 228], MEM[(MEM[64]) len 0]).gas(msg.gas);
+                            if (RETURNDATASIZE() == 0) {
+                                v84 = v91 = 96;
+                            } else {
+                                v84 = v92 = MEM[64];
+                                MEM[64] = v92 + (RETURNDATASIZE() + 63 & ~0x1f);
+                                MEM[v92] = RETURNDATASIZE();
+                                RETURNDATACOPY(v92 + 32, 0, RETURNDATASIZE());
+                            }
+                        }
+                    } else {
+                        require(0x7 & v76 >> 48 <= uint64.max, Panic(65)); // failed memory allocation (too much memory)
+                        v93 = new uint256[](0x7 & v76 >> 48);
+                        if (0x7 & v76 >> 48) {
+                            CALLDATACOPY(v93.data, msg.data.length, (0x7 & v76 >> 48) << 5);
+                        }
+                        v94 = v95 = 0;
+                        while (v94 < 0x7 & v76 >> 48) {
+                            require(v86 < v9.length, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+                            require(v94 < v93.length, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+                            v93[v94] = address(v9[v86]);
+                            v86 += 1;
+                            v94 += 1;
+                        }
+                        if (!(v76 & 0x40)) {
+                            MEM[36 + MEM[64]] = v28;
+                            MEM[36 + MEM[64] + 32] = uint8(0);
+                            MEM[36 + MEM[64] + 64] = 160;
+                            MEM[36 + MEM[64] + 160] = v93.length;
+                            v96 = v97 = 36 + MEM[64] + 160 + 32;
+                            v98 = v99 = v93.data;
+                            v100 = v101 = 0;
+                            while (v100 < v93.length) {
+                                MEM[v96] = address(MEM[v98]);
+                                v96 += 32;
+                                v98 += 32;
+                                v100 += 1;
+                            }
+                            MEM[36 + MEM[64] + 96] = address(v73);
+                            MEM[164 + MEM[64]] = 0x2540be3ff;
+                            v102 = MEM[64];
+                            MEM[v102] = v96 - v102 - 32;
+                            MEM[64] = v96;
+                            MEM[v102 + 32] = uint224(MEM[v102 + 32]) | 0x38ed173900000000000000000000000000000000000000000000000000000000;
+                        } else {
+                            MEM[36 + MEM[64]] = v28;
+                            MEM[36 + MEM[64] + 32] = uint8(0);
+                            MEM[36 + MEM[64] + 64] = 160;
+                            MEM[36 + MEM[64] + 160] = v93.length;
+                            v103 = v104 = 36 + MEM[64] + 160 + 32;
+                            v105 = v106 = v93.data;
+                            v107 = v108 = 0;
+                            while (v107 < v93.length) {
+                                MEM[v103] = address(MEM[v105]);
+                                v103 += 32;
+                                v105 += 32;
+                                v107 += 1;
+                            }
+                            MEM[36 + MEM[64] + 96] = address(v73);
+                            MEM[164 + MEM[64]] = 0x2540be3ff;
+                            v102 = v109 = MEM[64];
+                            MEM[v109] = v103 - v109 - 32;
+                            MEM[64] = v103;
+                            MEM[v109 + 32] = uint224(MEM[v109 + 32]) | 0x5c11d79500000000000000000000000000000000000000000000000000000000;
+                        }
+                        v110 = v111 = 0;
+                        while (v110 < MEM[v102]) {
+                            MEM[v110 + MEM[64]] = MEM[v110 + (v102 + 32)];
+                            v110 += 32;
+                        }
+                        if (v110 <= MEM[v102]) {
+                            goto 0x3447B0x1ff4B0x11faB0x1a2aB0x969B0x221;
+                        } else {
+                            MEM[MEM[v102] + MEM[64]] = 0;
+                        }
+                        v82 = v112 = address(MEM[0 + v4[v69]]).call(MEM[(MEM[64]) len (MEM[v102] + MEM[64] - MEM[64])], MEM[(MEM[64]) len 0]).gas(msg.gas);
+                        if (RETURNDATASIZE() == 0) {
+                            v84 = v113 = 96;
+                        } else {
+                            v84 = v114 = MEM[64];
+                            MEM[64] = v114 + (RETURNDATASIZE() + 63 & ~0x1f);
+                            MEM[v114] = RETURNDATASIZE();
+                            RETURNDATACOPY(v114 + 32, 0, RETURNDATASIZE());
+                        }
+                    }
+                } else {
+                    v115 = v116 = 0;
+                    if (v69) {
+                        v115 = v117 = 0x2868(v9, v76, v4[v69], v28);
+                    } else {
+                        v115 = MEM[96 + v4[v69]];
+                    }
+                    if (v76 & 0x7 != 1) {
+                        MEM[MEM[64] + 68] = v115;
+                        MEM[MEM[64] + 68 + 32] = v115;
+                        MEM[MEM[64] + 68 + 64] = address(v73);
+                        MEM[MEM[64] + 68 + 96] = 128;
+                        MEM[MEM[64] + 68 + 128] = 0;
+                        v118 = v119 = 0;
+                        while (v118 < 0) {
+                            MEM[v118 + (MEM[64] + 68 + 128 + 32)] = MEM[v118 + (MEM[64] + 32)];
+                            v118 += 32;
+                        }
+                        if (v118 <= 0) {
+                            goto 0x3411B0x3787B0x1d93B0x11faB0x1a2aB0x969B0x221;
+                        } else {
+                            MEM[0 + (MEM[64] + 68 + 128 + 32)] = 0;
+                        }
+                        v120 = MEM[64];
+                        MEM[v120] = 32 + (MEM[64] + 68 + 128) - v120 - 32;
+                        MEM[64] = 32 + (MEM[64] + 68 + 128);
+                        MEM[v120 + 32] = uint224(MEM[v120 + 32]) | 0x22c0d9f00000000000000000000000000000000000000000000000000000000;
+                    } else {
+                        MEM[MEM[64] + 68] = v115;
+                        MEM[MEM[64] + 100] = address(v73);
+                        v120 = v121 = MEM[64];
+                        MEM[v121] = 100;
+                        MEM[64] = MEM[64] + 132;
+                        MEM[v121 + 32] = 0x6d9a640a00000000000000000000000000000000000000000000000000000000 | uint224(v115);
+                    }
+                    v122 = v123 = 0;
+                    while (v122 < MEM[v120]) {
+                        MEM[v122 + MEM[64]] = MEM[v122 + (v120 + 32)];
+                        v122 += 32;
+                    }
+                    if (v122 <= MEM[v120]) {
+                        goto 0x3447B0x1deaB0x11faB0x1a2aB0x969B0x221;
+                    } else {
+                        MEM[MEM[v120] + MEM[64]] = 0;
+                    }
+                    v82 = v124 = address(MEM[0 + v4[v69]]).call(MEM[(MEM[64]) len (MEM[v120] + MEM[64] - MEM[64])], MEM[(MEM[64]) len 0]).gas(msg.gas);
+                    if (RETURNDATASIZE() == 0) {
+                        v84 = v125 = 96;
+                    } else {
+                        v84 = v126 = MEM[64];
+                        MEM[64] = v126 + (RETURNDATASIZE() + 63 & ~0x1f);
+                        MEM[v126] = RETURNDATASIZE();
+                        RETURNDATACOPY(v126 + 32, 0, RETURNDATASIZE());
+                    }
+                    goto 0x218bB0x11faB0x1a2aB0x969B0x221;
+                }
+                if (v82) {
+                    if (v69) {
+                        v127 = 0xea1(v73, v71);
+                        v128 = _SafeSub(v127, v77);
+                        v129 = v130 = v34 >> 144 > 0;
+                        if (v130) {
+                            v129 = v128 < MEM[v4[v69] + 96];
+                        }
+                        if (v129) {
+                            v131 = _SafeMul(v128, 0x5f5e100);
+                            v132 = _SafeDiv(v131, MEM[v4[v69] + 96]);
+                            if (v132 < v34 >> 144) {
+                                require(v69, Error('BB: FAIL_T_1'));
+                                require(1 != v69, Error('BB: FAIL_T_2'));
+                                require(2 != v69, Error('BB: FAIL_T_3'));
+                                require(3 != v69, Error('BB: FAIL_T_4'));
+                                revert(Error('BB: FAIL_T_X'));
+                            }
+                        }
+                        MEM[v4[v69] + 96] = v128;
+                    }
+                    v28 = MEM[96 + v4[v69]];
+                    v69 = v69 + 1;
+                } else if (MEM[v84] >= 68) {
+                    if (v69) {
+                        if (1 != v69) {
+                            if (2 != v69) {
+                                if (3 != v69) {
+                                    require(36 + v84 + MEM[4 + v84] - (36 + v84) >= 32);
+                                    require(MEM[36 + v84] <= uint64.max);
+                                    require(36 + v84 + MEM[4 + v84] > 36 + v84 + MEM[36 + v84] + 31);
+                                    v133 = MEM[36 + v84 + MEM[36 + v84]];
+                                    v134 = 0x382f(v133);
+                                    require(!((MEM[64] + (~0x1f & v134 + 31) < MEM[64]) | (MEM[64] + (~0x1f & v134 + 31) > uint64.max)), Panic(65)); // failed memory allocation (too much memory)
+                                    require(36 + v84 + MEM[36 + v84] + v133 + 32 <= 36 + v84 + MEM[4 + v84]);
+                                    v135 = v136 = 0;
+                                    while (v135 < v133) {
+                                        MEM[v135 + (MEM[64] + 32)] = MEM[v135 + (36 + v84 + MEM[36 + v84] + 32)];
+                                        v135 += 32;
+                                    }
+                                    if (v135 <= v133) {
+                                        goto 0x525dB0x2388B0x11faB0x1a2aB0x969B0x221;
+                                    } else {
+                                        MEM[v133 + (MEM[64] + 32)] = 0;
+                                    }
+                                    MEM[32 + MEM[64]] = 'BB: RX|';
+                                    v137 = v138 = 0;
+                                    while (v137 < v133) {
+                                        MEM[v137 + (32 + MEM[64] + 7)] = MEM[v137 + (MEM[64] + 32)];
+                                        v137 += 32;
+                                    }
+                                    if (v137 <= v133) {
+                                        goto 0x5285B0x11faB0x1a2aB0x969B0x221;
+                                    } else {
+                                        MEM[v133 + (32 + MEM[64] + 7)] = 0;
+                                    }
+                                    v139 = v140 = 7 + (v133 + (32 + MEM[64]));
+                                } else {
+                                    require(36 + v84 + MEM[4 + v84] - (36 + v84) >= 32);
+                                    require(MEM[36 + v84] <= uint64.max);
+                                    require(36 + v84 + MEM[4 + v84] > 36 + v84 + MEM[36 + v84] + 31);
+                                    v141 = MEM[36 + v84 + MEM[36 + v84]];
+                                    v142 = 0x382f(v141);
+                                    require(!((MEM[64] + (~0x1f & v142 + 31) < MEM[64]) | (MEM[64] + (~0x1f & v142 + 31) > uint64.max)), Panic(65)); // failed memory allocation (too much memory)
+                                    require(36 + v84 + MEM[36 + v84] + v141 + 32 <= 36 + v84 + MEM[4 + v84]);
+                                    v143 = v144 = 0;
+                                    while (v143 < v141) {
+                                        MEM[v143 + (MEM[64] + 32)] = MEM[v143 + (36 + v84 + MEM[36 + v84] + 32)];
+                                        v143 += 32;
+                                    }
+                                    if (v143 <= v141) {
+                                        goto 0x525dB0x2365B0x11faB0x1a2aB0x969B0x221;
+                                    } else {
+                                        MEM[v141 + (MEM[64] + 32)] = 0;
+                                    }
+                                    MEM[32 + MEM[64]] = 'BB: R4|';
+                                    v145 = v146 = 0;
+                                    while (v145 < v141) {
+                                        MEM[v145 + (32 + MEM[64] + 7)] = MEM[v145 + (MEM[64] + 32)];
+                                        v145 += 32;
+                                    }
+                                    if (v145 <= v141) {
+                                        goto 0x52ddB0x11faB0x1a2aB0x969B0x221;
+                                    } else {
+                                        MEM[v141 + (32 + MEM[64] + 7)] = 0;
+                                    }
+                                    v139 = v147 = 7 + (v141 + (32 + MEM[64]));
+                                }
+                            } else {
+                                require(36 + v84 + MEM[4 + v84] - (36 + v84) >= 32);
+                                require(MEM[36 + v84] <= uint64.max);
+                                require(36 + v84 + MEM[4 + v84] > 36 + v84 + MEM[36 + v84] + 31);
+                                v148 = MEM[36 + v84 + MEM[36 + v84]];
+                                v149 = 0x382f(v148);
+                                require(!((MEM[64] + (~0x1f & v149 + 31) < MEM[64]) | (MEM[64] + (~0x1f & v149 + 31) > uint64.max)), Panic(65)); // failed memory allocation (too much memory)
+                                require(36 + v84 + MEM[36 + v84] + v148 + 32 <= 36 + v84 + MEM[4 + v84]);
+                                v150 = v151 = 0;
+                                while (v150 < v148) {
+                                    MEM[v150 + (MEM[64] + 32)] = MEM[v150 + (36 + v84 + MEM[36 + v84] + 32)];
+                                    v150 += 32;
+                                }
+                                if (v150 <= v148) {
+                                    goto 0x525dB0x2338B0x11faB0x1a2aB0x969B0x221;
+                                } else {
+                                    MEM[v148 + (MEM[64] + 32)] = 0;
+                                }
+                                MEM[32 + MEM[64]] = 'BB: R3|';
+                                v152 = v153 = 0;
+                                while (v152 < v148) {
+                                    MEM[v152 + (32 + MEM[64] + 7)] = MEM[v152 + (MEM[64] + 32)];
+                                    v152 += 32;
+                                }
+                                if (v152 <= v148) {
+                                    goto 0x5309B0x11faB0x1a2aB0x969B0x221;
+                                } else {
+                                    MEM[v148 + (32 + MEM[64] + 7)] = 0;
+                                }
+                                v139 = v154 = 7 + (v148 + (32 + MEM[64]));
+                            }
+                        } else {
+                            require(36 + v84 + MEM[4 + v84] - (36 + v84) >= 32);
+                            require(MEM[36 + v84] <= uint64.max);
+                            require(36 + v84 + MEM[4 + v84] > 36 + v84 + MEM[36 + v84] + 31);
+                            v155 = MEM[36 + v84 + MEM[36 + v84]];
+                            v156 = 0x382f(v155);
+                            require(!((MEM[64] + (~0x1f & v156 + 31) < MEM[64]) | (MEM[64] + (~0x1f & v156 + 31) > uint64.max)), Panic(65)); // failed memory allocation (too much memory)
+                            require(36 + v84 + MEM[36 + v84] + v155 + 32 <= 36 + v84 + MEM[4 + v84]);
+                            v157 = v158 = 0;
+                            while (v157 < v155) {
+                                MEM[v157 + (MEM[64] + 32)] = MEM[v157 + (36 + v84 + MEM[36 + v84] + 32)];
+                                v157 += 32;
+                            }
+                            if (v157 <= v155) {
+                                goto 0x525dB0x230bB0x11faB0x1a2aB0x969B0x221;
+                            } else {
+                                MEM[v155 + (MEM[64] + 32)] = 0;
+                            }
+                            MEM[32 + MEM[64]] = 'BB: R2|';
+                            v159 = v160 = 0;
+                            while (v159 < v155) {
+                                MEM[v159 + (32 + MEM[64] + 7)] = MEM[v159 + (MEM[64] + 32)];
+                                v159 += 32;
+                            }
+                            if (v159 <= v155) {
+                                goto 0x5335B0x11faB0x1a2aB0x969B0x221;
+                            } else {
+                                MEM[v155 + (32 + MEM[64] + 7)] = 0;
+                            }
+                            v139 = 7 + (v155 + (32 + MEM[64]));
+                        }
+                    } else {
+                        require(36 + v84 + MEM[4 + v84] - (36 + v84) >= 32);
+                        require(MEM[36 + v84] <= uint64.max);
+                        require(36 + v84 + MEM[4 + v84] > 36 + v84 + MEM[36 + v84] + 31);
+                        v161 = MEM[36 + v84 + MEM[36 + v84]];
+                        v162 = 0x382f(v161);
+                        require(!((MEM[64] + (~0x1f & v162 + 31) < MEM[64]) | (MEM[64] + (~0x1f & v162 + 31) > uint64.max)), Panic(65)); // failed memory allocation (too much memory)
+                        require(36 + v84 + MEM[36 + v84] + v161 + 32 <= 36 + v84 + MEM[4 + v84]);
+                        v163 = v164 = 0;
+                        while (v163 < v161) {
+                            MEM[v163 + (MEM[64] + 32)] = MEM[v163 + (36 + v84 + MEM[36 + v84] + 32)];
+                            v163 += 32;
+                        }
+                        if (v163 <= v161) {
+                            goto 0x525dB0x22b8B0x11faB0x1a2aB0x969B0x221;
+                        } else {
+                            MEM[v161 + (MEM[64] + 32)] = 0;
+                        }
+                        MEM[32 + MEM[64]] = 'BB: R1|';
+                        v165 = v166 = 0;
+                        while (v165 < v161) {
+                            MEM[v165 + (32 + MEM[64] + 7)] = MEM[v165 + (MEM[64] + 32)];
+                            v165 += 32;
+                        }
+                        if (v165 <= v161) {
+                            goto 0x52b1B0x11faB0x1a2aB0x969B0x221;
+                        } else {
+                            MEM[v161 + (32 + MEM[64] + 7)] = 0;
+                        }
+                        v139 = v167 = 7 + (v161 + (32 + MEM[64]));
+                    }
+                    MEM[v139] = 0x8c379a000000000000000000000000000000000000000000000000000000000;
+                    MEM[4 + v139] = 32;
+                    MEM[4 + v139 + 32] = v139 - MEM[64] + ~31;
+                    v168 = v169 = 0;
+                    while (v168 < v139 - MEM[64] + ~31) {
+                        MEM[v168 + (4 + v139 + 32 + 32)] = MEM[v168 + (MEM[64] + 32)];
+                        v168 += 32;
+                    }
+                    if (v168 <= v139 - MEM[64] + ~31) {
+                        goto 0x3411B0x36efB0x22dbB0x11faB0x1a2aB0x969B0x221;
+                    } else {
+                        MEM[v139 - MEM[64] + ~31 + (4 + v139 + 32 + 32)] = 0;
+                    }
+                    revert(MEM[64], 32 + ((~0x1f & 31 + (v139 - MEM[64] + ~31)) + (4 + v139 + 32)) - MEM[64]);
+                } else {
+                    require(v69, Error(0x42423a205231));
+                    require(1 != v69, Error(0x42423a205232));
+                    require(2 != v69, Error(0x42423a205233));
+                    require(3 != v69, Error(0x42423a205234));
+                    revert(Error(0x42423a205258));
+                }
+            }
+            if (!(v34 & 0x4)) {
+                v170 = address(0xd614927acfb9744441180c2525faf4cedb70207f);
+            } else {
+                v171 = 0x1291(v4, v29);
+                MEM[v171 - 32] = 0xfa61cc12;
+                revert(v171 - 4, (v171.length << 5) + 36);
+            }
+        } else {
+            MEM[32 + MEM[64]] = 96;
+            MEM[128 + MEM[64]] = v4.length;
+            v172 = v173 = 0;
+            v174 = v175 = 32 + MEM[64] + 128;
+            v176 = v177 = v4.data;
+            while (v172 < v4.length) {
+                MEM[v174] = address(MEM[MEM[v176]]);
+                MEM[v174 + 32] = MEM[MEM[v176] + 32];
+                MEM[v174 + 64] = MEM[MEM[v176] + 64];
+                MEM[v174 + 96] = MEM[96 + MEM[v176]];
+                v174 += 128;
+                v176 += 32;
+                v172 += 1;
+            }
+            MEM[32 + MEM[64] + 32] = v174 - (32 + MEM[64]);
+            MEM[v174] = v9.length;
+            v178 = v179 = v174 + 32;
+            v180 = v181 = v9.data;
+            v182 = v183 = 0;
+            while (v182 < v9.length) {
+                MEM[v178] = address(MEM[v180]);
+                v178 += 32;
+                v180 += 32;
+                v182 += 1;
+            }
+            MEM[32 + MEM[64] + 64] = v34;
+            v170 = v184 = address(0xd614927acfb9744441180c2525faf4cedb70207f);
+            if (0 == MEM[32 + v4[0]] & 0x10) {
+                v39 = v185 = this;
+            }
+            v186 = new uint256[](varg2.length);
+            require(varg2.length <= 0x7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff);
+            MEM[4 + MEM[64] + (varg2.length << 5) + 192] = 0;
+            MEM[4 + MEM[64] + (varg2.length << 5) + 192] = v178 - MEM[64] - 32;
+            v187 = v188 = 0;
+            while (v187 < v178 - MEM[64] - 32) {
+                MEM[v187 + (4 + MEM[64] + (varg2.length << 5) + 192 + 32)] = MEM[v187 + (MEM[64] + 32)];
+                v187 += 32;
+            }
+            if (v187 <= v178 - MEM[64] - 32) {
+                goto 0x3411B0x35a8B0x18ffB0x969B0x221;
+            } else {
+                MEM[v178 - MEM[64] - 32 + (4 + MEM[64] + (varg2.length << 5) + 192 + 32)] = 0;
+            }
+            goto 0x1925B0x969B0x221;
+        }
+        require(bool(v170.code.size));
+        v189 = v170.refund(0x410085df, address(v9[0]), address(v39), v68, address(v9[0]), v29, v186, 4 + MEM[64] + (varg2.length << 5) - (4 + MEM[64]) + 192).gas(msg.gas);
+        require(bool(v189), 0, RETURNDATASIZE()); // checks call status, propagates error data on error
+    }
+    if (this != msg.sender) {
+        v190 = new uint256[](MEM[96]);
+        v191 = v192 = 0;
+        v193 = v194 = 128;
+        v195 = v196 = v190.data;
+        while (v191 < MEM[96]) {
+            MEM[v195] = MEM[v193];
+            v193 += 32;
+            v195 += 32;
+            v191 += 1;
+        }
+        return v190, MEM[96], v59, v68, address(v9[0]), address(v9[MEM[32 + v4[0]] >> 42 & 0x7]), v29, address(this), address(v9[MEM[32 + v4[0]] >> 45 & 0x7]);
+    } else {
+        v197 = 0x1291(v4, v29);
+        MEM[v197 - 32] = 0xfa61cc12;
+        revert(v197 - 4, (v197.length << 5) + 36);
+    }
+}
+
+function 0x62b8d8c9() public nonPayable { 
+    return address(0xd614927acfb9744441180c2525faf4cedb70207f);
+}
+
+function 0x24eb(address varg0, address varg1, address varg2) private { 
+    v0 = v1 = 0;
+    while (v0 < 68) {
+        MEM[v0 + MEM[64]] = MEM[v0 + (MEM[64] + 32)];
+        v0 += 32;
+    }
+    if (v0 <= 68) {
+        goto 0x3447B0x2527;
+    } else {
+        MEM[68 + MEM[64]] = 0;
+    }
+    v2 = v3, /* uint256 */ v4, /* uint256 */ v5 = varg2.allowance(varg1, varg0).gas(msg.gas);
+    if (RETURNDATASIZE() == 0) {
+        v6 = v7 = 96;
+    } else {
+        v6 = v8 = new bytes[](RETURNDATASIZE());
+        v4 = v8.data;
+        RETURNDATACOPY(v4, 0, RETURNDATASIZE());
+    }
+    if (v3) {
+        v2 = v9 = MEM[v6] >= 32;
+    }
+    require(v2);
+    require(v5 + MEM[v6] - v5 >= 32);
+    return MEM[v5];
+}
+
+function 0x25db(uint256 varg0, address varg1, address varg2) private { 
+    v0 = v1 = 0;
+    while (v0 < 68) {
+        MEM[v0 + MEM[64]] = MEM[v0 + (MEM[64] + 32)];
+        v0 += 32;
+    }
+    if (v0 <= 68) {
+        goto 0x3447B0x25db;
+    } else {
+        MEM[68 + MEM[64]] = 0;
+    }
+    v2 = v3, /* uint256 */ v4, /* uint256 */ v5 = varg2.approve(varg1, varg0).gas(msg.gas);
+    if (RETURNDATASIZE() == 0) {
+        v6 = v7 = 96;
+    } else {
+        v6 = v8 = new bytes[](RETURNDATASIZE());
+        v4 = v8.data;
+        RETURNDATACOPY(v4, 0, RETURNDATASIZE());
+    }
+    if (v3) {
+        v2 = v9 = !MEM[v6];
+        if (MEM[v6]) {
+            require(v5 + MEM[v6] - v5 >= 32);
+            v2 = MEM[v5];
+            require(v2 == bool(v2));
+        }
+    }
+    require(v2, Error('BB: APPROVE_FAILED'));
+    return ;
+}
+
+function 0x2868(uint256 varg0, uint256 varg1, uint256 varg2, uint256 varg3) private { 
+    if (varg1 & 0x7 >= 2) {
+        v0 = v1 = 0x7 & varg1 >> 42;
+        if (varg1 & 0x7 != 2) {
+            if (varg1 & 0x7 != 3) {
+                return 0;
+            } else {
+                require(v1 < varg0.length, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+                require(0x7 & varg1 >> 45 < varg0.length, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+                require(bool((varg1 >> 96).code.size));
+                v2, /* uint256 */ v3 = (varg1 >> 96).staticcall(bytes4(0xb3765e0e00000000000000000000000000000000000000000000000000000000), address(MEM[varg2]), address(varg0[v1]), address(varg0[0x7 & varg1 >> 45]), varg3, varg1, MEM[varg2 + 64]).gas(msg.gas);
+                require(bool(v2), 0, RETURNDATASIZE()); // checks call status, propagates error data on error
+                require(MEM[64] + RETURNDATASIZE() - MEM[64] >= 32);
+                return v3;
+            }
+        } else {
+            v4 = 0x7 & varg1 >> 48;
+            require(v4 <= uint64.max, Panic(65)); // failed memory allocation (too much memory)
+            v5 = new address[](v4);
+            if (v4) {
+                CALLDATACOPY(v5.data, msg.data.length, v4 << 5);
+            }
+            v6 = v7 = 0;
+            while (v6 < v4) {
+                require(v0 < varg0.length, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+                require(v6 < v5.length, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+                v5[v6] = address(varg0[v0]);
+                v0 += 1;
+                v6 += 1;
+            }
+            v8 = new address[](v5.length);
+            v9 = v10 = v8.data;
+            v11 = v12 = v5.data;
+            v13 = v14 = 0;
+            while (v13 < v5.length) {
+                MEM[v9] = address(MEM[v11]);
+                v9 += 32;
+                v11 += 32;
+                v13 += 1;
+            }
+            require(bool((address(MEM[varg2])).code.size));
+            v15, /* uint256 */ v16 = address(MEM[varg2]).getAmountsOut(varg3, v8).gas(msg.gas);
+            require(bool(v15), 0, RETURNDATASIZE()); // checks call status, propagates error data on error
+            RETURNDATACOPY(v16, 0, RETURNDATASIZE());
+            MEM[64] = v16 + (~0x1f & RETURNDATASIZE() + 31);
+            require(v16 + RETURNDATASIZE() - v16 >= 32);
+            require(MEM[v16] <= uint64.max);
+            require(v16 + RETURNDATASIZE() > v16 + MEM[v16] + 31);
+            v17 = 0x380c(MEM[v16 + MEM[v16]]);
+            require(!((MEM[64] + (~0x1f & v17 + 31) < MEM[64]) | (MEM[64] + (~0x1f & v17 + 31) > uint64.max)), Panic(65)); // failed memory allocation (too much memory)
+            v18 = v19 = MEM[64] + 32;
+            v20 = v21 = v16 + MEM[v16] + 32;
+            require(v16 + MEM[v16] + (MEM[v16 + MEM[v16]] << 5) + 32 <= v16 + RETURNDATASIZE());
+            v22 = v23 = 0;
+            while (v22 < MEM[v16 + MEM[v16]]) {
+                MEM[v18] = MEM[v20];
+                v22 += 1;
+                v18 += 32;
+                v20 += 32;
+            }
+            v24 = _SafeSub(MEM[v16 + MEM[v16]], 1);
+            require(v24 < MEM[v16 + MEM[v16]], Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+            return MEM[32 + (v24 << 5) + MEM[64]];
+        }
+    } else {
+        v25 = v26 = varg1 >> 152;
+        v25 = v27 = uint104(varg1 >> 48);
+        if (!v26) {
+            require(bool((address(MEM[0 + varg2])).code.size));
+            v28, /* uint112 */ v29, /* uint112 */ v30, /* uint32 */ v31 = address(MEM[0 + varg2]).getReserves().gas(msg.gas);
+            require(bool(v28), 0, RETURNDATASIZE()); // checks call status, propagates error data on error
+            require(MEM[64] + RETURNDATASIZE() - MEM[64] >= 96);
+            require(v29 == uint112(v29));
+            require(v30 == uint112(v30));
+            require(v31 == uint32(v31));
+            v25 = v32 = uint112(v29);
+            v25 = v33 = uint112(v30);
+            MEM[varg2 + 32] = uint48(varg1) | (v25 << 152 | v25 << 48);
+        }
+        v34 = v35 = !v25;
+        if (v25) {
+            v34 = v36 = !v25;
+        }
+        require(!v34, Error('BB: NIL_POOL_RESERVE'));
+        v37 = _SafeSub(0xf4240, 0xfffff & varg1 >> 10);
+        v38 = _SafeMul(varg3, v37);
+        v39 = _SafeMul(v25, 0xf4240);
+        v40 = _SafeAdd(v39, v38);
+        v41 = _SafeMul(v38, v25);
+        v42 = _SafeDiv(v41, v40);
+        return v42;
+    }
+}
+
+function 0x7fe3ba8b(address varg0, uint256 varg1, bytes varg2) public nonPayable { 
+    require(msg.data.length - 4 >= 96);
+    require(varg0 == varg0);
+    require(varg2 <= uint64.max);
+    require(4 + varg2 + 31 < msg.data.length);
+    require(varg2.length <= uint64.max);
+    require(4 + varg2 + varg2.length + 32 <= msg.data.length);
+    v0 = new bytes[](varg2.length);
+    CALLDATACOPY(v0.data, varg2.data, varg2.length);
+    v0[varg2.length] = 0;
+    require(v0.data + v0.length - v0.data >= 96);
+    require(MEM[v0.data] <= uint64.max);
+    require(v0.data + MEM[v0.data] + 31 < v0.data + v0.length);
+    v1 = v0[MEM[v0.data]];
+    v2 = 0x380c(v1);
+    require(!((MEM[64] + (~0x1f & v2 + 31) < MEM[64]) | (MEM[64] + (~0x1f & v2 + 31) > uint64.max)), Panic(65)); // failed memory allocation (too much memory)
+    v3 = v4 = MEM[64] + 32;
+    v5 = v6 = v0.data + MEM[v0.data] + 32;
+    require(v0.data + MEM[v0.data] + (v1 << 7) + 32 <= v0.data + v0.length);
+    v7 = v8 = 0;
+    while (v7 < v1) {
+        require(v0.data + v0.length - v5 >= 128);
+        require(!((MEM[64] + 128 < MEM[64]) | (MEM[64] + 128 > uint64.max)), Panic(65)); // failed memory allocation (too much memory)
+        MEM[64] = MEM[64] + 128;
+        require(MEM[v5] == address(MEM[v5]));
+        MEM[MEM[64]] = MEM[v5];
+        MEM[MEM[64] + 32] = MEM[32 + v5];
+        MEM[MEM[64] + 64] = MEM[v5 + 64];
+        MEM[MEM[64] + 96] = MEM[v5 + 96];
+        MEM[v3] = MEM[64];
+        v7 += 1;
+        v3 += 32;
+        v5 += 128;
+    }
+    require(v0[32][32] <= uint64.max);
+    require(v0.data + v0[32][32] + 31 < v0.data + v0.length);
+    v9 = 0x380c(v0[v0[32][32]]);
+    require(!((MEM[64] + (~0x1f & v9 + 31) < MEM[64]) | (MEM[64] + (~0x1f & v9 + 31) > uint64.max)), Panic(65)); // failed memory allocation (too much memory)
+    v10 = v11 = MEM[64] + 32;
+    v12 = v13 = v0.data + v0[32][32] + 32;
+    require(v0.data + v0[32][32] + (v0[v0[32][32]] << 5) + 32 <= v0.data + v0.length);
+    v14 = v15 = 0;
+    while (v14 < v0[v0[32][32]]) {
+        require(MEM[v12] == address(MEM[v12]));
+        MEM[v10] = MEM[v12];
+        v10 += 32;
+        v12 += 32;
+        v14 += 1;
+    }
+    v16 = v17 = uint112(v0[64] >> 16);
+    v18 = v19 = v0[64] >> 144;
+    v20 = v21 = varg1 > v17;
+    if (v21) {
+        v20 = bool(!(v0[64] & 0x4));
+    }
+    if (v20) {
+        v22 = _SafeSub(v1, 1);
+        require(v22 < v1, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+        require(MEM[96 + MEM[32 + (v22 << 5) + MEM[64]]] >= varg1, Error('BB: FAIL_L'));
+        if (v19) {
+            v23 = _SafeMul(varg1, 0x5f5e100);
+            v18 = v24 = _SafeDiv(v23, MEM[96 + MEM[32 + (v22 << 5) + MEM[64]]]);
+        }
+    }
+    v25 = v26 = 0;
+    if (v0[64] & 0x1) {
+        require(0 < v1, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+        v25 = v27 = 1;
+        require(1 < v0[v0[32][32]], Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+        v25 = v28 = 0 != MEM[32 + MEM[32 + MEM[64]]] & 0x40;
+        if (bool(0 == MEM[32 + MEM[32 + MEM[64]]] & 0x40)) {
+            v16 = v29 = MEM[96 + MEM[32 + MEM[64]]];
+        } else {
+            v16 = v30 = 0xea1(this, MEM[64 + MEM[64]]);
+            MEM[MEM[32 + MEM[64]] + 96] = v30;
+        }
+        if (v1 > 1) {
+            require(1 < v1, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+            if (0 != MEM[32 + MEM[64 + MEM[64]]] & 0x10) {
+                if (bool(0 == MEM[32 + MEM[32 + MEM[64]]] & 0x40)) {
+                    0xf88(v16, MEM[0 + MEM[64 + MEM[64]]], MEM[64 + MEM[64]]);
+                } else {
+                    if (MEM[32 + MEM[64 + MEM[64]]] & 0x7 < 2) {
+                        v31 = v32 = MEM[32 + MEM[64 + MEM[64]]] >> 152;
+                    } else {
+                        v31 = v33 = 0xea1(MEM[0 + MEM[64 + MEM[64]]], MEM[64 + MEM[64]]);
+                    }
+                    0xf88(v16, MEM[0 + MEM[64 + MEM[64]]], MEM[64 + MEM[64]]);
+                    v34 = 0xea1(MEM[0 + MEM[64 + MEM[64]]], MEM[64 + MEM[64]]);
+                    v16 = v35 = _SafeSub(v34, v31);
+                    MEM[MEM[32 + MEM[64]] + 96] = v35;
+                }
+            }
+        }
+    }
+    v36 = v37 = 0;
+    while (v25 < v1) {
+        v25 = v25 + 1;
+        v38 = v39 = this;
+        if (v25 != v1) {
+            require(v25 < v1, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+            if (0 != MEM[32 + MEM[32 + (v25 << 5) + MEM[64]]] & 0x10) {
+                require(v25 < v1, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+                v38 = v40 = MEM[0 + MEM[32 + (v25 << 5) + MEM[64]]];
+            }
+        } else if (!(v0[64] & 0x1)) {
+            v38 = 0xd614927acfb9744441180c2525faf4cedb70207f;
+        }
+        require(v25 < v1, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+        v41 = MEM[32 + (v25 << 5) + MEM[64]];
+        v42 = v43 = 0;
+        if (!v25) {
+            v25 = bool(MEM[32 + v41] & 0x40);
+        }
+        if (v25) {
+            require(MEM[32 + v41] >> 45 & 0x7 < v0[v0[32][32]], Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+            v36 = MEM[32 + ((MEM[32 + v41] >> 45 & 0x7) << 5) + MEM[64]];
+            if (v25 < v1) {
+                require(v25 < v1, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+                if (MEM[32 + MEM[32 + (v25 << 5) + MEM[64]]] & 0x7 < 2) {
+                    v42 = v44 = MEM[32 + MEM[32 + (v25 << 5) + MEM[64]]] >> 152;
+                }
+            }
+            if (!v42) {
+                if (this == address(v38)) {
+                    v42 = v45 = 0;
+                } else {
+                    v42 = v46 = 0xea1(v38, v36);
+                }
+            }
+        }
+        v47 = v48 = 0;
+        v49 = v50 = 96;
+        if (MEM[32 + v41] & 0x7 >= 2) {
+            v51 = v52 = 0x7 & MEM[32 + v41] >> 42;
+            if (MEM[32 + v41] & 0x20) {
+                require(v52 < v0[v0[32][32]], Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+                v53 = 0x24eb(MEM[0 + v41], this, MEM[32 + (v52 << 5) + MEM[64]]);
+                if (!v53) {
+                    0x25db(~0, MEM[0 + v41], MEM[32 + (v52 << 5) + MEM[64]]);
+                }
+            }
+            if (MEM[32 + v41] & 0x7 != 2) {
+                if (MEM[32 + v41] & 0x7 == 3) {
+                    require(v52 < v0[v0[32][32]], Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+                    require(MEM[32 + v41] >> 45 & 0x7 < v0[v0[32][32]], Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+                    MEM[MEM[64] + 68] = address(MEM[32 + (v52 << 5) + MEM[64]]);
+                    MEM[MEM[64] + 100] = address(MEM[((MEM[32 + v41] >> 45 & 0x7) << 5) + MEM[64] + 32]);
+                    MEM[MEM[64] + 132] = v16;
+                    MEM[MEM[64] + 164] = MEM[32 + v41];
+                    MEM[MEM[64] + 196] = MEM[v41 + 64];
+                    MEM[MEM[64] + 228] = address(v38);
+                    MEM[MEM[64] + 32] = uint224(address(MEM[0 + v41])) | 0x4da9175700000000000000000000000000000000000000000000000000000000;
+                    v54 = v55 = 0;
+                    while (v54 < 228) {
+                        MEM[v54 + MEM[64]] = MEM[v54 + (MEM[64] + 32)];
+                        v54 += 32;
+                    }
+                    if (v54 <= 228) {
+                        goto 0x3447B0x20a6B0x11faB0x703B0x99bB0x2a3;
+                    } else {
+                        MEM[228 + MEM[64]] = 0;
+                    }
+                    v47 = address(MEM[32 + v41] >> 96).delegatecall(MEM[(MEM[64]) len 228], MEM[(MEM[64]) len 0]).gas(msg.gas);
+                    if (RETURNDATASIZE() == 0) {
+                        v49 = v56 = 96;
+                    } else {
+                        v49 = v57 = MEM[64];
+                        MEM[64] = v57 + (RETURNDATASIZE() + 63 & ~0x1f);
+                        MEM[v57] = RETURNDATASIZE();
+                        RETURNDATACOPY(v57 + 32, 0, RETURNDATASIZE());
+                    }
+                }
+            } else {
+                require(0x7 & MEM[32 + v41] >> 48 <= uint64.max, Panic(65)); // failed memory allocation (too much memory)
+                v58 = new uint256[](0x7 & MEM[32 + v41] >> 48);
+                if (0x7 & MEM[32 + v41] >> 48) {
+                    CALLDATACOPY(v58.data, msg.data.length, (0x7 & MEM[32 + v41] >> 48) << 5);
+                }
+                v59 = v60 = 0;
+                while (v59 < 0x7 & MEM[32 + v41] >> 48) {
+                    require(v51 < v0[v0[32][32]], Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+                    require(v59 < v58.length, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+                    v58[v59] = address(MEM[32 + (v51 << 5) + MEM[64]]);
+                    v51 += 1;
+                    v59 += 1;
+                }
+                if (!(MEM[32 + v41] & 0x40)) {
+                    MEM[36 + MEM[64]] = v16;
+                    MEM[36 + MEM[64] + 32] = uint8(0);
+                    MEM[36 + MEM[64] + 64] = 160;
+                    MEM[36 + MEM[64] + 160] = v58.length;
+                    v61 = v62 = 36 + MEM[64] + 160 + 32;
+                    v63 = v64 = v58.data;
+                    v65 = v66 = 0;
+                    while (v65 < v58.length) {
+                        MEM[v61] = address(MEM[v63]);
+                        v61 += 32;
+                        v63 += 32;
+                        v65 += 1;
+                    }
+                    MEM[36 + MEM[64] + 96] = address(v38);
+                    MEM[164 + MEM[64]] = 0x2540be3ff;
+                    v67 = MEM[64];
+                    MEM[v67] = v61 - v67 - 32;
+                    MEM[64] = v61;
+                    MEM[v67 + 32] = uint224(MEM[v67 + 32]) | 0x38ed173900000000000000000000000000000000000000000000000000000000;
+                } else {
+                    MEM[36 + MEM[64]] = v16;
+                    MEM[36 + MEM[64] + 32] = uint8(0);
+                    MEM[36 + MEM[64] + 64] = 160;
+                    MEM[36 + MEM[64] + 160] = v58.length;
+                    v68 = v69 = 36 + MEM[64] + 160 + 32;
+                    v70 = v71 = v58.data;
+                    v72 = v73 = 0;
+                    while (v72 < v58.length) {
+                        MEM[v68] = address(MEM[v70]);
+                        v68 += 32;
+                        v70 += 32;
+                        v72 += 1;
+                    }
+                    MEM[36 + MEM[64] + 96] = address(v38);
+                    MEM[164 + MEM[64]] = 0x2540be3ff;
+                    v67 = v74 = MEM[64];
+                    MEM[v74] = v68 - v74 - 32;
+                    MEM[64] = v68;
+                    MEM[v74 + 32] = uint224(MEM[v74 + 32]) | 0x5c11d79500000000000000000000000000000000000000000000000000000000;
+                }
+                v75 = v76 = 0;
+                while (v75 < MEM[v67]) {
+                    MEM[v75 + MEM[64]] = MEM[v75 + (v67 + 32)];
+                    v75 += 32;
+                }
+                if (v75 <= MEM[v67]) {
+                    goto 0x3447B0x1ff4B0x11faB0x703B0x99bB0x2a3;
+                } else {
+                    MEM[MEM[v67] + MEM[64]] = 0;
+                }
+                v47 = v77 = address(MEM[0 + v41]).call(MEM[(MEM[64]) len (MEM[v67] + MEM[64] - MEM[64])], MEM[(MEM[64]) len 0]).gas(msg.gas);
+                if (RETURNDATASIZE() == 0) {
+                    v49 = v78 = 96;
+                } else {
+                    v49 = v79 = MEM[64];
+                    MEM[64] = v79 + (RETURNDATASIZE() + 63 & ~0x1f);
+                    MEM[v79] = RETURNDATASIZE();
+                    RETURNDATACOPY(v79 + 32, 0, RETURNDATASIZE());
+                }
+            }
+        } else {
+            v80 = v81 = 0;
+            if (v25) {
+                v80 = v82 = 0x2868(MEM[64], MEM[32 + v41], v41, v16);
+            } else {
+                v80 = MEM[96 + v41];
+            }
+            if (MEM[32 + v41] & 0x7 != 1) {
+                MEM[MEM[64] + 68] = v80;
+                MEM[MEM[64] + 68 + 32] = v80;
+                MEM[MEM[64] + 68 + 64] = address(v38);
+                MEM[MEM[64] + 68 + 96] = 128;
+                MEM[MEM[64] + 68 + 128] = 0;
+                v83 = v84 = 0;
+                while (v83 < 0) {
+                    MEM[v83 + (MEM[64] + 68 + 128 + 32)] = MEM[v83 + (MEM[64] + 32)];
+                    v83 += 32;
+                }
+                if (v83 <= 0) {
+                    goto 0x3411B0x3787B0x1d93B0x11faB0x703B0x99bB0x2a3;
+                } else {
+                    MEM[0 + (MEM[64] + 68 + 128 + 32)] = 0;
+                }
+                v85 = MEM[64];
+                MEM[v85] = 32 + (MEM[64] + 68 + 128) - v85 - 32;
+                MEM[64] = 32 + (MEM[64] + 68 + 128);
+                MEM[v85 + 32] = uint224(MEM[v85 + 32]) | 0x22c0d9f00000000000000000000000000000000000000000000000000000000;
+            } else {
+                MEM[MEM[64] + 68] = v80;
+                MEM[MEM[64] + 100] = address(v38);
+                v85 = v86 = MEM[64];
+                MEM[v86] = 100;
+                MEM[64] = MEM[64] + 132;
+                MEM[v86 + 32] = 0x6d9a640a00000000000000000000000000000000000000000000000000000000 | uint224(v80);
+            }
+            v87 = v88 = 0;
+            while (v87 < MEM[v85]) {
+                MEM[v87 + MEM[64]] = MEM[v87 + (v85 + 32)];
+                v87 += 32;
+            }
+            if (v87 <= MEM[v85]) {
+                goto 0x3447B0x1deaB0x11faB0x703B0x99bB0x2a3;
+            } else {
+                MEM[MEM[v85] + MEM[64]] = 0;
+            }
+            v47 = v89 = address(MEM[0 + v41]).call(MEM[(MEM[64]) len (MEM[v85] + MEM[64] - MEM[64])], MEM[(MEM[64]) len 0]).gas(msg.gas);
+            if (RETURNDATASIZE() == 0) {
+                v49 = v90 = 96;
+            } else {
+                v49 = v91 = MEM[64];
+                MEM[64] = v91 + (RETURNDATASIZE() + 63 & ~0x1f);
+                MEM[v91] = RETURNDATASIZE();
+                RETURNDATACOPY(v91 + 32, 0, RETURNDATASIZE());
+            }
+            goto 0x218bB0x11faB0x703B0x99bB0x2a3;
+        }
+        if (v47) {
+            if (v25) {
+                v92 = 0xea1(v38, v36);
+                v93 = _SafeSub(v92, v42);
+                v94 = v95 = v18 > 0;
+                if (v95) {
+                    v94 = v93 < MEM[v41 + 96];
+                }
+                if (v94) {
+                    v96 = _SafeMul(v93, 0x5f5e100);
+                    v97 = _SafeDiv(v96, MEM[v41 + 96]);
+                    if (v97 < v18) {
+                        require(v25, Error('BB: FAIL_T_1'));
+                        require(1 != v25, Error('BB: FAIL_T_2'));
+                        require(2 != v25, Error('BB: FAIL_T_3'));
+                        require(3 != v25, Error('BB: FAIL_T_4'));
+                        revert(Error('BB: FAIL_T_X'));
+                    }
+                }
+                MEM[v41 + 96] = v93;
+            }
+            v16 = MEM[96 + v41];
+            v25 = v25 + 1;
+        } else if (MEM[v49] >= 68) {
+            if (v25) {
+                if (1 != v25) {
+                    if (2 != v25) {
+                        if (3 != v25) {
+                            require(36 + v49 + MEM[4 + v49] - (36 + v49) >= 32);
+                            require(MEM[36 + v49] <= uint64.max);
+                            require(36 + v49 + MEM[4 + v49] > 36 + v49 + MEM[36 + v49] + 31);
+                            v98 = MEM[36 + v49 + MEM[36 + v49]];
+                            v99 = 0x382f(v98);
+                            require(!((MEM[64] + (~0x1f & v99 + 31) < MEM[64]) | (MEM[64] + (~0x1f & v99 + 31) > uint64.max)), Panic(65)); // failed memory allocation (too much memory)
+                            require(36 + v49 + MEM[36 + v49] + v98 + 32 <= 36 + v49 + MEM[4 + v49]);
+                            v100 = v101 = 0;
+                            while (v100 < v98) {
+                                MEM[v100 + (MEM[64] + 32)] = MEM[v100 + (36 + v49 + MEM[36 + v49] + 32)];
+                                v100 += 32;
+                            }
+                            if (v100 <= v98) {
+                                goto 0x525dB0x2388B0x11faB0x703B0x99bB0x2a3;
+                            } else {
+                                MEM[v98 + (MEM[64] + 32)] = 0;
+                            }
+                            MEM[32 + MEM[64]] = 'BB: RX|';
+                            v102 = v103 = 0;
+                            while (v102 < v98) {
+                                MEM[v102 + (32 + MEM[64] + 7)] = MEM[v102 + (MEM[64] + 32)];
+                                v102 += 32;
+                            }
+                            if (v102 <= v98) {
+                                goto 0x5285B0x11faB0x703B0x99bB0x2a3;
+                            } else {
+                                MEM[v98 + (32 + MEM[64] + 7)] = 0;
+                            }
+                            v104 = v105 = 7 + (v98 + (32 + MEM[64]));
+                        } else {
+                            require(36 + v49 + MEM[4 + v49] - (36 + v49) >= 32);
+                            require(MEM[36 + v49] <= uint64.max);
+                            require(36 + v49 + MEM[4 + v49] > 36 + v49 + MEM[36 + v49] + 31);
+                            v106 = MEM[36 + v49 + MEM[36 + v49]];
+                            v107 = 0x382f(v106);
+                            require(!((MEM[64] + (~0x1f & v107 + 31) < MEM[64]) | (MEM[64] + (~0x1f & v107 + 31) > uint64.max)), Panic(65)); // failed memory allocation (too much memory)
+                            require(36 + v49 + MEM[36 + v49] + v106 + 32 <= 36 + v49 + MEM[4 + v49]);
+                            v108 = v109 = 0;
+                            while (v108 < v106) {
+                                MEM[v108 + (MEM[64] + 32)] = MEM[v108 + (36 + v49 + MEM[36 + v49] + 32)];
+                                v108 += 32;
+                            }
+                            if (v108 <= v106) {
+                                goto 0x525dB0x2365B0x11faB0x703B0x99bB0x2a3;
+                            } else {
+                                MEM[v106 + (MEM[64] + 32)] = 0;
+                            }
+                            MEM[32 + MEM[64]] = 'BB: R4|';
+                            v110 = v111 = 0;
+                            while (v110 < v106) {
+                                MEM[v110 + (32 + MEM[64] + 7)] = MEM[v110 + (MEM[64] + 32)];
+                                v110 += 32;
+                            }
+                            if (v110 <= v106) {
+                                goto 0x52ddB0x11faB0x703B0x99bB0x2a3;
+                            } else {
+                                MEM[v106 + (32 + MEM[64] + 7)] = 0;
+                            }
+                            v104 = v112 = 7 + (v106 + (32 + MEM[64]));
+                        }
+                    } else {
+                        require(36 + v49 + MEM[4 + v49] - (36 + v49) >= 32);
+                        require(MEM[36 + v49] <= uint64.max);
+                        require(36 + v49 + MEM[4 + v49] > 36 + v49 + MEM[36 + v49] + 31);
+                        v113 = MEM[36 + v49 + MEM[36 + v49]];
+                        v114 = 0x382f(v113);
+                        require(!((MEM[64] + (~0x1f & v114 + 31) < MEM[64]) | (MEM[64] + (~0x1f & v114 + 31) > uint64.max)), Panic(65)); // failed memory allocation (too much memory)
+                        require(36 + v49 + MEM[36 + v49] + v113 + 32 <= 36 + v49 + MEM[4 + v49]);
+                        v115 = v116 = 0;
+                        while (v115 < v113) {
+                            MEM[v115 + (MEM[64] + 32)] = MEM[v115 + (36 + v49 + MEM[36 + v49] + 32)];
+                            v115 += 32;
+                        }
+                        if (v115 <= v113) {
+                            goto 0x525dB0x2338B0x11faB0x703B0x99bB0x2a3;
+                        } else {
+                            MEM[v113 + (MEM[64] + 32)] = 0;
+                        }
+                        MEM[32 + MEM[64]] = 'BB: R3|';
+                        v117 = v118 = 0;
+                        while (v117 < v113) {
+                            MEM[v117 + (32 + MEM[64] + 7)] = MEM[v117 + (MEM[64] + 32)];
+                            v117 += 32;
+                        }
+                        if (v117 <= v113) {
+                            goto 0x5309B0x11faB0x703B0x99bB0x2a3;
+                        } else {
+                            MEM[v113 + (32 + MEM[64] + 7)] = 0;
+                        }
+                        v104 = v119 = 7 + (v113 + (32 + MEM[64]));
+                    }
+                } else {
+                    require(36 + v49 + MEM[4 + v49] - (36 + v49) >= 32);
+                    require(MEM[36 + v49] <= uint64.max);
+                    require(36 + v49 + MEM[4 + v49] > 36 + v49 + MEM[36 + v49] + 31);
+                    v120 = MEM[36 + v49 + MEM[36 + v49]];
+                    v121 = 0x382f(v120);
+                    require(!((MEM[64] + (~0x1f & v121 + 31) < MEM[64]) | (MEM[64] + (~0x1f & v121 + 31) > uint64.max)), Panic(65)); // failed memory allocation (too much memory)
+                    require(36 + v49 + MEM[36 + v49] + v120 + 32 <= 36 + v49 + MEM[4 + v49]);
+                    v122 = v123 = 0;
+                    while (v122 < v120) {
+                        MEM[v122 + (MEM[64] + 32)] = MEM[v122 + (36 + v49 + MEM[36 + v49] + 32)];
+                        v122 += 32;
+                    }
+                    if (v122 <= v120) {
+                        goto 0x525dB0x230bB0x11faB0x703B0x99bB0x2a3;
+                    } else {
+                        MEM[v120 + (MEM[64] + 32)] = 0;
+                    }
+                    MEM[32 + MEM[64]] = 'BB: R2|';
+                    v124 = v125 = 0;
+                    while (v124 < v120) {
+                        MEM[v124 + (32 + MEM[64] + 7)] = MEM[v124 + (MEM[64] + 32)];
+                        v124 += 32;
+                    }
+                    if (v124 <= v120) {
+                        goto 0x5335B0x11faB0x703B0x99bB0x2a3;
+                    } else {
+                        MEM[v120 + (32 + MEM[64] + 7)] = 0;
+                    }
+                    v104 = 7 + (v120 + (32 + MEM[64]));
+                }
+            } else {
+                require(36 + v49 + MEM[4 + v49] - (36 + v49) >= 32);
+                require(MEM[36 + v49] <= uint64.max);
+                require(36 + v49 + MEM[4 + v49] > 36 + v49 + MEM[36 + v49] + 31);
+                v126 = MEM[36 + v49 + MEM[36 + v49]];
+                v127 = 0x382f(v126);
+                require(!((MEM[64] + (~0x1f & v127 + 31) < MEM[64]) | (MEM[64] + (~0x1f & v127 + 31) > uint64.max)), Panic(65)); // failed memory allocation (too much memory)
+                require(36 + v49 + MEM[36 + v49] + v126 + 32 <= 36 + v49 + MEM[4 + v49]);
+                v128 = v129 = 0;
+                while (v128 < v126) {
+                    MEM[v128 + (MEM[64] + 32)] = MEM[v128 + (36 + v49 + MEM[36 + v49] + 32)];
+                    v128 += 32;
+                }
+                if (v128 <= v126) {
+                    goto 0x525dB0x22b8B0x11faB0x703B0x99bB0x2a3;
+                } else {
+                    MEM[v126 + (MEM[64] + 32)] = 0;
+                }
+                MEM[32 + MEM[64]] = 'BB: R1|';
+                v130 = v131 = 0;
+                while (v130 < v126) {
+                    MEM[v130 + (32 + MEM[64] + 7)] = MEM[v130 + (MEM[64] + 32)];
+                    v130 += 32;
+                }
+                if (v130 <= v126) {
+                    goto 0x52b1B0x11faB0x703B0x99bB0x2a3;
+                } else {
+                    MEM[v126 + (32 + MEM[64] + 7)] = 0;
+                }
+                v104 = v132 = 7 + (v126 + (32 + MEM[64]));
+            }
+            MEM[v104] = 0x8c379a000000000000000000000000000000000000000000000000000000000;
+            MEM[4 + v104] = 32;
+            MEM[4 + v104 + 32] = v104 - MEM[64] + ~31;
+            v133 = v134 = 0;
+            while (v133 < v104 - MEM[64] + ~31) {
+                MEM[v133 + (4 + v104 + 32 + 32)] = MEM[v133 + (MEM[64] + 32)];
+                v133 += 32;
+            }
+            if (v133 <= v104 - MEM[64] + ~31) {
+                goto 0x3411B0x36efB0x22dbB0x11faB0x703B0x99bB0x2a3;
+            } else {
+                MEM[v104 - MEM[64] + ~31 + (4 + v104 + 32 + 32)] = 0;
+            }
+            revert(MEM[64], 32 + ((~0x1f & 31 + (v104 - MEM[64] + ~31)) + (4 + v104 + 32)) - MEM[64]);
+        } else {
+            require(v25, Error(0x42423a205231));
+            require(1 != v25, Error(0x42423a205232));
+            require(2 != v25, Error(0x42423a205233));
+            require(3 != v25, Error(0x42423a205234));
+            revert(Error(0x42423a205258));
+        }
+    }
+    if (bool(!(v0[64] & 0x4))) {
+        if (!bool(!(v0[64] & 0x1))) {
+            require(0 < v0[v0[32][32]], Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+            require(0 < v1, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+            v135 = v136 = 0;
+            while (v135 < 68) {
+                MEM[v135 + MEM[64]] = MEM[v135 + (MEM[64] + 32)];
+                v135 += 32;
+            }
+            if (v135 <= 68) {
+                goto 0x3447B0xf880x4e3B0x99bB0x2a3;
+            } else {
+                MEM[68 + MEM[64]] = 0;
+            }
+            v137 = v138, /* uint256 */ v139, /* uint256 */ v140 = address(MEM[32 + MEM[64]]).transfer(address(MEM[0 + MEM[32 + MEM[64]]]), v17).gas(msg.gas);
+            if (RETURNDATASIZE() == 0) {
+                v141 = 96;
+            } else {
+                v141 = v142 = new bytes[](RETURNDATASIZE());
+                RETURNDATACOPY(v142.data, 0, RETURNDATASIZE());
+            }
+            if (v138) {
+                v137 = v143 = !MEM[v141];
+                if (MEM[v141]) {
+                    require(32 + v141 + MEM[v141] - (32 + v141) >= 32);
+                    v137 = MEM[32 + v141];
+                    require(v137 == bool(v137));
+                }
+            }
+            require(v137, Error('BB: TRANSFER_FAILED'));
+            v144 = 0xea1(this, MEM[32 + MEM[64]]);
+            if (v0[64] & 0x8) {
+                0x137a(0xd614927acfb9744441180c2525faf4cedb70207f, MEM[32 + MEM[64]]);
+            }
+            require(bool((address(0xd614927acfb9744441180c2525faf4cedb70207f)).code.size));
+            v145 = address(0xd614927acfb9744441180c2525faf4cedb70207f).settle(address(MEM[32 + MEM[64]]), v144).gas(msg.gas);
+            require(bool(v145), 0, RETURNDATASIZE()); // checks call status, propagates error data on error
+            goto 0x4d88B0x2a3;
+        }
+        exit;
+    } else {
+        v146 = 0x1291(MEM[64], v17);
+        MEM[v146 - 32] = 0xfa61cc12;
+        revert(v146 - 4, (v146.length << 5) + 36);
+    }
+}
+
+function 0x806d34af(uint256 varg0, uint256 varg1) public nonPayable { 
+    require(msg.data.length - 4 >= 64);
+    require(varg0 <= uint64.max);
+    require(4 + varg0 + 31 < msg.data.length);
+    require(varg0.length <= uint64.max);
+    require(4 + varg0 + (varg0.length << 5) + 32 <= msg.data.length);
+    require(msg.sender == _owner, Error('Caller is not owner'));
+    v0 = v1 = 0;
+    while (v0 < varg0.length) {
+        if (!varg1) {
+            require(v0 < varg0.length, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+            require((v0 << 5) + varg0.data + 32 - ((v0 << 5) + varg0.data) >= 32);
+            require(varg0[v0] == address(varg0[v0]));
+            MEM[36 + MEM[64]] = address(this);
+            MEM[MEM[64] + 32] = uint224(MEM[MEM[64] + 32]) | 0x70a0823100000000000000000000000000000000000000000000000000000000;
+            v2 = v3 = 0;
+            while (v2 < 68 + MEM[64] - MEM[64] - 32) {
+                MEM[v2 + MEM[64]] = MEM[v2 + (MEM[64] + 32)];
+                v2 += 32;
+            }
+            if (v2 <= 68 + MEM[64] - MEM[64] - 32) {
+                goto 0x3447B0xed50x9e2B0x2c5;
+            } else {
+                MEM[68 + MEM[64] - MEM[64] - 32 + MEM[64]] = 0;
+            }
+            v4 = v5 = address(varg0[v0]).staticcall(MEM[(MEM[64]) len (68 + MEM[64] - MEM[64] - 32 + MEM[64] - MEM[64])], MEM[(MEM[64]) len 0]).gas(msg.gas);
+            if (RETURNDATASIZE() == 0) {
+                v6 = 96;
+            } else {
+                v6 = v7 = MEM[64];
+                MEM[64] = v7 + (RETURNDATASIZE() + 63 & ~0x1f);
+                MEM[v7] = RETURNDATASIZE();
+                RETURNDATACOPY(v7 + 32, 0, RETURNDATASIZE());
+            }
+            if (v5) {
+                v4 = MEM[v6] >= 32;
+            }
+            require(v4);
+            require(32 + v6 + MEM[v6] - (32 + v6) >= 32);
+            v8 = MEM[32 + v6];
+        }
+        require(v0 < varg0.length, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+        require((v0 << 5) + varg0.data + 32 - ((v0 << 5) + varg0.data) >= 32);
+        require(varg0[v0] == address(varg0[v0]));
+        MEM[MEM[64] + 68] = v8;
+        MEM[MEM[64] + 32] = 0xa9059cbb00000000000000000000000000000000000000000000000000000000 | uint224(address(msg.sender));
+        v9 = v10 = 0;
+        while (v9 < 68) {
+            MEM[v9 + MEM[64]] = MEM[v9 + (MEM[64] + 32)];
+            v9 += 32;
+        }
+        if (v9 <= 68) {
+            goto 0x3447B0xf880x9e2B0x2c5;
+        } else {
+            MEM[68 + MEM[64]] = 0;
+        }
+        v11 = v12 = address(varg0[v0]).call(MEM[(MEM[64]) len (68 + MEM[64] - MEM[64])], MEM[(MEM[64]) len 0]).gas(msg.gas);
+        if (RETURNDATASIZE() == 0) {
+            v13 = 96;
+        } else {
+            v13 = v14 = MEM[64];
+            MEM[64] = v14 + (RETURNDATASIZE() + 63 & ~0x1f);
+            MEM[v14] = RETURNDATASIZE();
+            RETURNDATACOPY(v14 + 32, 0, RETURNDATASIZE());
+        }
+        if (v12) {
+            v11 = v15 = !MEM[v13];
+            if (MEM[v13]) {
+                require(32 + v13 + MEM[v13] - (32 + v13) >= 32);
+                v11 = MEM[32 + v13];
+                require(v11 == bool(v11));
+            }
+        }
+        require(v11, Error('BB: TRANSFER_FAILED'));
+        require(v0 != ~0, Panic(17)); // arithmetic overflow or underflow
+        v0 += 1;
+    }
+}
+
+function getAddressList() public nonPayable { 
+    require(0 < v0.length, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+    require(1 < v0.length, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+    require(2 < v0.length, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+    require(3 < v0.length, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+    MEM[0xd614927acfb9744441180c2525faf4cedb70207ffd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9ff970a61a04b1ca14834a43f5de4533ebddb5d48] = address(0xda10009cbd5d07dd0cecc66161fc93d7c9000da1);
+    require(4 < v0.length, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+    MEM[0xd614927acfb9744441180c2525faf4cedb70207ffd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9ff970a61a04b1ca14834a43f5de4533ebddb5d68] = address(0x912ce59144191c1204e64559fe8253a0e49e6548);
+    require(5 < v0.length, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+    MEM[0xd614927acfb9744441180c2525faf4cedb70207ffd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9ff970a61a04b1ca14834a43f5de4533ebddb5d88] = address(0x2f2a2543b76a4166549f7aab2e75bef0aefc5b0f);
+    require(6 < v0.length, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+    MEM[0xd614927acfb9744441180c2525faf4cedb70207ffd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9ff970a61a04b1ca14834a43f5de4533ebddb5da8] = address(0x0);
+    v1 = new address[](v0.length);
+    v2 = v3 = v1.data;
+    v4 = v5 = v0.data;
+    v6 = v7 = 0;
+    while (v6 < v0.length) {
+        MEM[v2] = address(MEM[v4]);
+        v2 += 32;
+        v4 += 32;
+        v6 += 1;
+    }
+    return v1, v8, address(0xd614927acfb9744441180c2525faf4cedb70207f);
+}
+
+function owner() public nonPayable { 
+    return _owner;
+}
+
+function 0x94f38a02() public nonPayable { 
+    return ___function_selector__;
+}
+
+function changeOwner(address varg0) public nonPayable { 
+    require(msg.data.length - 4 >= 32);
+    require(varg0 == varg0);
+    require(msg.sender == _owner, Error('Caller is not owner'));
+    _owner = varg0;
+}
+
+function 0xedbdce58(uint256 varg0, uint256 varg1, uint256 varg2, uint256 varg3) public nonPayable { 
+    require(msg.data.length - 4 >= 128);
+    require(varg0 <= uint64.max);
+    require(4 + varg0 + 31 < msg.data.length);
+    require(varg0.length <= uint64.max);
+    require(4 + varg0 + (varg0.length << 5) + 32 <= msg.data.length);
+    require(varg1 <= uint64.max);
+    require(4 + varg1 + 31 < msg.data.length);
+    require(varg1.length <= uint64.max);
+    require(4 + varg1 + (varg1.length << 5) + 32 <= msg.data.length);
+    require(varg2 <= uint64.max);
+    require(4 + varg2 + 31 < msg.data.length);
+    require(varg2.length <= uint64.max);
+    require(4 + varg2 + (varg2.length << 5) + 32 <= msg.data.length);
+    v0 = 0xd53(varg3, varg2.length, varg2.data, varg1.length, varg1.data, varg0.length, varg0.data);
+    v1 = new uint256[](MEM[v0]);
+    v2 = v3 = 0;
+    v4 = v5 = 32 + v0;
+    v6 = v7 = v1.data;
+    while (v2 < MEM[v0]) {
+        MEM[v6] = MEM[v4];
+        v4 += 32;
+        v6 += 32;
+        v2 += 1;
+    }
+    return v1;
+}
+
+function 0xee33b7e2(address varg0, bytes varg1) public nonPayable { 
+    require(msg.data.length - 4 >= 64);
+    require(varg0 == varg0);
+    require(varg1 <= uint64.max);
+    require(4 + varg1 + 31 < msg.data.length);
+    require(varg1.length <= uint64.max);
+    require(4 + varg1 + varg1.length + 32 <= msg.data.length);
+    require(msg.sender == _owner, Error('Caller is not owner'));
+    v0 = new bytes[](varg1.length);
+    CALLDATACOPY(v0.data, varg1.data, varg1.length);
+    v0[varg1.length] = 0;
+    v1, v2 = 0x3a6(v0, varg0);
+    require(v2);
+}
+
+function 0x380c(uint256 varg0) private { 
+    require(varg0 <= uint64.max, Panic(65)); // failed memory allocation (too much memory)
+    return 32 + (varg0 << 5);
+}
+
+function 0x382f(uint256 varg0) private { 
+    require(varg0 <= uint64.max, Panic(65)); // failed memory allocation (too much memory)
+    return 32 + (~0x1f & 31 + varg0);
+}
+
+function _SafeSub(uint256 varg0, uint256 varg1, uint256 varg2, uint256 varg3) private { 
+    require(varg2 <= varg3);
+    require(varg3 <= varg1);
+    return varg3 - varg2, varg2 + varg0;
+}
+
+function _SafeAdd(uint256 varg0, uint256 varg1) private { 
+    require(varg0 <= ~varg1, Panic(17)); // arithmetic overflow or underflow
+    return varg0 + varg1;
+}
+
+function _SafeDiv(uint256 varg0, uint256 varg1) private { 
+    require(varg1, Panic(18)); // division by zero
+    return varg0 / varg1;
+}
+
+function _SafeMul(uint256 varg0, uint256 varg1) private { 
+    require(!(bool(varg0) & (varg1 > ~0 / varg0)), Panic(17)); // arithmetic overflow or underflow
+    return varg0 * varg1;
+}
+
+function _SafeSub(uint256 varg0, uint256 varg1) private { 
+    require(varg0 >= varg1, Panic(17)); // arithmetic overflow or underflow
+    return varg0 - varg1;
+}
+
+function VERSION() public nonPayable { 
+    return 701;
+}
+
+function 0x3a6(bytes varg0, address varg1) private { 
+    require(bool((address(0xd614927acfb9744441180c2525faf4cedb70207f)).code.size));
+    v0, /* bool */ v1 = address(0xd614927acfb9744441180c2525faf4cedb70207f).call(uint32(0xad8add11)).gas(msg.gas);
+    require(bool(v0), 0, RETURNDATASIZE()); // checks call status, propagates error data on error
+    require(MEM[64] + RETURNDATASIZE() - MEM[64] >= 32);
+    require(v1 == bool(v1));
+    require(v1, Error('BB: UNSAFE_DELEGATE'));
+    v2 = v3 = 0;
+    while (v2 < varg0.length) {
+        MEM[v2 + v4.data] = varg0[v2];
+        v2 += 32;
+    }
+    if (v2 <= varg0.length) {
+        goto 0x3447B0x47f;
+    } else {
+        MEM[varg0.length + v4.data] = 0;
+    }
+    v5, /* uint256 */ v6 = varg1.delegatecall(v4.data).gas(msg.gas);
+    if (RETURNDATASIZE() == 0) {
+        v7 = v8 = 96;
+    } else {
+        v7 = v9 = new bytes[](RETURNDATASIZE());
+        v6 = v9.data;
+        RETURNDATACOPY(v6, 0, RETURNDATASIZE());
+    }
+    return v7, v5;
+}
+
+function () public payable { 
+}
+
+function 0xd53(uint256 varg0, uint256 varg1, uint256 varg2, uint256 varg3, uint256 varg4, uint256 varg5, uint256 varg6) private { 
+    if (this == msg.sender) {
+        v0 = v1 = 0;
+        v2 = v3 = bool(varg0 >> 12);
+        require(v3 <= uint64.max, Panic(65)); // failed memory allocation (too much memory)
+        v4 = new uint256[](v3);
+        if (v3) {
+            v5 = v4.data;
+            do {
+                MEM[MEM[64]] = address(0x0);
+                MEM[32 + MEM[64]] = 0;
+                MEM[64 + MEM[64]] = 0;
+                MEM[96 + MEM[64]] = 0;
+                MEM[v5] = MEM[64];
+                v5 += 32;
+                v2 = v2 - 1;
+            } while (!v2);
+        }
+        require(v3 <= uint64.max, Panic(65)); // failed memory allocation (too much memory)
+        v6 = new uint256[](v3);
+        if (v3) {
+            CALLDATACOPY(v6.data, msg.data.length, v3 << 5);
+        }
+        v7 = v8 = 0;
+        while (v7 < v3) {
+            require(v7 < v4.length, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+            require(v0 < varg3, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+            require((v0 << 5) + varg4 + 32 - ((v0 << 5) + varg4) >= 32);
+            require(msg.data[(v0 << 5) + varg4] == address(msg.data[(v0 << 5) + varg4]));
+            MEM[v4[v7]] = address(msg.data[(v0 << 5) + varg4]);
+            require(v7 < varg5, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+            MEM[v4[v7] + 32] = msg.data[(v7 << 5) + varg6];
+            v0 += 1;
+            v7 = v7 + 1;
+            if (msg.data[(v7 << 5) + varg6] & 0x80) {
+                require(v7 < varg5, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+                require(v7 < v6.length, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+                v6[v7] = msg.data[(v7 << 5) + varg6];
+                v7 += 1;
+            }
+            if (msg.data[(v7 << 5) + varg6] & 0x100) {
+                require(v7 < varg5, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+                MEM[v4[v7] + 64] = msg.data[(v7 << 5) + varg6];
+                v7 = v7 + 1;
+            }
+            v7 += 1;
+        }
+        v9 = bool(varg0 >> 8);
+        require(v9 <= uint64.max, Panic(65)); // failed memory allocation (too much memory)
+        v10 = new uint256[](v9);
+        if (v9) {
+            CALLDATACOPY(v10.data, msg.data.length, v9 << 5);
+        }
+        v11 = v12 = 0;
+        while (v11 < v9) {
+            require(v11 < 32, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+            v13 = byte(varg0, v11);
+            if (v13 != 7) {
+                if (v13) {
+                    if (1 != v13) {
+                        if (2 != v13) {
+                            if (3 != v13) {
+                                if (4 != v13) {
+                                    if (5 != v13) {
+                                        require(6 == v13, Error('BB: Address'));
+                                        v14 = 0;
+                                    } else {
+                                        v14 = v15 = 0x2f2a2543b76a4166549f7aab2e75bef0aefc5b0f;
+                                    }
+                                } else {
+                                    v14 = v16 = 0x912ce59144191c1204e64559fe8253a0e49e6548;
+                                }
+                            } else {
+                                v14 = v17 = 0xda10009cbd5d07dd0cecc66161fc93d7c9000da1;
+                            }
+                        } else {
+                            v14 = v18 = 0xff970a61a04b1ca14834a43f5de4533ebddb5cc8;
+                        }
+                    } else {
+                        v14 = v19 = 0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9;
+                    }
+                } else {
+                    v14 = v20 = 0xd614927acfb9744441180c2525faf4cedb70207f;
+                }
+                require(v11 < v10.length, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+                v10[v11] = address(v14);
+            } else {
+                require(v0 < varg3, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+                require((v0 << 5) + varg4 + 32 - ((v0 << 5) + varg4) >= 32);
+                require(msg.data[(v0 << 5) + varg4] == address(msg.data[(v0 << 5) + varg4]));
+                require(v11 < v10.length, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+                v10[v11] = address(msg.data[(v0 << 5) + varg4]);
+                v0 += 1;
+            }
+            v11 += 1;
+        }
+        if (this == msg.sender) {
+            varg0 = v21 = varg0 | 0x4;
+        } else {
+            if (uint16(varg0 >> 128)) {
+                require(bool((address(0x64)).code.size));
+                v22, /* uint256 */ v23 = address(0x64).staticcall(uint32(0xa3b1b31d)).gas(msg.gas);
+                require(bool(v22), 0, RETURNDATASIZE()); // checks call status, propagates error data on error
+                require(MEM[64] + RETURNDATASIZE() - MEM[64] >= 32);
+                require(uint8.max, Panic(18)); // division by zero
+                v24 = v23 % uint8.max;
+                if (v24 < uint8(uint16(varg0 >> 128))) {
+                    v24 = v25 = _SafeAdd(v24, uint8.max);
+                }
+                v26 = _SafeSub(v24, uint8(uint16(varg0 >> 128)));
+                v27 = v28 = v26 > uint16(varg0 >> 128) >> 8;
+            } else {
+                v27 = 0;
+            }
+            require(!v27, Error('BB: Expired'));
+        }
+        v29 = v30 = uint112(varg0 >> 16);
+        v31 = v32 = 0;
+        while (v31 < v4.length) {
+            require(v31 < v4.length, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+            v29 = 0x2868(v10, MEM[32 + v4[v31]], v4[v31], v29);
+            require(v31 < v6.length, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+            if (v29 > v6[v31]) {
+                if (0xfff & MEM[32 + v4[v31]] >> 30) {
+                    v33 = _SafeSub(10000, 0xfff & MEM[32 + v4[v31]] >> 30);
+                    v34 = _SafeMul(v29, v33);
+                    v29 = _SafeDiv(v34, 10000);
+                }
+                MEM[96 + v4[v31]] = v29;
+                v31 += 1;
+            } else {
+                require(v31, Error('BB: FAIL_Q_1'));
+                require(1 != v31, Error('BB: FAIL_Q_2'));
+                require(2 != v31, Error('BB: FAIL_Q_3'));
+                require(3 != v31, Error('BB: FAIL_Q_4'));
+                revert(Error('BB: FAIL_Q_X'));
+            }
+        }
+        v35 = v36 = uint144(varg0);
+        if (this != msg.sender) {
+            require(v29 >= v30, Error('BB: FAIL_Q'));
+            if (v36 & 0x2) {
+                v37 = _SafeMul(v30, 0x5f5e100);
+                v38 = _SafeDiv(v37, v29);
+                v35 = v36 | v38 << 144;
+            }
+        }
+        require(0 < v4.length, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+        v39 = v4.data;
+        v40 = v41 = MEM[0 + v4[0]];
+        require(0 < v10.length, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+        v42 = v10.data;
+        if (0 != v35 & 0x1) {
+            require(bool((address(0xd614927acfb9744441180c2525faf4cedb70207f)).code.size));
+            v43 = address(0xd614927acfb9744441180c2525faf4cedb70207f).call(uint32(0x6e0e14e3)).gas(msg.gas);
+            require(bool(v43), 0, RETURNDATASIZE()); // checks call status, propagates error data on error
+            if (MEM[32 + v4[0]] & 0x20) {
+                0x137a(v41, v10[0]);
+            }
+            MEM[32 + MEM[64]] = 96;
+            MEM[128 + MEM[64]] = v4.length;
+            v44 = v45 = 0;
+            v46 = v47 = 32 + MEM[64] + 128;
+            v48 = v49 = v4.data;
+            while (v44 < v4.length) {
+                MEM[v46] = address(MEM[MEM[v48]]);
+                MEM[v46 + 32] = MEM[MEM[v48] + 32];
+                MEM[v46 + 64] = MEM[MEM[v48] + 64];
+                MEM[v46 + 96] = MEM[96 + MEM[v48]];
+                v46 += 128;
+                v48 += 32;
+                v44 += 1;
+            }
+            MEM[32 + MEM[64] + 32] = v46 - (32 + MEM[64]);
+            MEM[v46] = v10.length;
+            v50 = v51 = v46 + 32;
+            v52 = v53 = v10.data;
+            v54 = v55 = 0;
+            while (v54 < v10.length) {
+                MEM[v50] = address(MEM[v52]);
+                v50 += 32;
+                v52 += 32;
+                v54 += 1;
+            }
+            MEM[32 + MEM[64] + 64] = v35;
+            if (MEM[32 + v4[0]] & 0x7 != 0) {
+                require(MEM[32 + v4[0]] & 0x7 == 3, Error('BB: FL_ROUTE'));
+                require(MEM[32 + v4[0]] >> 42 & 0x7 < v10.length, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+                require(MEM[32 + v4[0]] >> 45 & 0x7 < v10.length, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+                v56 = new uint256[](v50 - MEM[64] - 32);
+                v57 = v58 = 0;
+                while (v57 < v50 - MEM[64] - 32) {
+                    MEM[v57 + v56.data] = MEM[v57 + (MEM[64] + 32)];
+                    v57 += 32;
+                }
+                if (v57 <= v50 - MEM[64] - 32) {
+                    goto 0x3411B0x3508B0x1c4cB0x969B0xe0d;
+                } else {
+                    MEM[v50 - MEM[64] - 32 + v56.data] = 0;
+                }
+                require(bool((address(MEM[32 + v4[0]] >> 96)).code.size));
+                v59 = address(MEM[32 + v4[0]] >> 96).call(uint32(0xe62b8f40), address(v41), address(v10[MEM[32 + v4[0]] >> 42 & 0x7]), address(v10[MEM[32 + v4[0]] >> 45 & 0x7]), v30, MEM[32 + v4[0]], MEM[64 + v4[0]], address(this), v56).gas(msg.gas);
+                require(bool(v59), 0, RETURNDATASIZE()); // checks call status, propagates error data on error
+                goto 0x977B0xe0d;
+            } else {
+                v60 = v61 = MEM[v4[0] + 96];
+                v60 = v62 = 0;
+                v63 = new uint256[](v50 - MEM[64] - 32);
+                v64 = v65 = 0;
+                while (v64 < v50 - MEM[64] - 32) {
+                    MEM[v64 + v63.data] = MEM[v64 + (MEM[64] + 32)];
+                    v64 += 32;
+                }
+                if (v64 <= v50 - MEM[64] - 32) {
+                    goto 0x3411B0x3787B0x1b8aB0x969B0xe0d;
+                } else {
+                    MEM[v50 - MEM[64] - 32 + v63.data] = 0;
+                }
+                require(bool((address(v41)).code.size));
+                v66 = address(v41).swap(v60, v60, address(this), v63).gas(msg.gas);
+                require(bool(v66), 0, RETURNDATASIZE()); // checks call status, propagates error data on error
+                goto 0x977B0xe0d;
+            }
+        } else {
+            if (!varg1) {
+                if (!(MEM[32 + v4[0]] & 0x10)) {
+                    v40 = v67 = this;
+                }
+                require(bool((address(0xd614927acfb9744441180c2525faf4cedb70207f)).code.size));
+                v68, /* uint256 */ v69 = address(0xd614927acfb9744441180c2525faf4cedb70207f).borrow(address(v40), address(v10[0]), v30).gas(msg.gas);
+                require(bool(v68), 0, RETURNDATASIZE()); // checks call status, propagates error data on error
+                require(MEM[64] + RETURNDATASIZE() - MEM[64] >= 32);
+                v70 = v71 = 0;
+                v72 = v73 = 0;
+                while (v70 < v4.length) {
+                    v70 = v70 + 1;
+                    v74 = v75 = this;
+                    if (v70 != v4.length) {
+                        require(v70 < v4.length, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+                        if (0 != MEM[32 + v4[v70]] & 0x10) {
+                            require(v70 < v4.length, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+                            v74 = v76 = MEM[0 + v4[v70]];
+                        }
+                    } else if (!v71) {
+                        v74 = 0xd614927acfb9744441180c2525faf4cedb70207f;
+                    }
+                    require(v70 < v4.length, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+                    v77 = MEM[32 + v4[v70]];
+                    v78 = v79 = 0;
+                    if (!v70) {
+                        v70 = bool(v77 & 0x40);
+                    }
+                    if (v70) {
+                        require(v77 >> 45 & 0x7 < v10.length, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+                        v72 = v10[v77 >> 45 & 0x7];
+                        if (v70 < v4.length) {
+                            require(v70 < v4.length, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+                            if (MEM[32 + v4[v70]] & 0x7 < 2) {
+                                v78 = v80 = MEM[32 + v4[v70]] >> 152;
+                            }
+                        }
+                        if (!v78) {
+                            if (this == address(v74)) {
+                                v78 = v81 = 0;
+                            } else {
+                                v78 = v82 = 0xea1(v74, v72);
+                            }
+                        }
+                    }
+                    v83 = v84 = 0;
+                    v85 = v86 = 96;
+                    if (v77 & 0x7 >= 2) {
+                        v87 = v88 = 0x7 & v77 >> 42;
+                        if (v77 & 0x20) {
+                            require(v88 < v10.length, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+                            v89 = 0x24eb(MEM[0 + v4[v70]], this, v10[v88]);
+                            if (!v89) {
+                                0x25db(~0, MEM[0 + v4[v70]], v10[v88]);
+                            }
+                        }
+                        if (v77 & 0x7 != 2) {
+                            if (v77 & 0x7 == 3) {
+                                require(v88 < v10.length, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+                                require(v77 >> 45 & 0x7 < v10.length, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+                                MEM[MEM[64] + 68] = address(v10[v88]);
+                                MEM[MEM[64] + 100] = address(v10[v77 >> 45 & 0x7]);
+                                MEM[MEM[64] + 132] = v29;
+                                MEM[MEM[64] + 164] = v77;
+                                MEM[MEM[64] + 196] = MEM[v4[v70] + 64];
+                                MEM[MEM[64] + 228] = address(v74);
+                                MEM[MEM[64] + 32] = uint224(address(MEM[0 + v4[v70]])) | 0x4da9175700000000000000000000000000000000000000000000000000000000;
+                                v90 = v91 = 0;
+                                while (v90 < 228) {
+                                    MEM[v90 + MEM[64]] = MEM[v90 + (MEM[64] + 32)];
+                                    v90 += 32;
+                                }
+                                if (v90 <= 228) {
+                                    goto 0x3447B0x20a6B0x11faB0x1a2aB0x969B0xe0d;
+                                } else {
+                                    MEM[228 + MEM[64]] = 0;
+                                }
+                                v83 = address(v77 >> 96).delegatecall(MEM[(MEM[64]) len 228], MEM[(MEM[64]) len 0]).gas(msg.gas);
+                                if (RETURNDATASIZE() == 0) {
+                                    v85 = v92 = 96;
+                                } else {
+                                    v85 = v93 = MEM[64];
+                                    MEM[64] = v93 + (RETURNDATASIZE() + 63 & ~0x1f);
+                                    MEM[v93] = RETURNDATASIZE();
+                                    RETURNDATACOPY(v93 + 32, 0, RETURNDATASIZE());
+                                }
+                            }
+                        } else {
+                            require(0x7 & v77 >> 48 <= uint64.max, Panic(65)); // failed memory allocation (too much memory)
+                            v94 = new uint256[](0x7 & v77 >> 48);
+                            if (0x7 & v77 >> 48) {
+                                CALLDATACOPY(v94.data, msg.data.length, (0x7 & v77 >> 48) << 5);
+                            }
+                            v95 = v96 = 0;
+                            while (v95 < 0x7 & v77 >> 48) {
+                                require(v87 < v10.length, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+                                require(v95 < v94.length, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+                                v94[v95] = address(v10[v87]);
+                                v87 += 1;
+                                v95 += 1;
+                            }
+                            if (!(v77 & 0x40)) {
+                                MEM[36 + MEM[64]] = v29;
+                                MEM[36 + MEM[64] + 32] = uint8(0);
+                                MEM[36 + MEM[64] + 64] = 160;
+                                MEM[36 + MEM[64] + 160] = v94.length;
+                                v97 = v98 = 36 + MEM[64] + 160 + 32;
+                                v99 = v100 = v94.data;
+                                v101 = v102 = 0;
+                                while (v101 < v94.length) {
+                                    MEM[v97] = address(MEM[v99]);
+                                    v97 += 32;
+                                    v99 += 32;
+                                    v101 += 1;
+                                }
+                                MEM[36 + MEM[64] + 96] = address(v74);
+                                MEM[164 + MEM[64]] = 0x2540be3ff;
+                                v103 = MEM[64];
+                                MEM[v103] = v97 - v103 - 32;
+                                MEM[64] = v97;
+                                MEM[v103 + 32] = uint224(MEM[v103 + 32]) | 0x38ed173900000000000000000000000000000000000000000000000000000000;
+                            } else {
+                                MEM[36 + MEM[64]] = v29;
+                                MEM[36 + MEM[64] + 32] = uint8(0);
+                                MEM[36 + MEM[64] + 64] = 160;
+                                MEM[36 + MEM[64] + 160] = v94.length;
+                                v104 = v105 = 36 + MEM[64] + 160 + 32;
+                                v106 = v107 = v94.data;
+                                v108 = v109 = 0;
+                                while (v108 < v94.length) {
+                                    MEM[v104] = address(MEM[v106]);
+                                    v104 += 32;
+                                    v106 += 32;
+                                    v108 += 1;
+                                }
+                                MEM[36 + MEM[64] + 96] = address(v74);
+                                MEM[164 + MEM[64]] = 0x2540be3ff;
+                                v103 = v110 = MEM[64];
+                                MEM[v110] = v104 - v110 - 32;
+                                MEM[64] = v104;
+                                MEM[v110 + 32] = uint224(MEM[v110 + 32]) | 0x5c11d79500000000000000000000000000000000000000000000000000000000;
+                            }
+                            v111 = v112 = 0;
+                            while (v111 < MEM[v103]) {
+                                MEM[v111 + MEM[64]] = MEM[v111 + (v103 + 32)];
+                                v111 += 32;
+                            }
+                            if (v111 <= MEM[v103]) {
+                                goto 0x3447B0x1ff4B0x11faB0x1a2aB0x969B0xe0d;
+                            } else {
+                                MEM[MEM[v103] + MEM[64]] = 0;
+                            }
+                            v83 = v113 = address(MEM[0 + v4[v70]]).call(MEM[(MEM[64]) len (MEM[v103] + MEM[64] - MEM[64])], MEM[(MEM[64]) len 0]).gas(msg.gas);
+                            if (RETURNDATASIZE() == 0) {
+                                v85 = v114 = 96;
+                            } else {
+                                v85 = v115 = MEM[64];
+                                MEM[64] = v115 + (RETURNDATASIZE() + 63 & ~0x1f);
+                                MEM[v115] = RETURNDATASIZE();
+                                RETURNDATACOPY(v115 + 32, 0, RETURNDATASIZE());
+                            }
+                        }
+                    } else {
+                        v116 = v117 = 0;
+                        if (v70) {
+                            v116 = v118 = 0x2868(v10, v77, v4[v70], v29);
+                        } else {
+                            v116 = MEM[96 + v4[v70]];
+                        }
+                        if (v77 & 0x7 != 1) {
+                            MEM[MEM[64] + 68] = v116;
+                            MEM[MEM[64] + 68 + 32] = v116;
+                            MEM[MEM[64] + 68 + 64] = address(v74);
+                            MEM[MEM[64] + 68 + 96] = 128;
+                            MEM[MEM[64] + 68 + 128] = 0;
+                            v119 = v120 = 0;
+                            while (v119 < 0) {
+                                MEM[v119 + (MEM[64] + 68 + 128 + 32)] = MEM[v119 + (MEM[64] + 32)];
+                                v119 += 32;
+                            }
+                            if (v119 <= 0) {
+                                goto 0x3411B0x3787B0x1d93B0x11faB0x1a2aB0x969B0xe0d;
+                            } else {
+                                MEM[0 + (MEM[64] + 68 + 128 + 32)] = 0;
+                            }
+                            v121 = MEM[64];
+                            MEM[v121] = 32 + (MEM[64] + 68 + 128) - v121 - 32;
+                            MEM[64] = 32 + (MEM[64] + 68 + 128);
+                            MEM[v121 + 32] = uint224(MEM[v121 + 32]) | 0x22c0d9f00000000000000000000000000000000000000000000000000000000;
+                        } else {
+                            MEM[MEM[64] + 68] = v116;
+                            MEM[MEM[64] + 100] = address(v74);
+                            v121 = v122 = MEM[64];
+                            MEM[v122] = 100;
+                            MEM[64] = MEM[64] + 132;
+                            MEM[v122 + 32] = 0x6d9a640a00000000000000000000000000000000000000000000000000000000 | uint224(v116);
+                        }
+                        v123 = v124 = 0;
+                        while (v123 < MEM[v121]) {
+                            MEM[v123 + MEM[64]] = MEM[v123 + (v121 + 32)];
+                            v123 += 32;
+                        }
+                        if (v123 <= MEM[v121]) {
+                            goto 0x3447B0x1deaB0x11faB0x1a2aB0x969B0xe0d;
+                        } else {
+                            MEM[MEM[v121] + MEM[64]] = 0;
+                        }
+                        v83 = v125 = address(MEM[0 + v4[v70]]).call(MEM[(MEM[64]) len (MEM[v121] + MEM[64] - MEM[64])], MEM[(MEM[64]) len 0]).gas(msg.gas);
+                        if (RETURNDATASIZE() == 0) {
+                            v85 = v126 = 96;
+                        } else {
+                            v85 = v127 = MEM[64];
+                            MEM[64] = v127 + (RETURNDATASIZE() + 63 & ~0x1f);
+                            MEM[v127] = RETURNDATASIZE();
+                            RETURNDATACOPY(v127 + 32, 0, RETURNDATASIZE());
+                        }
+                        goto 0x218bB0x11faB0x1a2aB0x969B0xe0d;
+                    }
+                    if (v83) {
+                        if (v70) {
+                            v128 = 0xea1(v74, v72);
+                            v129 = _SafeSub(v128, v78);
+                            v130 = v131 = v35 >> 144 > 0;
+                            if (v131) {
+                                v130 = v129 < MEM[v4[v70] + 96];
+                            }
+                            if (v130) {
+                                v132 = _SafeMul(v129, 0x5f5e100);
+                                v133 = _SafeDiv(v132, MEM[v4[v70] + 96]);
+                                if (v133 < v35 >> 144) {
+                                    require(v70, Error('BB: FAIL_T_1'));
+                                    require(1 != v70, Error('BB: FAIL_T_2'));
+                                    require(2 != v70, Error('BB: FAIL_T_3'));
+                                    require(3 != v70, Error('BB: FAIL_T_4'));
+                                    revert(Error('BB: FAIL_T_X'));
+                                }
+                            }
+                            MEM[v4[v70] + 96] = v129;
+                        }
+                        v29 = MEM[96 + v4[v70]];
+                        v70 = v70 + 1;
+                    } else if (MEM[v85] >= 68) {
+                        if (v70) {
+                            if (1 != v70) {
+                                if (2 != v70) {
+                                    if (3 != v70) {
+                                        require(36 + v85 + MEM[4 + v85] - (36 + v85) >= 32);
+                                        require(MEM[36 + v85] <= uint64.max);
+                                        require(36 + v85 + MEM[4 + v85] > 36 + v85 + MEM[36 + v85] + 31);
+                                        v134 = MEM[36 + v85 + MEM[36 + v85]];
+                                        v135 = 0x382f(v134);
+                                        require(!((MEM[64] + (~0x1f & v135 + 31) < MEM[64]) | (MEM[64] + (~0x1f & v135 + 31) > uint64.max)), Panic(65)); // failed memory allocation (too much memory)
+                                        require(36 + v85 + MEM[36 + v85] + v134 + 32 <= 36 + v85 + MEM[4 + v85]);
+                                        v136 = v137 = 0;
+                                        while (v136 < v134) {
+                                            MEM[v136 + (MEM[64] + 32)] = MEM[v136 + (36 + v85 + MEM[36 + v85] + 32)];
+                                            v136 += 32;
+                                        }
+                                        if (v136 <= v134) {
+                                            goto 0x525dB0x2388B0x11faB0x1a2aB0x969B0xe0d;
+                                        } else {
+                                            MEM[v134 + (MEM[64] + 32)] = 0;
+                                        }
+                                        MEM[32 + MEM[64]] = 'BB: RX|';
+                                        v138 = v139 = 0;
+                                        while (v138 < v134) {
+                                            MEM[v138 + (32 + MEM[64] + 7)] = MEM[v138 + (MEM[64] + 32)];
+                                            v138 += 32;
+                                        }
+                                        if (v138 <= v134) {
+                                            goto 0x5285B0x11faB0x1a2aB0x969B0xe0d;
+                                        } else {
+                                            MEM[v134 + (32 + MEM[64] + 7)] = 0;
+                                        }
+                                        v140 = v141 = 7 + (v134 + (32 + MEM[64]));
+                                    } else {
+                                        require(36 + v85 + MEM[4 + v85] - (36 + v85) >= 32);
+                                        require(MEM[36 + v85] <= uint64.max);
+                                        require(36 + v85 + MEM[4 + v85] > 36 + v85 + MEM[36 + v85] + 31);
+                                        v142 = MEM[36 + v85 + MEM[36 + v85]];
+                                        v143 = 0x382f(v142);
+                                        require(!((MEM[64] + (~0x1f & v143 + 31) < MEM[64]) | (MEM[64] + (~0x1f & v143 + 31) > uint64.max)), Panic(65)); // failed memory allocation (too much memory)
+                                        require(36 + v85 + MEM[36 + v85] + v142 + 32 <= 36 + v85 + MEM[4 + v85]);
+                                        v144 = v145 = 0;
+                                        while (v144 < v142) {
+                                            MEM[v144 + (MEM[64] + 32)] = MEM[v144 + (36 + v85 + MEM[36 + v85] + 32)];
+                                            v144 += 32;
+                                        }
+                                        if (v144 <= v142) {
+                                            goto 0x525dB0x2365B0x11faB0x1a2aB0x969B0xe0d;
+                                        } else {
+                                            MEM[v142 + (MEM[64] + 32)] = 0;
+                                        }
+                                        MEM[32 + MEM[64]] = 'BB: R4|';
+                                        v146 = v147 = 0;
+                                        while (v146 < v142) {
+                                            MEM[v146 + (32 + MEM[64] + 7)] = MEM[v146 + (MEM[64] + 32)];
+                                            v146 += 32;
+                                        }
+                                        if (v146 <= v142) {
+                                            goto 0x52ddB0x11faB0x1a2aB0x969B0xe0d;
+                                        } else {
+                                            MEM[v142 + (32 + MEM[64] + 7)] = 0;
+                                        }
+                                        v140 = v148 = 7 + (v142 + (32 + MEM[64]));
+                                    }
+                                } else {
+                                    require(36 + v85 + MEM[4 + v85] - (36 + v85) >= 32);
+                                    require(MEM[36 + v85] <= uint64.max);
+                                    require(36 + v85 + MEM[4 + v85] > 36 + v85 + MEM[36 + v85] + 31);
+                                    v149 = MEM[36 + v85 + MEM[36 + v85]];
+                                    v150 = 0x382f(v149);
+                                    require(!((MEM[64] + (~0x1f & v150 + 31) < MEM[64]) | (MEM[64] + (~0x1f & v150 + 31) > uint64.max)), Panic(65)); // failed memory allocation (too much memory)
+                                    require(36 + v85 + MEM[36 + v85] + v149 + 32 <= 36 + v85 + MEM[4 + v85]);
+                                    v151 = v152 = 0;
+                                    while (v151 < v149) {
+                                        MEM[v151 + (MEM[64] + 32)] = MEM[v151 + (36 + v85 + MEM[36 + v85] + 32)];
+                                        v151 += 32;
+                                    }
+                                    if (v151 <= v149) {
+                                        goto 0x525dB0x2338B0x11faB0x1a2aB0x969B0xe0d;
+                                    } else {
+                                        MEM[v149 + (MEM[64] + 32)] = 0;
+                                    }
+                                    MEM[32 + MEM[64]] = 'BB: R3|';
+                                    v153 = v154 = 0;
+                                    while (v153 < v149) {
+                                        MEM[v153 + (32 + MEM[64] + 7)] = MEM[v153 + (MEM[64] + 32)];
+                                        v153 += 32;
+                                    }
+                                    if (v153 <= v149) {
+                                        goto 0x5309B0x11faB0x1a2aB0x969B0xe0d;
+                                    } else {
+                                        MEM[v149 + (32 + MEM[64] + 7)] = 0;
+                                    }
+                                    v140 = v155 = 7 + (v149 + (32 + MEM[64]));
+                                }
+                            } else {
+                                require(36 + v85 + MEM[4 + v85] - (36 + v85) >= 32);
+                                require(MEM[36 + v85] <= uint64.max);
+                                require(36 + v85 + MEM[4 + v85] > 36 + v85 + MEM[36 + v85] + 31);
+                                v156 = MEM[36 + v85 + MEM[36 + v85]];
+                                v157 = 0x382f(v156);
+                                require(!((MEM[64] + (~0x1f & v157 + 31) < MEM[64]) | (MEM[64] + (~0x1f & v157 + 31) > uint64.max)), Panic(65)); // failed memory allocation (too much memory)
+                                require(36 + v85 + MEM[36 + v85] + v156 + 32 <= 36 + v85 + MEM[4 + v85]);
+                                v158 = v159 = 0;
+                                while (v158 < v156) {
+                                    MEM[v158 + (MEM[64] + 32)] = MEM[v158 + (36 + v85 + MEM[36 + v85] + 32)];
+                                    v158 += 32;
+                                }
+                                if (v158 <= v156) {
+                                    goto 0x525dB0x230bB0x11faB0x1a2aB0x969B0xe0d;
+                                } else {
+                                    MEM[v156 + (MEM[64] + 32)] = 0;
+                                }
+                                MEM[32 + MEM[64]] = 'BB: R2|';
+                                v160 = v161 = 0;
+                                while (v160 < v156) {
+                                    MEM[v160 + (32 + MEM[64] + 7)] = MEM[v160 + (MEM[64] + 32)];
+                                    v160 += 32;
+                                }
+                                if (v160 <= v156) {
+                                    goto 0x5335B0x11faB0x1a2aB0x969B0xe0d;
+                                } else {
+                                    MEM[v156 + (32 + MEM[64] + 7)] = 0;
+                                }
+                                v140 = 7 + (v156 + (32 + MEM[64]));
+                            }
+                        } else {
+                            require(36 + v85 + MEM[4 + v85] - (36 + v85) >= 32);
+                            require(MEM[36 + v85] <= uint64.max);
+                            require(36 + v85 + MEM[4 + v85] > 36 + v85 + MEM[36 + v85] + 31);
+                            v162 = MEM[36 + v85 + MEM[36 + v85]];
+                            v163 = 0x382f(v162);
+                            require(!((MEM[64] + (~0x1f & v163 + 31) < MEM[64]) | (MEM[64] + (~0x1f & v163 + 31) > uint64.max)), Panic(65)); // failed memory allocation (too much memory)
+                            require(36 + v85 + MEM[36 + v85] + v162 + 32 <= 36 + v85 + MEM[4 + v85]);
+                            v164 = v165 = 0;
+                            while (v164 < v162) {
+                                MEM[v164 + (MEM[64] + 32)] = MEM[v164 + (36 + v85 + MEM[36 + v85] + 32)];
+                                v164 += 32;
+                            }
+                            if (v164 <= v162) {
+                                goto 0x525dB0x22b8B0x11faB0x1a2aB0x969B0xe0d;
+                            } else {
+                                MEM[v162 + (MEM[64] + 32)] = 0;
+                            }
+                            MEM[32 + MEM[64]] = 'BB: R1|';
+                            v166 = v167 = 0;
+                            while (v166 < v162) {
+                                MEM[v166 + (32 + MEM[64] + 7)] = MEM[v166 + (MEM[64] + 32)];
+                                v166 += 32;
+                            }
+                            if (v166 <= v162) {
+                                goto 0x52b1B0x11faB0x1a2aB0x969B0xe0d;
+                            } else {
+                                MEM[v162 + (32 + MEM[64] + 7)] = 0;
+                            }
+                            v140 = v168 = 7 + (v162 + (32 + MEM[64]));
+                        }
+                        MEM[v140] = 0x8c379a000000000000000000000000000000000000000000000000000000000;
+                        MEM[4 + v140] = 32;
+                        MEM[4 + v140 + 32] = v140 - MEM[64] + ~31;
+                        v169 = v170 = 0;
+                        while (v169 < v140 - MEM[64] + ~31) {
+                            MEM[v169 + (4 + v140 + 32 + 32)] = MEM[v169 + (MEM[64] + 32)];
+                            v169 += 32;
+                        }
+                        if (v169 <= v140 - MEM[64] + ~31) {
+                            goto 0x3411B0x36efB0x22dbB0x11faB0x1a2aB0x969B0xe0d;
+                        } else {
+                            MEM[v140 - MEM[64] + ~31 + (4 + v140 + 32 + 32)] = 0;
+                        }
+                        revert(MEM[64], 32 + ((~0x1f & 31 + (v140 - MEM[64] + ~31)) + (4 + v140 + 32)) - MEM[64]);
+                    } else {
+                        require(v70, Error(0x42423a205231));
+                        require(1 != v70, Error(0x42423a205232));
+                        require(2 != v70, Error(0x42423a205233));
+                        require(3 != v70, Error(0x42423a205234));
+                        revert(Error(0x42423a205258));
+                    }
+                }
+                if (!(v35 & 0x4)) {
+                    v171 = address(0xd614927acfb9744441180c2525faf4cedb70207f);
+                } else {
+                    v172 = 0x1291(v4, v30);
+                    MEM[v172 - 32] = 0xfa61cc12;
+                    revert(v172 - 4, (v172.length << 5) + 36);
+                }
+            } else {
+                MEM[32 + MEM[64]] = 96;
+                MEM[128 + MEM[64]] = v4.length;
+                v173 = v174 = 0;
+                v175 = v176 = 32 + MEM[64] + 128;
+                v177 = v178 = v4.data;
+                while (v173 < v4.length) {
+                    MEM[v175] = address(MEM[MEM[v177]]);
+                    MEM[v175 + 32] = MEM[MEM[v177] + 32];
+                    MEM[v175 + 64] = MEM[MEM[v177] + 64];
+                    MEM[v175 + 96] = MEM[96 + MEM[v177]];
+                    v175 += 128;
+                    v177 += 32;
+                    v173 += 1;
+                }
+                MEM[32 + MEM[64] + 32] = v175 - (32 + MEM[64]);
+                MEM[v175] = v10.length;
+                v179 = v180 = v175 + 32;
+                v181 = v182 = v10.data;
+                v183 = v184 = 0;
+                while (v183 < v10.length) {
+                    MEM[v179] = address(MEM[v181]);
+                    v179 += 32;
+                    v181 += 32;
+                    v183 += 1;
+                }
+                MEM[32 + MEM[64] + 64] = v35;
+                v171 = v185 = address(0xd614927acfb9744441180c2525faf4cedb70207f);
+                if (0 == MEM[32 + v4[0]] & 0x10) {
+                    v40 = v186 = this;
+                }
+                v187 = new uint256[](varg1);
+                require(varg1 <= 0x7ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff);
+                v188 = 4 + MEM[64] + (varg1 << 5) + 192;
+                MEM[v188] = 0;
+                MEM[v188] = v179 - MEM[64] - 32;
+                v189 = v190 = 0;
+                while (v189 < v179 - MEM[64] - 32) {
+                    MEM[v189 + (v188 + 32)] = MEM[v189 + (MEM[64] + 32)];
+                    v189 += 32;
+                }
+                if (v189 <= v179 - MEM[64] - 32) {
+                    goto 0x3411B0x35a8B0x18ffB0x969B0xe0d;
+                } else {
+                    MEM[v179 - MEM[64] - 32 + (v188 + 32)] = 0;
+                }
+                goto 0x1925B0x969B0xe0d;
+            }
+            require(bool(v171.code.size));
+            v191 = v171.refund(0x410085df, address(v10[0]), address(v40), v69, address(v10[0]), v30, v187, 4 + MEM[64] + (varg1 << 5) - (4 + MEM[64]) + 192).gas(msg.gas);
+            require(bool(v191), 0, RETURNDATASIZE()); // checks call status, propagates error data on error
+        }
+        if (this != msg.sender) {
+            return 96;
+        } else {
+            v192 = 0x1291(v4, v30);
+            MEM[v192 - 32] = 0xfa61cc12;
+            revert(v192 - 4, (v192.length << 5) + 36);
+        }
+    } else {
+        MEM[msg.data.length + MEM[64]] = 0;
+        v193, /* uint256 */ v194 = address(this).call(MEM[(MEM[64]) len (msg.data.length + MEM[64] - MEM[64])], MEM[(MEM[64]) len 0]).gas(msg.gas);
+        if (RETURNDATASIZE() != 0) {
+            v195 = new bytes[](RETURNDATASIZE());
+            v194 = v195.data;
+            RETURNDATACOPY(v194, 0, RETURNDATASIZE());
+        }
+        assert(v193 == 0);
+        RETURNDATACOPY(0, 0, 4);
+        require(bytes4(MEM[0]) == 0xfa61cc1200000000000000000000000000000000000000000000000000000000, 0, RETURNDATASIZE()); // checks call status, propagates error data on error
+        return ;
+    }
+}
+
+function 0xea1(address varg0, address varg1) private { 
+    v0 = v1 = 0;
+    while (v0 < 36) {
+        MEM[v0 + MEM[64]] = MEM[v0 + (MEM[64] + 32)];
+        v0 += 32;
+    }
+    if (v0 <= 36) {
+        goto 0x3447B0xed50xea1;
+    } else {
+        MEM[36 + MEM[64]] = 0;
+    }
+    v2, /* uint256 */ v3, /* uint256 */ v4 = varg1.balanceOf(varg0).gas(msg.gas);
+    if (RETURNDATASIZE() == 0) {
+        v5 = v6 = 96;
+    } else {
+        v5 = new bytes[](RETURNDATASIZE());
+        RETURNDATACOPY(v5.data, 0, RETURNDATASIZE());
+    }
+    if (v2) {
+        v2 = v7 = MEM[v5] >= 32;
+    }
+    require(v2);
+    require(32 + v5 + MEM[v5] - (32 + v5) >= 32);
+    return MEM[32 + v5];
+}
+
+function 0xf88(uint256 varg0, address varg1, address varg2) private { 
+    v0 = v1 = 0;
+    while (v0 < 68) {
+        MEM[v0 + MEM[64]] = MEM[v0 + (MEM[64] + 32)];
+        v0 += 32;
+    }
+    if (v0 <= 68) {
+        goto 0x3447B0xf88;
+    } else {
+        MEM[68 + MEM[64]] = 0;
+    }
+    v2 = v3, /* uint256 */ v4, /* uint256 */ v5 = varg2.transfer(varg1, varg0).gas(msg.gas);
+    if (RETURNDATASIZE() == 0) {
+        v6 = v7 = 96;
+    } else {
+        v6 = new bytes[](RETURNDATASIZE());
+        RETURNDATACOPY(v6.data, 0, RETURNDATASIZE());
+    }
+    if (v3) {
+        v2 = v8 = !MEM[v6];
+        if (MEM[v6]) {
+            require(32 + v6 + MEM[v6] - (32 + v6) >= 32);
+            v2 = MEM[32 + v6];
+            require(v2 == bool(v2));
+        }
+    }
+    require(v2, Error('BB: TRANSFER_FAILED'));
+    return ;
+}
+
+// Note: The function selector is not present in the original solidity code.
+// However, we display it for the sake of completeness.
+
+function __function_selector__(bytes4 function_selector) public payable { 
+    MEM[64] = 128;
+    if (msg.data.length < 4) {
+        if (!msg.data.length) {
+            ();
+        }
+    } else if (0x8da5cb5b > function_selector >> 224) {
+        if (0x582f20f == function_selector >> 224) {
+            0x0582f20f();
+        } else if (0x62b8d8c9 == function_selector >> 224) {
+            0x62b8d8c9();
+        } else if (0x7fe3ba8b == function_selector >> 224) {
+            0x7fe3ba8b();
+        } else if (0x806d34af == function_selector >> 224) {
+            0x806d34af();
+        } else if (0x81119130 == function_selector >> 224) {
+            getAddressList();
+        }
+    } else if (0x8da5cb5b == function_selector >> 224) {
+        owner();
+    } else if (0x94f38a02 == function_selector >> 224) {
+        0x94f38a02();
+    } else if (0xa6f9dae1 == function_selector >> 224) {
+        changeOwner(address);
+    } else if (0xedbdce58 == function_selector >> 224) {
+        0xedbdce58();
+    } else if (0xee33b7e2 == function_selector >> 224) {
+        0xee33b7e2();
+    } else if (0xffa1ad74 == function_selector >> 224) {
+        VERSION();
+    }
+    require(!msg.value);
+    if (!___function_selector__) {
+        v0, v1 = _SafeSub(0, msg.data.length, 4, msg.data.length);
+        require(v1 + v0 - v1 >= 128);
+        require(msg.data[v1] == address(msg.data[v1]));
+        require(msg.data[v1 + 96] <= uint64.max);
+        require(v1 + v0 > v1 + msg.data[v1 + 96] + 31);
+        v2 = 0x382f(msg.data[v1 + msg.data[v1 + 96]]);
+        require(!((MEM[64] + (~0x1f & v2 + 31) < MEM[64]) | (MEM[64] + (~0x1f & v2 + 31) > uint64.max)), Panic(65)); // failed memory allocation (too much memory)
+        require(v1 + msg.data[v1 + 96] + msg.data[v1 + msg.data[v1 + 96]] + 32 <= v1 + v0);
+        CALLDATACOPY(MEM[64] + 32, v1 + msg.data[v1 + 96] + 32, msg.data[v1 + msg.data[v1 + 96]]);
+        MEM[MEM[64] + msg.data[v1 + msg.data[v1 + 96]] + 32] = 0;
+        require(32 + MEM[64] + msg.data[v1 + msg.data[v1 + 96]] - (32 + MEM[64]) >= 96);
+        require(MEM[32 + MEM[64]] <= uint64.max);
+        require(32 + MEM[64] + MEM[32 + MEM[64]] + 31 < 32 + MEM[64] + msg.data[v1 + msg.data[v1 + 96]]);
+        v3 = MEM[32 + MEM[64] + MEM[32 + MEM[64]]];
+        v4 = 0x380c(v3);
+        require(!((MEM[64] + (~0x1f & v4 + 31) < MEM[64]) | (MEM[64] + (~0x1f & v4 + 31) > uint64.max)), Panic(65)); // failed memory allocation (too much memory)
+        v5 = v6 = MEM[64] + 32;
+        v7 = v8 = 32 + MEM[64] + MEM[32 + MEM[64]] + 32;
+        require(32 + MEM[64] + MEM[32 + MEM[64]] + (v3 << 7) + 32 <= 32 + MEM[64] + msg.data[v1 + msg.data[v1 + 96]]);
+        v9 = v10 = 0;
+        while (v9 < v3) {
+            require(32 + MEM[64] + msg.data[v1 + msg.data[v1 + 96]] - v7 >= 128);
+            require(!((MEM[64] + 128 < MEM[64]) | (MEM[64] + 128 > uint64.max)), Panic(65)); // failed memory allocation (too much memory)
+            MEM[64] = MEM[64] + 128;
+            require(MEM[v7] == address(MEM[v7]));
+            MEM[MEM[64]] = MEM[v7];
+            MEM[MEM[64] + 32] = MEM[32 + v7];
+            MEM[MEM[64] + 64] = MEM[v7 + 64];
+            MEM[MEM[64] + 96] = MEM[v7 + 96];
+            MEM[v5] = MEM[64];
+            v9 += 1;
+            v5 += 32;
+            v7 += 128;
+        }
+        require(MEM[32 + MEM[64] + 32] <= uint64.max);
+        require(32 + MEM[64] + MEM[32 + MEM[64] + 32] + 31 < 32 + MEM[64] + msg.data[v1 + msg.data[v1 + 96]]);
+        v11 = MEM[32 + MEM[64] + MEM[32 + MEM[64] + 32]];
+        v12 = 0x380c(v11);
+        require(!((MEM[64] + (~0x1f & v12 + 31) < MEM[64]) | (MEM[64] + (~0x1f & v12 + 31) > uint64.max)), Panic(65)); // failed memory allocation (too much memory)
+        v13 = v14 = MEM[64] + 32;
+        v15 = v16 = 32 + MEM[64] + MEM[32 + MEM[64] + 32] + 32;
+        require(32 + MEM[64] + MEM[32 + MEM[64] + 32] + (v11 << 5) + 32 <= 32 + MEM[64] + msg.data[v1 + msg.data[v1 + 96]]);
+        v17 = v18 = 0;
+        while (v17 < v11) {
+            require(MEM[v15] == address(MEM[v15]));
+            MEM[v13] = MEM[v15];
+            v13 += 32;
+            v15 += 32;
+            v17 += 1;
+        }
+        v19 = v20 = uint112(MEM[32 + MEM[64] + 64] >> 16);
+        v21 = v22 = MEM[32 + MEM[64] + 64] >> 144;
+        v23 = v24 = 0 > v20;
+        if (v24) {
+            v23 = bool(!(MEM[32 + MEM[64] + 64] & 0x4));
+        }
+        if (v23) {
+            v25 = _SafeSub(v3, 1);
+            require(v25 < v3, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+            require(MEM[96 + MEM[32 + (v25 << 5) + MEM[64]]] >= 0, Error('BB: FAIL_L'));
+            if (v22) {
+                v26 = _SafeMul(0, 0x5f5e100);
+                v21 = v27 = _SafeDiv(v26, MEM[96 + MEM[32 + (v25 << 5) + MEM[64]]]);
+            }
+        }
+        v28 = v29 = 0;
+        if (MEM[32 + MEM[64] + 64] & 0x1) {
+            require(0 < v3, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+            v28 = v30 = 1;
+            require(1 < v11, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+            v28 = v31 = 0 != MEM[32 + MEM[32 + MEM[64]]] & 0x40;
+            if (bool(0 == MEM[32 + MEM[32 + MEM[64]]] & 0x40)) {
+                v19 = v32 = MEM[96 + MEM[32 + MEM[64]]];
+            } else {
+                v19 = v33 = 0xea1(this, MEM[64 + MEM[64]]);
+                MEM[MEM[32 + MEM[64]] + 96] = v33;
+            }
+            if (v3 > 1) {
+                require(1 < v3, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+                if (0 != MEM[32 + MEM[64 + MEM[64]]] & 0x10) {
+                    if (bool(0 == MEM[32 + MEM[32 + MEM[64]]] & 0x40)) {
+                        0xf88(v19, MEM[0 + MEM[64 + MEM[64]]], MEM[64 + MEM[64]]);
+                    } else {
+                        if (MEM[32 + MEM[64 + MEM[64]]] & 0x7 < 2) {
+                            v34 = v35 = MEM[32 + MEM[64 + MEM[64]]] >> 152;
+                        } else {
+                            v34 = v36 = 0xea1(MEM[0 + MEM[64 + MEM[64]]], MEM[64 + MEM[64]]);
+                        }
+                        0xf88(v19, MEM[0 + MEM[64 + MEM[64]]], MEM[64 + MEM[64]]);
+                        v37 = 0xea1(MEM[0 + MEM[64 + MEM[64]]], MEM[64 + MEM[64]]);
+                        v19 = v38 = _SafeSub(v37, v34);
+                        MEM[MEM[32 + MEM[64]] + 96] = v38;
+                    }
+                }
+            }
+        }
+        v39 = v40 = 0;
+        while (v28 < v3) {
+            v28 = v28 + 1;
+            v41 = v42 = this;
+            if (v28 != v3) {
+                require(v28 < v3, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+                if (0 != MEM[32 + MEM[32 + (v28 << 5) + MEM[64]]] & 0x10) {
+                    require(v28 < v3, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+                    v41 = v43 = MEM[0 + MEM[32 + (v28 << 5) + MEM[64]]];
+                }
+            } else if (!(MEM[32 + MEM[64] + 64] & 0x1)) {
+                v41 = 0xd614927acfb9744441180c2525faf4cedb70207f;
+            }
+            require(v28 < v3, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+            v44 = MEM[32 + (v28 << 5) + MEM[64]];
+            v45 = v46 = 0;
+            if (!v28) {
+                v28 = bool(MEM[32 + v44] & 0x40);
+            }
+            if (v28) {
+                require(MEM[32 + v44] >> 45 & 0x7 < v11, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+                v39 = MEM[32 + ((MEM[32 + v44] >> 45 & 0x7) << 5) + MEM[64]];
+                if (v28 < v3) {
+                    require(v28 < v3, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+                    if (MEM[32 + MEM[32 + (v28 << 5) + MEM[64]]] & 0x7 < 2) {
+                        v45 = v47 = MEM[32 + MEM[32 + (v28 << 5) + MEM[64]]] >> 152;
+                    }
+                }
+                if (!v45) {
+                    if (this == address(v41)) {
+                        v45 = v48 = 0;
+                    } else {
+                        v45 = v49 = 0xea1(v41, v39);
+                    }
+                }
+            }
+            v50 = v51 = 0;
+            v52 = v53 = 96;
+            if (MEM[32 + v44] & 0x7 >= 2) {
+                v54 = v55 = 0x7 & MEM[32 + v44] >> 42;
+                if (MEM[32 + v44] & 0x20) {
+                    require(v55 < v11, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+                    v56 = 0x24eb(MEM[0 + v44], this, MEM[32 + (v55 << 5) + MEM[64]]);
+                    if (!v56) {
+                        0x25db(~0, MEM[0 + v44], MEM[32 + (v55 << 5) + MEM[64]]);
+                    }
+                }
+                if (MEM[32 + v44] & 0x7 != 2) {
+                    if (MEM[32 + v44] & 0x7 == 3) {
+                        require(v55 < v11, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+                        require(MEM[32 + v44] >> 45 & 0x7 < v11, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+                        MEM[MEM[64] + 68] = address(MEM[32 + (v55 << 5) + MEM[64]]);
+                        MEM[MEM[64] + 100] = address(MEM[((MEM[32 + v44] >> 45 & 0x7) << 5) + MEM[64] + 32]);
+                        MEM[MEM[64] + 132] = v19;
+                        MEM[MEM[64] + 164] = MEM[32 + v44];
+                        MEM[MEM[64] + 196] = MEM[v44 + 64];
+                        MEM[MEM[64] + 228] = address(v41);
+                        MEM[MEM[64] + 32] = uint224(address(MEM[0 + v44])) | 0x4da9175700000000000000000000000000000000000000000000000000000000;
+                        v57 = v58 = 0;
+                        while (v57 < 228) {
+                            MEM[v57 + MEM[64]] = MEM[v57 + (MEM[64] + 32)];
+                            v57 += 32;
+                        }
+                        if (v57 <= 228) {
+                            goto 0x3447B0x20a6B0x11faB0x703B0x1f2;
+                        } else {
+                            MEM[228 + MEM[64]] = 0;
+                        }
+                        v50 = address(MEM[32 + v44] >> 96).delegatecall(MEM[(MEM[64]) len 228], MEM[(MEM[64]) len 0]).gas(msg.gas);
+                        if (RETURNDATASIZE() == 0) {
+                            v52 = v59 = 96;
+                        } else {
+                            v52 = v60 = MEM[64];
+                            MEM[64] = v60 + (RETURNDATASIZE() + 63 & ~0x1f);
+                            MEM[v60] = RETURNDATASIZE();
+                            RETURNDATACOPY(v60 + 32, 0, RETURNDATASIZE());
+                        }
+                    }
+                } else {
+                    require(0x7 & MEM[32 + v44] >> 48 <= uint64.max, Panic(65)); // failed memory allocation (too much memory)
+                    v61 = new uint256[](0x7 & MEM[32 + v44] >> 48);
+                    if (0x7 & MEM[32 + v44] >> 48) {
+                        CALLDATACOPY(v61.data, msg.data.length, (0x7 & MEM[32 + v44] >> 48) << 5);
+                    }
+                    v62 = v63 = 0;
+                    while (v62 < 0x7 & MEM[32 + v44] >> 48) {
+                        require(v54 < v11, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+                        require(v62 < v61.length, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+                        v61[v62] = address(MEM[32 + (v54 << 5) + MEM[64]]);
+                        v54 += 1;
+                        v62 += 1;
+                    }
+                    if (!(MEM[32 + v44] & 0x40)) {
+                        MEM[36 + MEM[64]] = v19;
+                        MEM[36 + MEM[64] + 32] = uint8(0);
+                        MEM[36 + MEM[64] + 64] = 160;
+                        MEM[36 + MEM[64] + 160] = v61.length;
+                        v64 = v65 = 36 + MEM[64] + 160 + 32;
+                        v66 = v67 = v61.data;
+                        v68 = v69 = 0;
+                        while (v68 < v61.length) {
+                            MEM[v64] = address(MEM[v66]);
+                            v64 += 32;
+                            v66 += 32;
+                            v68 += 1;
+                        }
+                        MEM[36 + MEM[64] + 96] = address(v41);
+                        MEM[164 + MEM[64]] = 0x2540be3ff;
+                        v70 = MEM[64];
+                        MEM[v70] = v64 - v70 - 32;
+                        MEM[64] = v64;
+                        MEM[v70 + 32] = uint224(MEM[v70 + 32]) | 0x38ed173900000000000000000000000000000000000000000000000000000000;
+                    } else {
+                        MEM[36 + MEM[64]] = v19;
+                        MEM[36 + MEM[64] + 32] = uint8(0);
+                        MEM[36 + MEM[64] + 64] = 160;
+                        MEM[36 + MEM[64] + 160] = v61.length;
+                        v71 = v72 = 36 + MEM[64] + 160 + 32;
+                        v73 = v74 = v61.data;
+                        v75 = v76 = 0;
+                        while (v75 < v61.length) {
+                            MEM[v71] = address(MEM[v73]);
+                            v71 += 32;
+                            v73 += 32;
+                            v75 += 1;
+                        }
+                        MEM[36 + MEM[64] + 96] = address(v41);
+                        MEM[164 + MEM[64]] = 0x2540be3ff;
+                        v70 = v77 = MEM[64];
+                        MEM[v77] = v71 - v77 - 32;
+                        MEM[64] = v71;
+                        MEM[v77 + 32] = uint224(MEM[v77 + 32]) | 0x5c11d79500000000000000000000000000000000000000000000000000000000;
+                    }
+                    v78 = v79 = 0;
+                    while (v78 < MEM[v70]) {
+                        MEM[v78 + MEM[64]] = MEM[v78 + (v70 + 32)];
+                        v78 += 32;
+                    }
+                    if (v78 <= MEM[v70]) {
+                        goto 0x3447B0x1ff4B0x11faB0x703B0x1f2;
+                    } else {
+                        MEM[MEM[v70] + MEM[64]] = 0;
+                    }
+                    v50 = v80 = address(MEM[0 + v44]).call(MEM[(MEM[64]) len (MEM[v70] + MEM[64] - MEM[64])], MEM[(MEM[64]) len 0]).gas(msg.gas);
+                    if (RETURNDATASIZE() == 0) {
+                        v52 = v81 = 96;
+                    } else {
+                        v52 = v82 = MEM[64];
+                        MEM[64] = v82 + (RETURNDATASIZE() + 63 & ~0x1f);
+                        MEM[v82] = RETURNDATASIZE();
+                        RETURNDATACOPY(v82 + 32, 0, RETURNDATASIZE());
+                    }
+                }
+            } else {
+                v83 = v84 = 0;
+                if (v28) {
+                    v83 = v85 = 0x2868(MEM[64], MEM[32 + v44], v44, v19);
+                } else {
+                    v83 = MEM[96 + v44];
+                }
+                if (MEM[32 + v44] & 0x7 != 1) {
+                    MEM[MEM[64] + 68] = v83;
+                    MEM[MEM[64] + 68 + 32] = v83;
+                    MEM[MEM[64] + 68 + 64] = address(v41);
+                    MEM[MEM[64] + 68 + 96] = 128;
+                    MEM[MEM[64] + 68 + 128] = 0;
+                    v86 = v87 = 0;
+                    while (v86 < 0) {
+                        MEM[v86 + (MEM[64] + 68 + 128 + 32)] = MEM[v86 + (MEM[64] + 32)];
+                        v86 += 32;
+                    }
+                    if (v86 <= 0) {
+                        goto 0x3411B0x3787B0x1d93B0x11faB0x703B0x1f2;
+                    } else {
+                        MEM[0 + (MEM[64] + 68 + 128 + 32)] = 0;
+                    }
+                    v88 = MEM[64];
+                    MEM[v88] = 32 + (MEM[64] + 68 + 128) - v88 - 32;
+                    MEM[64] = 32 + (MEM[64] + 68 + 128);
+                    MEM[v88 + 32] = uint224(MEM[v88 + 32]) | 0x22c0d9f00000000000000000000000000000000000000000000000000000000;
+                } else {
+                    MEM[MEM[64] + 68] = v83;
+                    MEM[MEM[64] + 100] = address(v41);
+                    v88 = v89 = MEM[64];
+                    MEM[v89] = 100;
+                    MEM[64] = MEM[64] + 132;
+                    MEM[v89 + 32] = 0x6d9a640a00000000000000000000000000000000000000000000000000000000 | uint224(v83);
+                }
+                v90 = v91 = 0;
+                while (v90 < MEM[v88]) {
+                    MEM[v90 + MEM[64]] = MEM[v90 + (v88 + 32)];
+                    v90 += 32;
+                }
+                if (v90 <= MEM[v88]) {
+                    goto 0x3447B0x1deaB0x11faB0x703B0x1f2;
+                } else {
+                    MEM[MEM[v88] + MEM[64]] = 0;
+                }
+                v50 = v92 = address(MEM[0 + v44]).call(MEM[(MEM[64]) len (MEM[v88] + MEM[64] - MEM[64])], MEM[(MEM[64]) len 0]).gas(msg.gas);
+                if (RETURNDATASIZE() == 0) {
+                    v52 = v93 = 96;
+                } else {
+                    v52 = v94 = MEM[64];
+                    MEM[64] = v94 + (RETURNDATASIZE() + 63 & ~0x1f);
+                    MEM[v94] = RETURNDATASIZE();
+                    RETURNDATACOPY(v94 + 32, 0, RETURNDATASIZE());
+                }
+                goto 0x218bB0x11faB0x703B0x1f2;
+            }
+            if (v50) {
+                if (v28) {
+                    v95 = 0xea1(v41, v39);
+                    v96 = _SafeSub(v95, v45);
+                    v97 = v98 = v21 > 0;
+                    if (v98) {
+                        v97 = v96 < MEM[v44 + 96];
+                    }
+                    if (v97) {
+                        v99 = _SafeMul(v96, 0x5f5e100);
+                        v100 = _SafeDiv(v99, MEM[v44 + 96]);
+                        if (v100 < v21) {
+                            require(v28, Error('BB: FAIL_T_1'));
+                            require(1 != v28, Error('BB: FAIL_T_2'));
+                            require(2 != v28, Error('BB: FAIL_T_3'));
+                            require(3 != v28, Error('BB: FAIL_T_4'));
+                            revert(Error('BB: FAIL_T_X'));
+                        }
+                    }
+                    MEM[v44 + 96] = v96;
+                }
+                v19 = MEM[96 + v44];
+                v28 = v28 + 1;
+            } else if (MEM[v52] >= 68) {
+                if (v28) {
+                    if (1 != v28) {
+                        if (2 != v28) {
+                            if (3 != v28) {
+                                require(36 + v52 + MEM[4 + v52] - (36 + v52) >= 32);
+                                require(MEM[36 + v52] <= uint64.max);
+                                require(36 + v52 + MEM[4 + v52] > 36 + v52 + MEM[36 + v52] + 31);
+                                v101 = MEM[36 + v52 + MEM[36 + v52]];
+                                v102 = 0x382f(v101);
+                                require(!((MEM[64] + (~0x1f & v102 + 31) < MEM[64]) | (MEM[64] + (~0x1f & v102 + 31) > uint64.max)), Panic(65)); // failed memory allocation (too much memory)
+                                require(36 + v52 + MEM[36 + v52] + v101 + 32 <= 36 + v52 + MEM[4 + v52]);
+                                v103 = v104 = 0;
+                                while (v103 < v101) {
+                                    MEM[v103 + (MEM[64] + 32)] = MEM[v103 + (36 + v52 + MEM[36 + v52] + 32)];
+                                    v103 += 32;
+                                }
+                                if (v103 <= v101) {
+                                    goto 0x525dB0x2388B0x11faB0x703B0x1f2;
+                                } else {
+                                    MEM[v101 + (MEM[64] + 32)] = 0;
+                                }
+                                MEM[32 + MEM[64]] = 'BB: RX|';
+                                v105 = v106 = 0;
+                                while (v105 < v101) {
+                                    MEM[v105 + (32 + MEM[64] + 7)] = MEM[v105 + (MEM[64] + 32)];
+                                    v105 += 32;
+                                }
+                                if (v105 <= v101) {
+                                    goto 0x5285B0x11faB0x703B0x1f2;
+                                } else {
+                                    MEM[v101 + (32 + MEM[64] + 7)] = 0;
+                                }
+                                v107 = v108 = 7 + (v101 + (32 + MEM[64]));
+                            } else {
+                                require(36 + v52 + MEM[4 + v52] - (36 + v52) >= 32);
+                                require(MEM[36 + v52] <= uint64.max);
+                                require(36 + v52 + MEM[4 + v52] > 36 + v52 + MEM[36 + v52] + 31);
+                                v109 = MEM[36 + v52 + MEM[36 + v52]];
+                                v110 = 0x382f(v109);
+                                require(!((MEM[64] + (~0x1f & v110 + 31) < MEM[64]) | (MEM[64] + (~0x1f & v110 + 31) > uint64.max)), Panic(65)); // failed memory allocation (too much memory)
+                                require(36 + v52 + MEM[36 + v52] + v109 + 32 <= 36 + v52 + MEM[4 + v52]);
+                                v111 = v112 = 0;
+                                while (v111 < v109) {
+                                    MEM[v111 + (MEM[64] + 32)] = MEM[v111 + (36 + v52 + MEM[36 + v52] + 32)];
+                                    v111 += 32;
+                                }
+                                if (v111 <= v109) {
+                                    goto 0x525dB0x2365B0x11faB0x703B0x1f2;
+                                } else {
+                                    MEM[v109 + (MEM[64] + 32)] = 0;
+                                }
+                                MEM[32 + MEM[64]] = 'BB: R4|';
+                                v113 = v114 = 0;
+                                while (v113 < v109) {
+                                    MEM[v113 + (32 + MEM[64] + 7)] = MEM[v113 + (MEM[64] + 32)];
+                                    v113 += 32;
+                                }
+                                if (v113 <= v109) {
+                                    goto 0x52ddB0x11faB0x703B0x1f2;
+                                } else {
+                                    MEM[v109 + (32 + MEM[64] + 7)] = 0;
+                                }
+                                v107 = v115 = 7 + (v109 + (32 + MEM[64]));
+                            }
+                        } else {
+                            require(36 + v52 + MEM[4 + v52] - (36 + v52) >= 32);
+                            require(MEM[36 + v52] <= uint64.max);
+                            require(36 + v52 + MEM[4 + v52] > 36 + v52 + MEM[36 + v52] + 31);
+                            v116 = MEM[36 + v52 + MEM[36 + v52]];
+                            v117 = 0x382f(v116);
+                            require(!((MEM[64] + (~0x1f & v117 + 31) < MEM[64]) | (MEM[64] + (~0x1f & v117 + 31) > uint64.max)), Panic(65)); // failed memory allocation (too much memory)
+                            require(36 + v52 + MEM[36 + v52] + v116 + 32 <= 36 + v52 + MEM[4 + v52]);
+                            v118 = v119 = 0;
+                            while (v118 < v116) {
+                                MEM[v118 + (MEM[64] + 32)] = MEM[v118 + (36 + v52 + MEM[36 + v52] + 32)];
+                                v118 += 32;
+                            }
+                            if (v118 <= v116) {
+                                goto 0x525dB0x2338B0x11faB0x703B0x1f2;
+                            } else {
+                                MEM[v116 + (MEM[64] + 32)] = 0;
+                            }
+                            MEM[32 + MEM[64]] = 'BB: R3|';
+                            v120 = v121 = 0;
+                            while (v120 < v116) {
+                                MEM[v120 + (32 + MEM[64] + 7)] = MEM[v120 + (MEM[64] + 32)];
+                                v120 += 32;
+                            }
+                            if (v120 <= v116) {
+                                goto 0x5309B0x11faB0x703B0x1f2;
+                            } else {
+                                MEM[v116 + (32 + MEM[64] + 7)] = 0;
+                            }
+                            v107 = v122 = 7 + (v116 + (32 + MEM[64]));
+                        }
+                    } else {
+                        require(36 + v52 + MEM[4 + v52] - (36 + v52) >= 32);
+                        require(MEM[36 + v52] <= uint64.max);
+                        require(36 + v52 + MEM[4 + v52] > 36 + v52 + MEM[36 + v52] + 31);
+                        v123 = MEM[36 + v52 + MEM[36 + v52]];
+                        v124 = 0x382f(v123);
+                        require(!((MEM[64] + (~0x1f & v124 + 31) < MEM[64]) | (MEM[64] + (~0x1f & v124 + 31) > uint64.max)), Panic(65)); // failed memory allocation (too much memory)
+                        require(36 + v52 + MEM[36 + v52] + v123 + 32 <= 36 + v52 + MEM[4 + v52]);
+                        v125 = v126 = 0;
+                        while (v125 < v123) {
+                            MEM[v125 + (MEM[64] + 32)] = MEM[v125 + (36 + v52 + MEM[36 + v52] + 32)];
+                            v125 += 32;
+                        }
+                        if (v125 <= v123) {
+                            goto 0x525dB0x230bB0x11faB0x703B0x1f2;
+                        } else {
+                            MEM[v123 + (MEM[64] + 32)] = 0;
+                        }
+                        MEM[32 + MEM[64]] = 'BB: R2|';
+                        v127 = v128 = 0;
+                        while (v127 < v123) {
+                            MEM[v127 + (32 + MEM[64] + 7)] = MEM[v127 + (MEM[64] + 32)];
+                            v127 += 32;
+                        }
+                        if (v127 <= v123) {
+                            goto 0x5335B0x11faB0x703B0x1f2;
+                        } else {
+                            MEM[v123 + (32 + MEM[64] + 7)] = 0;
+                        }
+                        v107 = 7 + (v123 + (32 + MEM[64]));
+                    }
+                } else {
+                    require(36 + v52 + MEM[4 + v52] - (36 + v52) >= 32);
+                    require(MEM[36 + v52] <= uint64.max);
+                    require(36 + v52 + MEM[4 + v52] > 36 + v52 + MEM[36 + v52] + 31);
+                    v129 = MEM[36 + v52 + MEM[36 + v52]];
+                    v130 = 0x382f(v129);
+                    require(!((MEM[64] + (~0x1f & v130 + 31) < MEM[64]) | (MEM[64] + (~0x1f & v130 + 31) > uint64.max)), Panic(65)); // failed memory allocation (too much memory)
+                    require(36 + v52 + MEM[36 + v52] + v129 + 32 <= 36 + v52 + MEM[4 + v52]);
+                    v131 = v132 = 0;
+                    while (v131 < v129) {
+                        MEM[v131 + (MEM[64] + 32)] = MEM[v131 + (36 + v52 + MEM[36 + v52] + 32)];
+                        v131 += 32;
+                    }
+                    if (v131 <= v129) {
+                        goto 0x525dB0x22b8B0x11faB0x703B0x1f2;
+                    } else {
+                        MEM[v129 + (MEM[64] + 32)] = 0;
+                    }
+                    MEM[32 + MEM[64]] = 'BB: R1|';
+                    v133 = v134 = 0;
+                    while (v133 < v129) {
+                        MEM[v133 + (32 + MEM[64] + 7)] = MEM[v133 + (MEM[64] + 32)];
+                        v133 += 32;
+                    }
+                    if (v133 <= v129) {
+                        goto 0x52b1B0x11faB0x703B0x1f2;
+                    } else {
+                        MEM[v129 + (32 + MEM[64] + 7)] = 0;
+                    }
+                    v107 = v135 = 7 + (v129 + (32 + MEM[64]));
+                }
+                MEM[v107] = 0x8c379a000000000000000000000000000000000000000000000000000000000;
+                MEM[4 + v107] = 32;
+                MEM[4 + v107 + 32] = v107 - MEM[64] + ~31;
+                v136 = v137 = 0;
+                while (v136 < v107 - MEM[64] + ~31) {
+                    MEM[v136 + (4 + v107 + 32 + 32)] = MEM[v136 + (MEM[64] + 32)];
+                    v136 += 32;
+                }
+                if (v136 <= v107 - MEM[64] + ~31) {
+                    goto 0x3411B0x36efB0x22dbB0x11faB0x703B0x1f2;
+                } else {
+                    MEM[v107 - MEM[64] + ~31 + (4 + v107 + 32 + 32)] = 0;
+                }
+                revert(MEM[64], 32 + ((~0x1f & 31 + (v107 - MEM[64] + ~31)) + (4 + v107 + 32)) - MEM[64]);
+            } else {
+                require(v28, Error(0x42423a205231));
+                require(1 != v28, Error(0x42423a205232));
+                require(2 != v28, Error(0x42423a205233));
+                require(3 != v28, Error(0x42423a205234));
+                revert(Error(0x42423a205258));
+            }
+        }
+        if (bool(!(MEM[32 + MEM[64] + 64] & 0x4))) {
+            if (!bool(!(MEM[32 + MEM[64] + 64] & 0x1))) {
+                require(0 < v11, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+                require(0 < v3, Panic(50)); // access an out-of-bounds or negative index of bytesN array or slice
+                v138 = v139 = 0;
+                while (v138 < 68) {
+                    MEM[v138 + MEM[64]] = MEM[v138 + (MEM[64] + 32)];
+                    v138 += 32;
+                }
+                if (v138 <= 68) {
+                    goto 0x3447B0xf880x4e3B0x1f2;
+                } else {
+                    MEM[68 + MEM[64]] = 0;
+                }
+                v140 = v141, /* uint256 */ v142, /* uint256 */ v143 = address(MEM[32 + MEM[64]]).transfer(address(MEM[0 + MEM[32 + MEM[64]]]), v20).gas(msg.gas);
+                if (RETURNDATASIZE() == 0) {
+                    v144 = 96;
+                } else {
+                    v144 = v145 = new bytes[](RETURNDATASIZE());
+                    RETURNDATACOPY(v145.data, 0, RETURNDATASIZE());
+                }
+                if (v141) {
+                    v140 = v146 = !MEM[v144];
+                    if (MEM[v144]) {
+                        require(32 + v144 + MEM[v144] - (32 + v144) >= 32);
+                        v140 = MEM[32 + v144];
+                        require(v140 == bool(v140));
+                    }
+                }
+                require(v140, Error('BB: TRANSFER_FAILED'));
+                v147 = 0xea1(this, MEM[32 + MEM[64]]);
+                if (MEM[32 + MEM[64] + 64] & 0x8) {
+                    0x137a(0xd614927acfb9744441180c2525faf4cedb70207f, MEM[32 + MEM[64]]);
+                }
+                require(bool((address(0xd614927acfb9744441180c2525faf4cedb70207f)).code.size));
+                v148 = address(0xd614927acfb9744441180c2525faf4cedb70207f).settle(address(MEM[32 + MEM[64]]), v147).gas(msg.gas);
+                require(bool(v148), 0, RETURNDATASIZE()); // checks call status, propagates error data on error
+                goto 0x202;
+            }
+            exit;
+        } else {
+            v149 = 0x1291(MEM[64], v20);
+            MEM[v149 - 32] = 0xfa61cc12;
+            revert(v149 - 4, (v149.length << 5) + 36);
+        }
+    } else {
+        v150, v151 = _SafeSub(0, msg.data.length, 0, 4);
+        v152 = v153 = bytes4(msg.data[v151]);
+        if (v150 < 4) {
+            v152 = bytes4(msg.data[v151] & ~uint224.max << (4 - v150 << 3));
+        }
+        require(uint32(___function_selector__) == uint32(v152 >> 224), Error('BB: FB_MISS'));
+        v154, v155 = _SafeSub(0, msg.data.length, 4, msg.data.length);
+        MEM[36 + MEM[64] + 32] = v154;
+        CALLDATACOPY(36 + MEM[64] + 64, v155, v154);
+        MEM[64 + (v154 + (36 + MEM[64]))] = 0;
+        MEM[MEM[64]] = (~0x1f & v154 + 31) + (36 + MEM[64]) + 64 - MEM[64] - 32;
+        MEM[MEM[64] + 32] = uint224(32) | 0xe78169c400000000000000000000000000000000000000000000000000000000;
+        v156, v157 = 0x3a6(MEM[64], ___function_selector__ >> 96);
+        require(v157, Error('BB: FB_FAIL'));
+        ___function_selector__ = 0;
+        exit;
+    }
+}
